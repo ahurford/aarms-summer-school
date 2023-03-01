@@ -1,4 +1,6 @@
 aarms-eidm-summer-school
+application-form
+details
 instructors
 guest-lecturers
 tentative-schedule
