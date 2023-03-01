@@ -1,0 +1,53 @@
+# Course 1. Mathematical Epidemiology
+
+This covers will cover different formulations and analyses for mathematical models in epidemiology. Some lectures will be based on [Modelling Infectious Diseases in Humans and Animals](http://www.modelinginfectiousdiseases.org/) by Matt Keeling and Pej Rohani (available as .pdf from MUN library)
+
+- Lecture 1. Ch 2. Simple Epi Models
+
+- Lecture 2. Ch 3. Host Heterogeneity I
+
+Problems 1.
+
+- Lecture 3. Ch 3. Host Heterogeneity II 
+
+- Lecture 4. Ch 4. Multipathogen/Multihost 
+
+Problems 2.
+
+- Lecture 5. Evolutionary epidemiology
+
+- Lecture 6. Ch 5. Temporally-forced models 
+
+Problems 3. 
+
+- Lecture 7. Ch 6. Stochastic dynamics (models only, i.e. excluding 6.1 and 6.2) 
+
+- Lecture 8. Ch 7. Spatial models I
+
+Problems 4.
+
+- Lecture 9. Ch 7. Spatial models II 
+
+- Lecture 10. Modelling importations
+
+Problems 5.
+
+- Lecture 11. Within-host dynamics I
+
+- Lecture 12.  Within-host dynamics II
+
+Problems 6.
+
+- Lecture 13. Zoonotic spillover I
+
+- Lecture 14. Zoonotic spillover II 
+
+Problems 8.
+
+- Lecture 15. Ch 8. Controlling Infectious Disease - NPIs
+
+Problems 9.
+
+- Lecture 16. Ch 8. Controlling Infectious Disease - PIs
+
+Problems 10.

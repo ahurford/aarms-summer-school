@@ -1,0 +1,57 @@
+# Course 2. Data, models, and decision support
+
+This focuses on the role of models in decision support. We will explore types of models and their assumptions in relationship to available data and uncertainty in both parameter estimates, forecasts and model formulations. We will explore case studies where modelling has informed decision support. Some lectures will be from [Ecological forecasting](https://press.princeton.edu/books/hardcover/9780691160573/ecological-forecasting).
+
+- Lecture 1.  What is a model? What are models used for? (conceptual, mechanistic, statistical; strengths of each; forecasting and counterfactuals. Chapter 1 of Otto and Day? Other references?)
+
+- Lecture 2. Compartmental model assumptions (approximations: GillespieSSA pair approximation). Agent-based models vs. branching processes. Limitations of different approaches.
+
+Problems 1. Write 3-4 paragraphs to explain what is meant by 'all models are wrong but some are useful'. Include an example of a model that is useful. Identify ways in which models that are useful are wrong in different ways than models that are not useful.
+
+- Lecture 3. Mechanistic models. Introduction to independent parameter estimation (rate parameters as reciprocals of mean time), overview of data sources available.
+
+- Lecture 4. Ch 2. Process error vs. observation error (and Ch. 6.1 and 6.2 of [Modelling Infectious Diseases in Humans and Animals](http://www.modelinginfectiousdiseases.org/))
+
+Problems 2. Critical review of parameter estimates in modelling papers.
+
+- Lecture 5. Ch 5. Introduction to Bayes
+
+- Lecture 6. Ch 6. Parameter uncertainty
+
+Problems 3. Do a sensitivity analysis
+
+- Lecture 7. Ch 8. Latent variables. This [reference](https://esajournals.onlinelibrary.wiley.com/doi/epdf/10.1002/fee.2530) is interesting.
+
+- Lecture 8. Ch 9. Fusing data sources. Basics of systematic reviews.
+
+Problems 4. Case study: estimation of $R_t$ for different variants during COVID-19 (parameter portability & latent variables).
+
+- Lecture 9. Ch 11. Analyzing uncertainty in forecasts
+
+- Lecture 10. Ch 13. Data Assimilation I
+
+Problems 5. 
+
+- Lecture 11.  Ch 14. Data Assimilation II
+
+- Lecture 12. Case studies (i.e., see Ecological Forecasting)
+
+Problems 6.
+
+- Lecture 13. Ch. 16 Assessing model performance. Validation
+
+- Lecture 14. Ch 17. Forecasting models for decision support. Toy models for communication for decision support, ex. COVID-19: flatten the curve, $R_0$, $R_t$, doubling time, herd immunity, total mortality for highly transmissible variants.
+
+Problems 8.
+
+- Lecture 15. Counterfactuals for decision support
+
+Problems 9. Critical review of COVID-19 models for decision support (i.e., uncertainty quantification)
+
+- Lecture 16. Models and misinformation (some takehomes from Bergstrom book)
+
+Problems 10.
+
+
+
+

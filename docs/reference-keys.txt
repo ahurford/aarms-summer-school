@@ -1,5 +1,6 @@
-eidm-aarms-summer-school
-schedule
-mathematical-epidemiology-math-epi
-data-models-and-decision-support-data
-parts
+aarms-eidm-summer-school
+instructors
+guest-lecturers
+tentative-schedule
+course-1.-mathematical-epidemiology
+course-2.-data-models-and-decision-support
