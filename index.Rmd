@@ -1,0 +1,23 @@
+--- 
+site: bookdown::bookdown_site
+documentclass: book
+bookdown::gitbook:
+  css: style.css
+---
+
+# 2023 EIDM-AARMS Summer School
+
+Two courses are offered for math graduate credit:
+
+1. Mathematical Epidemiology (Math Epi), and
+2. Data, models, and decision support.
+
+It is intended that participants will take both courses.
+
+30 hours of instruction is considered to be equivalent to a grad course.
+
+A pre-requisite problem set will be assigned. Covers preliminaries in dynamical systems, epidemiology, and modelling.
+
+Students will work in groups of 2-3 to complete a project. Ideas for project descriptions will be provided. Specific expertise of the instructors includes spatial epidemiology, importations, within-host models, zoonotic spillover, and COVID-19. 
+
+7 hours of work is planned each day, expected to occur between 8.30am and 5.30pm with exact times to be determined. Students should also captize on being together to work on their projects if they wish, during down hours.

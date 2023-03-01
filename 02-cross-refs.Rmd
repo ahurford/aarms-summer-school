@@ -1,0 +1,104 @@
+# Mathematical Epidemiology (Math Epi)
+Chapters refer to Keeling and Rohani - available as .pdf from MUN library
+
+- Lecture 1. Ch 2. Simple Epi Models
+
+- Lecture 2. Ch 3. Host Heterogeneity I
+
+Problems 1.
+
+- Lecture 3. Ch 3. Host Heterogeneity II 
+
+- Lecture 4. Ch 4. Multipathogen/Multihost 
+
+Problems 2.
+
+- Lecture 5. Evolutionary epidemiology
+
+- Lecture 6. Ch 5. Temporally-forced models 
+
+Problems 3. 
+
+- Lecture 7. Ch 6. Stochastic dynamics (models) 
+
+- Lecture 8. Ch 7. Spatial models I
+
+Problems 4.
+
+- Lecture 9. Ch 7. Spatial models II 
+
+- Lecture 10. Modelling importations
+
+Problems 5.
+
+- Lecture 11. Within-host dynamics I
+
+- Lecture 12.  Within-host dynamics II
+
+Problems 6.
+
+- Lecture 13. Zoonotic spillover I
+
+- Lecture 14. Zoonotic spillover II 
+
+Problems 8.
+
+- Lecture 15. Ch 8. Controlling Infectious Disease - NPIs
+
+Problems 9.
+
+- Lecture 16. Ch 8. Controlling Infectious Disease - PIs
+
+Problems 10
+
+## Data, models, and decision support (Data)
+
+- Lecture 1.  What is a model? What are models used for? (conceptual, mechanistic, statistical; strengths of each; forecasting and counterfactuals. Chapter 1 of Otto and Day? Other references.)
+
+- Lecture 2. Compartmental model assumptions (approximations: GillespieSSA pair approximation). Agent-based models vs. branching processes. Limitations of different approaches.
+
+Problems 1. Explain what is meant by 'all models are wrong but some are useful' with an example of a model that is useful. Are models that are useful wrong in different ways than models that are not useful?
+
+- Lecture 3. Mechanistic models. Introduction to independent parameter estimation (rate parameters as reciprocals of mean time), overview of data sources available
+
+- Lecture 4. Fusing data sources (Ch. 9 Dietze). Basics of systematic reviews.
+
+Problems 2. Critical review of parameter estimates in modelling papers.
+
+- Lecture 5. Introduction to Bayes (Ch. 5 Dietze)
+
+- Lecture 6. Paramter uncertainty (Ch. 6 Dietze).
+
+Problems 3. Do a sensitivity analysis
+
+- Lecture 7. Latent variables (Ch. 8 Dietze) [reference](https://esajournals.onlinelibrary.wiley.com/doi/epdf/10.1002/fee.2530) (or other reference)
+
+- Lecture 8. Process error vs. observation error (Ch. 2 Dietze, Ch. 6.1 and 6.2 Rohani; pomp package?)
+
+Problems 4. Case study: estimation of Rt for different variants during COVID-19 (parameter portability).
+
+- Lecture 9. Analyzing uncertainty in forecasts (Ch. 11 Dietze)
+
+- Lecture 10. Data Assimilation I (Ch. 13 Dietze)
+
+Problems 5. 
+
+- Lecture 11.  Data Assimilation II (Ch. 14 Dietze)
+
+- Lecture 12. Case studies from Dietze.
+
+Problems 6.
+
+- Lecture 13. Assessing model performance (Ch. 16 Dietze). Validation
+
+- Lecture 14. Toy models for communication for decision support, ex. COVID-19: flatten the curve, $R_0$, $R_t$, doubling time, herd immunity, total mortality for highly transmissible variants. Forecasting models for decision support (Ch. 17 of Dietze)
+
+Problems 8.
+
+- Lecture 15. Counter-factuals for decision support
+
+Problems 9. Critical review of COVID-19 models for decision support (i.e. uncertainty quantification)
+
+- Lecture 16. Models and misinformation (some takehomes from Bergstrom book)
+
+Problems 10.
