@@ -1,6 +1,6 @@
 # Course 2. Data, models, and decision support
 
-This focuses on the role of models in decision support. We will explore types of models and their assumptions in relationship to available data and uncertainty in both parameter estimates, forecasts and model formulations. We will explore case studies where modelling has informed decision support. Some lectures will be from [Ecological forecasting](https://press.princeton.edu/books/hardcover/9780691160573/ecological-forecasting).
+Mathematical modelling best provides decision support when scientists are able to effectively communicate the data support for their recommendations. This involves understanding the models most appropriate for given questions, model assumptions, and communicating uncertainty. This course will cover types of models and what models can be used for, model parameterization and assumptions, forecasting, and model evaluation. We will explore case studies where modelling has informed decision support. Some lectures will be from [Ecological forecasting](https://press.princeton.edu/books/hardcover/9780691160573/ecological-forecasting).
 
 - Lecture 1.  What is a model? What are models used for? (conceptual, mechanistic, statistical; strengths of each; forecasting and counterfactuals. Chapter 1 of Otto and Day? Other references?)
 

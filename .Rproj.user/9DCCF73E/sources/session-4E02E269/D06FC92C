@@ -3,7 +3,7 @@
     "path": "~/Desktop/Work/Teaching/aarms-summer-school/index.Rmd",
     "project_path": "index.Rmd",
     "type": "r_markdown",
-    "hash": "452615546",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1677689875461.0,
@@ -12,8 +12,8 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "10,96",
-        "scrollLine": "0"
+        "cursorPosition": "10,89",
+        "scrollLine": "2"
     },
     "folds": "",
     "lastKnownWriteTime": 1677703368,
