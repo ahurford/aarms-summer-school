@@ -3,6 +3,7 @@ application-form
 details
 instructors
 guest-lecturers
+funding
 tentative-schedule
 course-1.-mathematical-epidemiology
 course-2.-data-models-and-decision-support

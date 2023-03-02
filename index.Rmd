@@ -41,3 +41,8 @@ Between the two courses, 7 hours of work is planned each day, expected to occur 
 
 ## Guest Lecturers
 - Dr. Brenda Wilson, Memorial University of Newfoundland and Labrador
+
+- TBD
+
+## Funding
+The summer school is funding by the [Atlantic Association for Research in the Mathematical Sciences](https://aarms.math.ca/), Mathematics for Public Health, CANMOD, OMNI, and Memorial University.
