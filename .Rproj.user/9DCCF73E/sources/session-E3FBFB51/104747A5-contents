@@ -1,0 +1,34 @@
+# Jan 24: Density dependent growth {#dd}
+
+## Required reading
+Vandermeer, J.H., Goldberg, D.E., 2013. Population Ecology: First Principles (Second Edition). Princeton University Press, Princeton, United States. p9-17. [Link](https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/detail.action?docID=1205619)
+
+## Questions
+
+1. What is the equation for continuous time logistic growth in its _classic form_? Define all the symbols in the equation by writing their meanings in words. Can $K$ be negative?
+
+1. What does dN/dt mean?
+
+1. Assume that $N < K$. For what values of $r$ will $N$ increase over time?
+
+1. Assume that $r > 0$ and $K > N$. Will $N$ increase or decrease in size over time? 
+
+1. Assume that $r,K \neq 0$. For what values of $N$ is the population size constant (i.e., not changing over time)?
+
+1. What is the main difference between exponential and logistic growth?
+
+1. Sketch a graph of the logistic growth equation, $\frac{dN(t)}{dt} = rN(t)\left(1 - \frac{N(t)}{K}\right)$,  with time, $t$, on the horizontal axis (x-axis), and population size $N(t)$, on the vertical (y-axis).
+
+a. Add to your graph a dashed line corresponding to the carrying capacity, $N(t) = K$. 
+b. Label on your graph, $N(0)$: the population size at $t=0$. 
+c. As drawn in your graph, is $N(0)<K$? i.e. is the population size at $t=0$ less than the carrying capacity, $K$? 
+d. As drawn, is $r > 0$? i.e. is the net reproductive rate when the population size is small, positive?
+e. What does it mean if $r<0$ in terms of the per capita birth rate when the population size is small, $b$, relative to the per capita death rate when the population size is small, $d$?
+f. If you answered 'yes' to c. add another line for $N(t)$, but when $N(0)>K$ (assume $r>0$). Note that $N(0)>K$ means that at time $t=0$ the population size, $N(0)$, is greater than the carrying capacity, $K$. 
+
+
+1. Draw a graph of a. exponential growth, $N(t) = N(0)e^{rt}$ or $\frac{dN(t)}{dt} = rN(t)$ (both are the same equation), and b. logistic growth $\frac{dN(t)}{dt} = rN(t)\left(1 - \frac{N(t)}{K}\right)$, where the value of $r$ is the same for both a. and b. 
+
+1. Draw a graph of logistic growth, where the population size is decreasing $\frac{dN(t)}{dt}<0$, but positive $N(t)>0$. Give a condition on the initial value of $N(0)$ or the per capita net reproductive rate when the population size is small, $r$, such that the population size is decreasing, $\frac{dN(t)}{dt}<0$, but positive, $N(t)>0$. 
+
+

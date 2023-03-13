@@ -2,56 +2,36 @@
 
 Mathematical modelling best provides decision support when scientists are able to effectively communicate the data support for their recommendations. This involves understanding the models most appropriate for given questions, model assumptions, and communicating uncertainty. This course will cover types of models and what models can be used for, model parameterization and assumptions, forecasting, and model evaluation. We will explore case studies where modelling has informed decision support. Some lectures will be from [Ecological forecasting](https://press.princeton.edu/books/hardcover/9780691160573/ecological-forecasting).
 
-- Lecture 1.  What is a model? What are models used for? (conceptual, mechanistic, statistical; strengths of each; forecasting and counterfactuals. Chapter 1 of Otto and Day? Other references?)
+- Lecture 1.  What is a model? What are models used for? (conceptual, mechanistic, statistical; strengths of each; forecasting and counterfactuals. Chapter 1 of Otto and Day? Other references?). Compartmental model assumptions (approximations: GillespieSSA pair approximation). Agent-based models vs. branching processes. Limitations of different approaches.
 
-- Lecture 2. Compartmental model assumptions (approximations: GillespieSSA pair approximation). Agent-based models vs. branching processes. Limitations of different approaches.
+- Lecture 2. Parameter estimation (i,e., independent parameter estimation - rate parameters as reciprocals of mean time) and working with data. (See also Ch 3. of Dietze and [Exercise 3](https://github.com/EcoForecast/EF_Activities/blob/master/Exercise_03_BigData.Rmd))
 
-**Problems 1. Write 3-4 paragraphs to explain what is meant by 'all models are wrong but some are useful'. Include an example of a model that is useful. Identify ways in which models that are useful are wrong in different ways than models that are not useful.**
+**Problems 1. See [here](#course2-problems1)**
 
-- Lecture 3. Mechanistic models. Introduction to independent parameter estimation (rate parameters as reciprocals of mean time), overview of data sources available.
+- Lectures 3. & 4. Ch 2. Process error vs. observation error (and Ch. 6.1 and 6.2 of [Modelling Infectious Diseases in Humans and Animals](http://www.modelinginfectiousdiseases.org/))
 
-- Lecture 4. Ch 2. Process error vs. observation error (and Ch. 6.1 and 6.2 of [Modelling Infectious Diseases in Humans and Animals](http://www.modelinginfectiousdiseases.org/))
+**Problems 2. [Exercise 2 from Ecological forecasting](https://github.com/EcoForecast/EF_Activities/blob/master/Exercise_02_Logistic.Rmd)**
 
-**Problems 2. Critical review of parameter estimates in modelling papers.**
+- Lectures 5. & 6.  Ch 5. Introduction to Bayes
 
-- Lecture 5. Ch 5. Introduction to Bayes
+**Problems 3. [Exercise 5 - Just Another Gibbs Sampler](https://github.com/EcoForecast/EF_Activities/blob/master/Exercise_05_JAGS.Rmd)**
 
-- Lecture 6. Ch 6. Parameter uncertainty
+- Lectures 7. & 8. Ch 6. Uncertainty
 
-**Problems 3. Do a sensitivity analysis**
+**Problems 4. [Chapter 6 Fitting uncertainties](https://github.com/EcoForecast/EF_Activities/blob/master/Chapter_06_FittingUncertainties.Rmd)**
 
-- Lecture 7. Ch 8. Latent variables. This [reference](https://esajournals.onlinelibrary.wiley.com/doi/epdf/10.1002/fee.2530) is interesting.
+- Lectures 9. & 10. Ch 8. Latent variables. This [reference](https://esajournals.onlinelibrary.wiley.com/doi/epdf/10.1002/fee.2530) is interesting.
 
-- Lecture 8. Ch 9. Fusing data sources.
+**Problems 5. [Exercise 6 from Ecological forecasting](https://github.com/EcoForecast/EF_Activities/blob/master/Exercise_06_StateSpace.Rmd)**
 
-**Problems 4. Case study: estimation of $R_t$ for different variants during COVID-19 (parameter portability & latent variables).**
+- Lectures 11. & 12. Ch. 11 Uncertainty
 
-- Lecture 9. Ch 11. Analyzing uncertainty in forecasts
+**Problems 6. [Chapter 11](https://github.com/EcoForecast/EF_ActivitiesChap)**
 
-- Lecture 10. Ch 13. Data Assimilation I
+- Lectures 13 & 14. TBD Ch. 13, 14, or 16 in Ecological forecasting. 
 
-**Problems 5.**
+**Problems 7. TBD**
 
-- Lecture 11.  Ch 14. Data Assimilation II
+- Lecture 15. Ch 17. Forecasting models for decision support. Toy models for communication for decision support, ex. COVID-19: flatten the curve, $R_0$, $R_t$, doubling time, herd immunity, total mortality for highly transmissible variants. Counterfactuals for decision support. Case studies (i.e., see Ecological Forecasting book)
 
-- Lecture 12. Case studies (i.e., see Ecological Forecasting book)
-
-**Problems 6.**
-
-- Lecture 13. Ch. 16 Assessing model performance. Validation
-
-- Lecture 14. Ch 17. Forecasting models for decision support. Toy models for communication for decision support, ex. COVID-19: flatten the curve, $R_0$, $R_t$, doubling time, herd immunity, total mortality for highly transmissible variants.
-
-**Problems 7.**
-
-- Lecture 15. Counterfactuals for decision support
-
-**Problems 8. Critical review of COVID-19 models for decision support (i.e., uncertainty quantification)**
-
-- Lecture 16. Models and misinformation
-
-**Problems 9.**
-
-
-
-
+**Problems 8. Critical review of COVID-19 models for decision support or see [here](https://github.com/EcoForecast/EF_ActivitiesChap) and [here](https://github.com/EcoForecast/EF_ActivitiesChap)**
