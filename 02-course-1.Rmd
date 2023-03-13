@@ -20,19 +20,19 @@ This course will cover different formulations and analyses for mathematical mode
 
 **Problems 3.** 
 
-- Lecture 7. Ch 6. Stochastic dynamics (models only, i.e. excluding 6.1 and 6.2) 
-
-- Lecture 8. Ch 7. Spatial models I
+- Lectures 7. & 8. Within-host dynamics (Heffernan)
 
 **Problems 4.**
 
-- Lecture 9. Ch 7. Spatial models II 
+- Lecture 9. Ch 6. Stochastic dynamics (models only, i.e. excluding 6.1 and 6.2) 
 
-- Lecture 10. Modelling importations (Arino)
+- Lecture 10. Ch 7. Spatial models I
 
 **Problems 5.**
 
-- Lectures 11 & 12. Within-host dynamics (Heffernan)
+- Lectures 11. Ch 7. Spatial models II 
+
+- Lecture 12. Modelling importations (Arino)
 
 **Problems 6.**
 
@@ -40,6 +40,6 @@ This course will cover different formulations and analyses for mathematical mode
 
 **Problems 7.**
 
-- Lecture 15. Ch 8. Controlling Infectious Disease
+- Lecture 15. Ch 8. Controlling Infectious Disease (Greer)
 
 **Problems 8.**
