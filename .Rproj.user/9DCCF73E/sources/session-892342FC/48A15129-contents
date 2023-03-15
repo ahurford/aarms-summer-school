@@ -1,0 +1,225 @@
+--- 
+site: bookdown::bookdown_site
+documentclass: book
+bookdown::gitbook:
+  css: style.css
+---
+
+# 2023 AARMS-EIDM Summer School {-}
+
+```{r, include=F}
+require(ggplot2)
+require(cowplot)
+require(magick)
+require(patchwork)
+g1=ggplot() + 
+  draw_image("images/BBMS.jpg") 
+g2=ggplot() +
+  draw_image("images/lecture.jpg")
+g3=ggplot() +
+  draw_image("images/library.jpg")
+```
+```{r, echo=F}
+g1+(g2/g3)
+```
+
+**The AARMS-EIDM Summer School will take place at Bonne Bay Marine Station, located in Norris Point on the west coast of Newfoundland.** Two graduate-level mathematics courses will be offered and run from August 19 to 31, 2023.  [Photo credit](https://commons.wikimedia.org/wiki/File:Bonnebaymarinestation.jpg)
+
+## Applications {-}
+<div class="alert alert-info">
+<center>
+**To apply for the summer school you must complete this [form](https://forms.gle/DcWMnRJtnNFKXMar6) by April 7, 2023.**
+</center>
+</div>
+
+## Details {-}
+
+Two courses will be offered for math graduate credit:
+
+- [Course 1.](#course1) Mathematical epidemiology, and
+
+- [Course 2.](#course2) Data, models, and decision support.
+
+Participants will take both courses.
+
+A pre-requisite problem set will be assigned to be submitted by August 19. This problem set will cover the preliminaries in dynamical systems, epidemiology, and modelling.
+
+Students will work in groups of 2-3 to complete a project (1 project for both courses). Ideas for project descriptions will be provided by the instructors. Specific expertise of the instructors includes spatial epidemiology, importations, within-host models, zoonotic spillover, and COVID-19. 
+
+Between the two courses, 7 hours of work is planned each day, expected to occur between 8.30am and 5.30pm with exact times to be determined. Students should also capitalize on being together to work on their projects if they wish, during unscheduled hours. The summer school will feature 3 guest lecturers.
+
+## Instructors {-}
+- [Dr. Julien Arino](https://julien-arino.github.io/), University of Manitoba
+
+- [Dr. Amy Greer](https://ovc.uoguelph.ca/population-medicine/faculty/amy-greer), Guelph University
+
+- [Dr. Jane Heffernan](https://news.yorku.ca/experts/?name_or_keyword=jane+heffernan&research_area=&submit=Search+the+Guide&search=Y), York University
+
+- [Dr. Amy Hurford](https://ahurford.github.io/website/#dr.-amy-hurford), Memorial University of Newfoundland and Labrador
+
+- [Dr. James Watmough](https://watmough.ext.unb.ca/), University of New Brunswick
+
+
+## Funding {-}
+```{r, include=F}
+g1=ggplot() + 
+  draw_image("images/AARMS.png") 
+g2=ggplot() +
+  draw_image("images/mfph.png")
+g3=ggplot() +
+  draw_image("images/canmod.png")
+g4=ggplot() +
+  draw_image("images/omni.png")
+g5=draw_image("images/mun.jpg")
+```
+```{r, echo=F, fig.width=5, fig.height=2}
+layout <- '
+ABC#
+'
+wrap_plots(D = g1, C = g2, B = g3, design = layout)
+```
+
+The summer school is funding by the [Atlantic Association for Research in the Mathematical Sciences](https://aarms.math.ca/), [Mathematics for Public Health](http://www.fields.utoronto.ca/activities/public-health), the [Canadian Network for Modelling Infectious Diseases](https://canmod.net/), the [One Health Modelling Network for Emerging Infections](https://omni-reunis.ca/), and [Memorial University](https://grenfell.mun.ca/academics-and-research/Pages/Bonne-Bay-Marine-Station.aspx).
+
+<!--chapter:end:index.Rmd-->
+
+# Tentative schedule {-}
+
+7 hours of work is scheduled August 20-30, with time to spend on projects increasing towards the end of the courses.
+
+- Saturday August 19: arrive
+
+- Sunday August 20: Both courses: lectures 1-2 + problems 1 (2 x 3hrs) + projects (1 hr)
+
+- Monday August 21: Both courses: lectures 3-4 + problems 2 + projects (1 hr)
+
+- Tues August 22: Both courses: lecture 5-6 + problems 3 + projects (1 hr)
+
+- Wed August 23: Both courses: lecture 7-8 + problems 4 + guest lecture 1
+
+- Thurs August 24: Both courses: lecture 9-10 + problems 5 + projects (1 hr)
+
+- Fri August 25: Both courses: lecture 11 (2 x 1 hr) + guest lecture 2 (1 hr) + projects (4 hrs)
+
+- Sat August 26: Both courses: lecture 12 (2 x 1 hr) + problems 6 (2 x 1 hr) + project (3 hr)
+
+- Sun August 27: Both courses: lecture 13 + guest lecture 3 (1 hr) + project (5 hrs)
+
+- Mon August 28: Both course: lecture 14 + problems 7 + project (3 hrs)
+
+- Tues August 29: Course 1: lecture 15 (1 hour) + problems 8 (1 hour) + project (5 hours)
+
+- Wed August 30: Course 2: lecture 15 + problems 8 + projects (5 hrs)
+
+<!--chapter:end:01-schedule.Rmd-->
+
+# Course 1. Mathematical Epidemiology {-}
+
+This course will cover different formulations and analyses for mathematical models in epidemiology. Topics include host heterogeneity, multiple pathogens, seasonality, spatial spread, within-host dynamics, and zoonotic spillover. Some lectures will be based on [Modelling Infectious Diseases in Humans and Animals](http://www.modelinginfectiousdiseases.org/) by Matt Keeling and Pejman Rohani (available as .pdf from MUN library).
+
+## Draft outline {-}
+
+- Lecture 1. Simple Epidemiological Models (Greer, [Ch 2](http://www.modelinginfectiousdiseases.org/)
+
+- Lecture 2. Host Heterogeneity  (Greer, [Ch 3](http://www.modelinginfectiousdiseases.org/))
+
+**Problems 1.**
+
+- Lecture 3. Host Heterogeneity (Greer, [Ch 3](http://www.modelinginfectiousdiseases.org/))
+
+- Lecture 4. Multipathogen/Multihost (Heffernan, [Ch 4](http://www.modelinginfectiousdiseases.org/))
+
+**Problems 2.**
+
+- Lecture 5. Pathogen evolution (Heffernan)
+
+- Lecture 6. Temporally-forced models ([Ch 5](http://www.modelinginfectiousdiseases.org/))
+
+**Problems 3.** 
+
+- Lectures 7. & 8. Within-host dynamics (Heffernan)
+
+**Problems 4.**
+
+- Lecture 9. Stochastic dynamics (Watmough, [Ch 6](http://www.modelinginfectiousdiseases.org/) models only i.e. excluding 6.1 and 6.2) 
+
+- Lecture 10. Spatial models (Arino, [Ch 7](http://www.modelinginfectiousdiseases.org/))
+
+**Problems 5.**
+
+- Lectures 11. Spatial models (Arino, [Ch 7](http://www.modelinginfectiousdiseases.org/))
+
+- Lecture 12. Modelling importations (Arino)
+
+**Problems 6.**
+
+- Lectures 13. & 14 Zoonotic spillover (Greer)
+
+**Problems 7.**
+
+- Lecture 15. Controlling Infectious Disease (Greer, [Ch 8](http://www.modelinginfectiousdiseases.org/))
+
+**Problems 8.**
+
+<!--chapter:end:02-course-1.Rmd-->
+
+# Course 2. Data, models, and decision support {-}
+
+During the COVID-19 pandemic mathematical modelling provided decision support through forecast modelling, exploration of counter-factual scenarios, and in guiding communication. This course will teach the technical skills to estimate model parameters, fit models to data, and describe the uncertainty of predictions. We will explore the use of models in public health communications during the COVID-19 pandemic to understand how models can best provide decision support. Some lectures will be from [Ecological forecasting](https://press.princeton.edu/books/hardcover/9780691160573/ecological-forecasting).
+
+- Lecture 1.  What is a model? What are models used for? (conceptual, mechanistic, statistical; forecasting and counter-factuals). Chapter 1 of Otto and Day? Other references?). Compartmental model assumptions (approximations: GillespieSSA pair approximation). Agent-based models vs. branching processes. Limitations of different approaches. (Heffernan)
+
+- Lecture 2. Parameter estimation (i,e., independent parameter estimation; rate parameters as reciprocals of mean time, types of data available), model selection for mechanistic models. (Watmough)
+
+**Problems 1. See [here](#course2-problems1)**
+
+- Lectures 3. & 4. Ch 2. Process error vs. observation error ([Ch 2](https://press.princeton.edu/books/hardcover/9780691160573/ecological-forecasting) and [Ch 6.1 and 6.2](http://www.modelinginfectiousdiseases.org/)) (Watmough)
+
+**Problems 2. [Exercise 2 from Ecological forecasting](https://github.com/EcoForecast/EF_Activities/blob/master/Exercise_02_Logistic.Rmd)**
+
+- Lectures 5. & 6.  Ch 5. Introduction to Bayes (Hurford)
+
+**Problems 3. [Exercise 5 - Just Another Gibbs Sampler](https://github.com/EcoForecast/EF_Activities/blob/master/Exercise_05_JAGS.Rmd)**
+
+- Lectures 7. & 8. Ch 6. Uncertainty (Watmough)
+
+**Problems 4. [Chapter 6 Fitting uncertainties](https://github.com/EcoForecast/EF_Activities/blob/master/Chapter_06_FittingUncertainties.Rmd)**
+
+- Lectures 9. & 10. Ch 8. Latent variables. This [reference](https://esajournals.onlinelibrary.wiley.com/doi/epdf/10.1002/fee.2530) is interesting. (Arino)
+
+**Problems 5. [Exercise 6 from Ecological forecasting](https://github.com/EcoForecast/EF_Activities/blob/master/Exercise_06_StateSpace.Rmd)**
+
+- Lectures 11. & 12. Ch. 11 Uncertainty (Hurford)
+
+**Problems 6. [Chapter 11](https://github.com/EcoForecast/EF_ActivitiesChap)**
+
+- Lectures 13 & 14. TBD Ch. 13, 14, or 16 in Ecological forecasting. (Watmough)
+
+**Problems 7. TBD**
+
+- Lecture 15. Models for decision support. Ch 17. Forecasting models for decision support. Toy models for communication for decision support, ex. COVID-19: flatten the curve, $R_0$, $R_t$, doubling time, herd immunity, total mortality for highly transmissible variants. Counterfactuals for decision support. Case studies (i.e., see Ecological Forecasting book) (Hurford)
+
+**Problems 8. Critical review of COVID-19 models for decision support or see [here](https://github.com/EcoForecast/EF_ActivitiesChap) and [here](https://github.com/EcoForecast/EF_ActivitiesChap)**
+
+<!--chapter:end:03-course-2.Rmd-->
+
+# Problems {-}
+
+## Course 2. Problems 1. {#course2-problems1 .unlisted .unnumbered}
+
+Write 3-4 paragraphs or ~1 page (if including a figure and/or list of selected references.) Address some of these topics:
+
+ - 'All models are wrong but some are useful'. Given an example of a model that is useful.
+ 
+ - Identify ways in which models that are useful are wrong in different ways than models that are not useful.
+ 
+ - Define model, topic, and question.
+
+- Review data sources available for epidemiological modelling.
+
+- How does data availability and computational limitations affect determinations of whether models are _wrong?_
+
+- Give a list of relevant references. Draw a conceptual diagram to illustrate your ideas.**
+
+<!--chapter:end:Course-2-problem-1.Rmd-->
+
