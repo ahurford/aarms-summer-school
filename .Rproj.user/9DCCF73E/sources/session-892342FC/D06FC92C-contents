@@ -77,7 +77,7 @@ g5=ggplot() +
 
 Summer school participants will have their accommodation and meal costs covered. Accommodations will be booked for participants. Participants are responsible for organizing their own transportation to Bonne Bay Marine Station.
 
-The summer school is funded by the [Atlantic Association for Research in the Mathematical Sciences](https://aarms.math.ca/), [Mathematics for Public Health](http://www.fields.utoronto.ca/activities/public-health), the [Canadian Network for Modelling Infectious Diseases](https://canmod.net/), the [One Health Modelling Network for Emerging Infections](https://omni-reunis.ca/), and [Memorial University](https://grenfell.mun.ca/academics-and-research/Pages/Bonne-Bay-Marine-Station.aspx).
+The summer school is supported by the [Atlantic Association for Research in the Mathematical Sciences](https://aarms.math.ca/), [Mathematics for Public Health](http://www.fields.utoronto.ca/activities/public-health), the [Canadian Network for Modelling Infectious Diseases](https://canmod.net/), the [One Health Modelling Network for Emerging Infections](https://omni-reunis.ca/), [Memorial University](https://grenfell.mun.ca/academics-and-research/Pages/Bonne-Bay-Marine-Station.aspx), and the [Canadian Centre for Disease Modelling](https://www.yorku.ca/science/cdm/).
 
 ```{r, echo=F, fig.width=6, fig.height=1}
 layout <- '
