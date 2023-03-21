@@ -1,0 +1,47 @@
+# Course 1. Mathematical Epidemiology {-}
+
+This course will cover different formulations and analyses for mathematical models in epidemiology. Topics include host heterogeneity, multiple pathogens, seasonality, spatial spread, within-host dynamics, and zoonotic spillover. Some lectures will be based on [Modelling Infectious Diseases in Humans and Animals](http://www.modelinginfectiousdiseases.org/) by Matt Keeling and Pejman Rohani (available as .pdf from MUN library).
+
+## Draft outline {-}
+
+- Lecture 1. Simple Epidemiological Models (Greer, [Ch 2](http://www.modelinginfectiousdiseases.org/)
+
+- Lecture 2. Host Heterogeneity  (Greer, [Ch 3](http://www.modelinginfectiousdiseases.org/))
+
+**Problems 1.**
+
+- Lecture 3. Host Heterogeneity (Greer, [Ch 3](http://www.modelinginfectiousdiseases.org/))
+
+- Lecture 4. Multipathogen/Multihost (Heffernan, [Ch 4](http://www.modelinginfectiousdiseases.org/))
+
+**Problems 2.**
+
+- Lecture 5. Pathogen evolution (Heffernan)
+
+- Lecture 6. Temporally-forced models ([Ch 5](http://www.modelinginfectiousdiseases.org/))
+
+**Problems 3.** 
+
+- Lectures 7. & 8. Within-host dynamics (Heffernan)
+
+**Problems 4.**
+
+- Lecture 9. Stochastic dynamics (Watmough, [Ch 6](http://www.modelinginfectiousdiseases.org/) models only i.e. excluding 6.1 and 6.2) 
+
+- Lecture 10. Spatial models (Arino, [Ch 7](http://www.modelinginfectiousdiseases.org/))
+
+**Problems 5.**
+
+- Lectures 11. Spatial models (Arino, [Ch 7](http://www.modelinginfectiousdiseases.org/))
+
+- Lecture 12. Modelling importations (Arino)
+
+**Problems 6.**
+
+- Lectures 13. & 14 Zoonotic spillover (Greer)
+
+**Problems 7.**
+
+- Lecture 15. Controlling Infectious Disease (Greer, [Ch 8](http://www.modelinginfectiousdiseases.org/))
+
+**Problems 8.**
