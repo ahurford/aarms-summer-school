@@ -42,9 +42,9 @@ Two courses will be offered:
 
 - [Course 2.](#course2) Data, models, and decision support.
 
-Participants will take both courses and receive a grade and certificate of completion that may be used to transfer credit to the home institution. The intended audience for the courses are math graduate students who would like to take these courses for credit. The course is also suitable for undergraduates with an interest in mathematical biology (and who have completed the relevant pre-requisite coursework), and advanced graduate students and postdoctoral fellows, who are interested in working collaboratively on an innovative project to advance infectious disease modelling to support public health decision-making.
+Participants will take both courses and receive a grade and certificate of completion that may be used to transfer credit to the home institution. The intended audience for the courses are math graduate students who would like to take these courses for credit. The course is also suitable for undergraduates with an interest in mathematical biology (and who have completed the relevant pre-requisite coursework), and advanced graduate students and postdoctoral fellows, who are interested in working collaboratively on an innovative project to advance infectious disease modelling to support decision-making in public health.
 
-Applicants should have completed undergraduate courses in mathematical modelling, dynamical systems, statistics, and be able to code in R and/or python. For applicants that do not have these prerequisites we will assign pre-requisite problems to help interested applicants prepare for the summer school.
+Applicants should have completed undergraduate courses in mathematical modelling, dynamical systems, statistics, and be able to code in R and/or python. Pre-requisite problems will be assigned to applicants that are missing some of these pre-requisites, but are interested in attending the summer school.
 
 From August 20 to 30, 7 hours of work are planned to occur at [Bonne Bay Marine Station](https://grenfell.mun.ca/academics-and-research/Pages/Bonne-Bay-Marine-Station.aspx). Participants should capitalize on being together in one location to work efficiently on projects.
 
