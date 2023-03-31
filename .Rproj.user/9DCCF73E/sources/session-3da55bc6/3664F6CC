@@ -3,7 +3,7 @@
     "path": "~/Desktop/Work/Teaching/aarms-summer-school/01-course-1.Rmd",
     "project_path": "01-course-1.Rmd",
     "type": "r_markdown",
-    "hash": "0",
+    "hash": "1524300319",
     "contents": "",
     "dirty": false,
     "created": 1677694425331.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "7,18",
+        "cursorPosition": "5,137",
         "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1679368275,
+    "lastKnownWriteTime": 1680283449,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1679368275383,
+    "last_content_update": 1680283449872,
     "read_only": false,
     "read_only_alternatives": []
 }
