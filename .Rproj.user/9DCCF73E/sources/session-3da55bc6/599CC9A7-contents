@@ -12,4 +12,8 @@ AARMS Summer School format:
 - 1 guest lecture (1 hour)
 - In-class exercises/group work (19 hours)
 
+Software:
+- RStudio and R
+- To be able to install `rjags` you will need to first install [JAGS](http://mcmc-jags.sourceforge.net/)
+
 Students will work in groups of 2-3 to complete a project. Project descriptions will be provided by the instructors. Specific expertise of the instructors includes spatial epidemiology, importations, within-host models, zoonotic spillover, and COVID-19.
