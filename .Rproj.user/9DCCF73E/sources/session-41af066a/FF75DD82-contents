@@ -1,0 +1,96 @@
+---
+title: "AAMRS-EIDM Summer school funding request to OMNI-REUNIS"
+author: "Amy Hurford"
+date: "`r Sys.Date()`"
+output:
+  word_document: default
+  html_document: default
+---
+
+We are requesting $25,000 from OMNI-REUNIS to support the AARMS-EIDM summer school. This is the same amount that was contributed by Mathematics for Public Health (MfPH) and CANMOD. Below is the budget for the event. Details of the event are available [here](https://aarms.math.ca/summer-school/school2023/).
+
+We received 64 applications for the AARMS summer school. Hurford, Greer, Watmough, and Heffernan reviewed the applications and offered admission to 43 participants. We were not able to support more students, but we believe we were able to admit all applicants enrolled in universities in Atlantic Canada, graduate students in mathematical modelling, and involved in OMNI, MfPH, and CANMOD projects. Of invited participants, 41 have confirmed attendance, 1 has not replied, and 1 has withdrawn (but will likely be replaced by a late expression of interest).
+
+### Accomodation expenses
+
+Memorial University (MUNL) contributed $10,000 but to be used only to support MUNL students. The cost for accommodations for MUN students (9) is estimated `r format(169*12 + 100*7*12, scientific = F)`.
+
+Accommodation costs are estimated for 12 nights as $ 100 per person per night at Bonne Bay Marine Station (24 participants), Ocean Atlantic Cottages $ 169 per night x 5 cottages (10 participants),  Out East B & B (7 participants) $ 7976.40 for the duration, The exposure AirBnB (2 participants) $ `r format(2165.26 + 1805.34, scientific=F)` (11 nights). A. Hurford is booked for 11 nights at The Tides ($245 per night), and 2 participants have 1 night at the the Tides before The Exposure becomes available.
+
+There are 5 instructors: Hurford, Greer, Heffernan, Watmough, and Arino. Instructor accommodation is budgeted at $ 250 per night for 12 days (except for Hurford who is included under The Tides).
+
+The estimated accommodation costs below exclude MUN students.
+
+
+```{r, include=F}
+Venue = c("The Exposure", "OutEast B&B", "Ocean Atlantic Cottages", "Bonne Bay Marine Station", "The Tides", "4 instructors", 
+          "MUN not covered")
+
+cost =  c(2165.26 + 1805.34, 7976.40, 169*12*(5-1), (24 - 7)*100*12, 295 + 2695 + 245, 250*12*4,428)
+total1 = sum(cost)
+
+accomodation = data.frame(Venue = c(Venue, "Total"), cost = c(cost, total1))
+```
+```{r, echo=F}
+accomodation
+```
+
+### Meal expenses
+There are few restuarants and grocery stores near the summer school venue. 31 participants are part of the Bonne Bay Marine Station meal plan budgeted at $ 70 per day for 12 days. The remaining participants and instructors will receive $ 50 per day at the MUN per diem rate.
+
+```{r, include=FALSE}
+Venue = c("Bonne Bay", "per diem")
+cost = c(70*12*31, 50*12*(10+2+5))
+total2 = sum(cost)
+food = data.frame(Venue = c(Venue, "Total"), cost = c(cost, total2))
+```
+```{r,echo=F}
+food
+```
+
+### Other costs
+Coffee breaks are budgeted at $ 5 per person x 2 per day. Ground transportation from Deer Lake airport to Norris point is by taxi at $ 120 per trip. Budgeting assumes 2 people per trip, and 2 trips for 40 people. We budget for 60 teaching assistant hours at $19.15 x 2 courses.
+
+```{r, include=FALSE}
+Expense = c("Instructor travel", "Coffee", "Facility rental","TA", "Ground transport")
+cost = c(9000, 5*45*12*2, 3000, 19.15*120, 120*40)
+total3 = sum(cost)
+other = data.frame(Expense = c(Expense, "Total"), cost = c(cost, total3))
+Total = total1+total2+total3
+```
+
+```{r, echo=F}
+other
+```
+
+### Total expenses
+```{r, echo=F}
+Total
+```
+
+### Total revenue
+Total revenue excludes $10,000 which was solely to be used to support MUN students, and assumes $25,000 from OMNI.
+
+```{r, include=F}
+Revenue = c("AARMS", "MfPH", "CANMOD", "OMNI")
+values = c(46750, 25000,25000,25000)
+total.rev = sum(values)
+Revenue = data.frame(Revenue = c(Revenue, "Total"), cost = c(values, total.rev))
+```  
+
+```{r,echo=F}
+Revenue
+```
+
+Overall, the budget projects a surplus of $ `r total.rev - Total`. We are asking for quite a lot of support from the Bonne Bay Station Managers, I expect we will incur additional charges for this support. Some aspects of the budget are estimated, such that a surplus of this amount is reasonable for the event to run on budget. 
+
+#### EIDM-based travel support
+
+Expenses to attend the summer school that are not covered, are the cost of getting to Deer Lake, NL. It might be difficult for me to budget and administer this. For EIDMs with projected surpluses, perhaps you could run your own travel support program to fund some participants costs to getting to Deer Lake, NL. Below are the results of a participant survey that was completed by 39 participants.
+
+
+
+
+
+
+<!-- A. Hurford has been reimbursed for $ 3,862. This was for accommodation deposits made for The Exposure ($ 2,165.26), Out East B&B ($ 782) and The Tides reservations for A. Hurford and A. Ludwig. A. Hurford did not request an advance on the deposit for the 1-night reservation for R. Falcao. A. Greer was denied a travel advance. -->

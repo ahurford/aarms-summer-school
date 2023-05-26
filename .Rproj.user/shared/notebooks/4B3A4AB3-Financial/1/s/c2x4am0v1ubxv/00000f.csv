@@ -1,0 +1,4 @@
+"0","Revenue = c(""AARMS"", ""MfPH"", ""CANMOD"", ""OMNI"")"
+"0","values = c(46750, 25000,25000,25000)"
+"0","total.rev = sum(values)"
+"0","Revenue = data.frame(Revenue = c(Revenue, ""Total""), cost = c(values, total.rev))"
