@@ -296,20 +296,14 @@ calendar(view = "week", defaultDate = "2023-08-19 15:00:00") %>%
     title = "Guest lecture",
     calendarId=2,
     body = "Brenda Wilson",
-    start = "2023-08-25 10:00:00",
-    end = "2023-08-25 11:00:00")%>%
-  cal_schedules(
-    title = "Projects",
-    body = "",
-    calendarId=2,
-    start = "2023-08-25 11:00:00",
-    end = "2023-08-25 12:00:00")%>%
+    start = "2023-08-25 13:00:00",
+    end = "2023-08-25 14:00:00")%>%
   cal_schedules(
     title = "Importations",
     body = "MATH 6115",
     calendarId = 6,
-    start = "2023-08-25 13:00:00",
-    end = "2023-08-25 14:00:00")%>%
+    start = "2023-08-25 10:00:00",
+    end = "2023-08-25 11:00:00")%>%
     cal_schedules(
     title = "Coffee",
     calendarId = 4,
@@ -319,13 +313,13 @@ calendar(view = "week", defaultDate = "2023-08-19 15:00:00") %>%
     title = "Problems 1.6",
     body = "",
     calendarId=6,
-    start = "2023-08-25 14:30:00",
-    end = "2023-08-25 15:30:00")%>%
+    start = "2023-08-25 11:00:00",
+    end = "2023-08-25 12:00:00")%>%
   cal_schedules(
     title = "Projects",
     body = "",
     calendarId = 3,
-    start = "2023-08-25 16:30:00",
+    start = "2023-08-25 14:30:00",
     end = "2023-08-25 17:30:00")%>%
   cal_props(props)
   
