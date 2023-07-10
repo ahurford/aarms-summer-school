@@ -21,6 +21,7 @@ calendar(view = "week", defaultDate = "2023-08-19 15:00:00") %>%
     calendarId = 4,
     start = "2023-08-19 15:00:00",
     end = "2023-08-19 20:00:00")%>%
+  ####### Monday August 20
   cal_schedules(
     calendarId=1,
     title = "Simple epidemiological models",
@@ -73,7 +74,7 @@ calendar(view = "week", defaultDate = "2023-08-19 15:00:00") %>%
     calendarId = 6,
     start = "2023-08-20 16:30:00",
     end = "2023-08-20 17:30:00")%>%
-#####################
+##################### Tuesday Aug 21
   cal_schedules(
     calendarId=1,
     title = "Host heterogeneity",
@@ -126,7 +127,7 @@ calendar(view = "week", defaultDate = "2023-08-19 15:00:00") %>%
     calendarId = 1,
     start = "2023-08-21 16:30:00",
     end = "2023-08-21 17:30:00")%>%
-##############
+############## Wed Aug 22
   cal_schedules(
     calendarId=3,
     title = "Within-host dynamics",
@@ -179,7 +180,7 @@ calendar(view = "week", defaultDate = "2023-08-19 15:00:00") %>%
     calendarId = 5,
     start = "2023-08-22 16:30:00",
     end = "2023-08-22 17:30:00")%>%
-#################
+################# Thurs Aug 23
   cal_schedules(
     calendarId=3,
     title = "Pathogen evolution",
@@ -232,7 +233,7 @@ calendar(view = "week", defaultDate = "2023-08-19 15:00:00") %>%
     calendarId = 3,
     start = "2023-08-23 16:30:00",
     end = "2023-08-23 17:30:00")%>%
-################
+################ Thurs Aug 24
   cal_schedules(
     calendarId=6,
     title = "Stochastic dynamics",
@@ -279,13 +280,7 @@ calendar(view = "week", defaultDate = "2023-08-19 15:00:00") %>%
     body = "",
     start = "2023-08-24 15:30:00",
     end = "2023-08-24 16:30:00")%>%
-  cal_schedules(
-    title = "Projects",
-    body = "",
-    calendarId = 1,
-    start = "2023-08-24 16:30:00",
-    end = "2023-08-24 17:30:00")%>%
-  ##############
+  ############## Fri Aug 25
   cal_schedules(
     calendarId=6,
     title = "Spatial models",
@@ -299,8 +294,8 @@ calendar(view = "week", defaultDate = "2023-08-19 15:00:00") %>%
     end = "2023-08-25 10:00:00")%>%
   cal_schedules(
     title = "Guest lecture",
-    calendarId=4,
-    body = "",
+    calendarId=2,
+    body = "Brenda Wilson",
     start = "2023-08-25 10:00:00",
     end = "2023-08-25 11:00:00")%>%
   cal_schedules(
@@ -330,7 +325,7 @@ calendar(view = "week", defaultDate = "2023-08-19 15:00:00") %>%
     title = "Projects",
     body = "",
     calendarId = 3,
-    start = "2023-08-25 15:30:00",
+    start = "2023-08-25 16:30:00",
     end = "2023-08-25 17:30:00")%>%
   cal_props(props)
   
@@ -344,6 +339,7 @@ calendar(view = "week", defaultDate = "2023-08-26 15:00:00") %>%
     hourStart = 8,
     hourEnd = 18
   )%>%
+  ####### Sunday August 26
 cal_schedules(
     calendarId=6,
     title = "Data assimilation",
@@ -384,7 +380,7 @@ cal_schedules(
     calendarId=3,
     start = "2023-08-26 14:30:00",
     end = "2023-08-26 17:30:00")%>%
-   #######
+   ####### Monday Aug 27
   cal_schedules(
     calendarId=1,
     title = "Zoonotic spillover",
@@ -425,7 +421,7 @@ cal_schedules(
     calendarId=6,
     start = "2023-08-27 14:30:00",
     end = "2023-08-27 17:30:00")%>%
-  #######
+  ####### Tuesday Aug 28
 cal_schedules(
     calendarId=5,
     title = "Assessing model performance",
@@ -450,9 +446,9 @@ cal_schedules(
     start = "2023-08-28 11:00:00",
     end = "2023-08-28 12:00:00")%>%
   cal_schedules(
-    title = "Guest lecture",
+    title = "Projects",
     body = "",
-    calendarId = 4,
+    calendarId = 2,
     start = "2023-08-28 13:00:00",
     end = "2023-08-28 14:00:00")%>%
     cal_schedules(
@@ -466,7 +462,7 @@ cal_schedules(
     calendarId=2,
     start = "2023-08-28 14:30:00",
     end = "2023-08-28 17:30:00")%>%
-    #######
+    ####### Wed Aug 29
 cal_schedules(
     calendarId=1,
     title = "Controlling infectious disease",
@@ -506,7 +502,7 @@ cal_schedules(
     calendarId=1,
     start = "2023-08-29 14:30:00",
     end = "2023-08-29 17:30:00")%>%
-  #######
+  ####### Thurs Aug 30
 cal_schedules(
     calendarId=2,
     title = "Models for decision support",
