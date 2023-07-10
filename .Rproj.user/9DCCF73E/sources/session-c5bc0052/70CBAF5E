@@ -3,7 +3,7 @@
     "path": "~/Desktop/Work/Teaching/aarms-summer-school/03-schedule.Rmd",
     "project_path": "03-schedule.Rmd",
     "type": "r_markdown",
-    "hash": "2149571634",
+    "hash": "1286224449",
     "contents": "",
     "dirty": false,
     "created": 1685031089182.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "281,35",
-        "scrollLine": "280"
+        "cursorPosition": "264,26",
+        "scrollLine": "260"
     },
     "folds": "",
-    "lastKnownWriteTime": 1688966512,
+    "lastKnownWriteTime": 1688966632,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1688966512926,
+    "last_content_update": 1688966632434,
     "read_only": false,
     "read_only_alternatives": []
 }
