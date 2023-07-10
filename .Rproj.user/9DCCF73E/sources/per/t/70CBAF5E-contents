@@ -69,8 +69,8 @@ calendar(view = "week", defaultDate = "2023-08-19 15:00:00") %>%
     start = "2023-08-20 15:30:00",
     end = "2023-08-20 16:30:00")%>%
   cal_schedules(
-    title = "Projects",
-    body = "",
+    title = "Data portal",
+    body = "Presentation by Bouchra Nasri",
     calendarId = 6,
     start = "2023-08-20 16:30:00",
     end = "2023-08-20 17:30:00")%>%
@@ -122,8 +122,8 @@ calendar(view = "week", defaultDate = "2023-08-19 15:00:00") %>%
     start = "2023-08-21 15:30:00",
     end = "2023-08-21 16:30:00")%>%
   cal_schedules(
-    title = "Projects",
-    body = "",
+    title = "Data portal",
+    body = "Presentation by Steve Walker",
     calendarId = 1,
     start = "2023-08-21 16:30:00",
     end = "2023-08-21 17:30:00")%>%
@@ -295,7 +295,7 @@ calendar(view = "week", defaultDate = "2023-08-19 15:00:00") %>%
   cal_schedules(
     title = "Guest lecture",
     calendarId=2,
-    body = "Brenda Wilson",
+    body = "Presentation by Brenda Wilson",
     start = "2023-08-25 13:00:00",
     end = "2023-08-25 14:00:00")%>%
   cal_schedules(
@@ -322,8 +322,6 @@ calendar(view = "week", defaultDate = "2023-08-19 15:00:00") %>%
     start = "2023-08-25 14:30:00",
     end = "2023-08-25 17:30:00")%>%
   cal_props(props)
-  
-
 
 
 calendar(view = "week", defaultDate = "2023-08-26 15:00:00") %>% 
