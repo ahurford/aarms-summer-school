@@ -99,7 +99,7 @@ calendar(view = "week", defaultDate = "2023-08-19 15:00:00") %>%
     start = "2023-08-21 11:00:00",
     end = "2023-08-21 12:00:00")%>%
   cal_schedules(
-    title = "Parameter estimation for the literature",
+    title = "Parameter estimation from the literature",
     body = "STAT 6571. See syllabus for readings",
     calendarId = 5,
     start = "2023-08-21 13:00:00",
