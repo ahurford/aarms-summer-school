@@ -21,7 +21,7 @@ calendar(view = "week", defaultDate = "2023-08-26 15:00:00") %>%
 cal_schedules(
     calendarId=6,
     title = "Data assimilation",
-    body = "STAT 6571. Chapter 11 of Dietze",
+    body = "STAT 6571. Chapter 13 of Dietze",
     start = "2023-08-26 08:30:00",
     end = "2023-08-26 09:30:00")%>%
       cal_schedules(
@@ -32,7 +32,7 @@ cal_schedules(
   cal_schedules(
     title = "Data assimilation",
     calendarId=6,
-    body = "STAT 6571. Chapter 11 of Dietze",
+    body = "STAT 6571. Chapter 14 of Dietze",
     start = "2023-08-26 10:00:00",
     end = "2023-08-26 11:00:00")%>%
   cal_schedules(
@@ -103,7 +103,7 @@ cal_schedules(
 cal_schedules(
     calendarId=5,
     title = "Assessing model performance",
-    body = "STAT 6571",
+    body = "STAT 6571. Ch 16 of Dietze",
     start = "2023-08-28 08:30:00",
     end = "2023-08-28 09:30:00")%>%
       cal_schedules(
@@ -112,9 +112,9 @@ cal_schedules(
     start = "2023-08-28 09:30:00",
     end = "2023-08-28 10:00:00")%>%
   cal_schedules(
-    title = "Ecological forecasting",
+    title = "Ecological forecasting - case studies",
     calendarId=5,
-    body = "STAT 6571",
+    body = "STAT 6571. Ch 7,10,12 and 15 of Dietze",
     start = "2023-08-28 10:00:00",
     end = "2023-08-28 11:00:00")%>%
   cal_schedules(
