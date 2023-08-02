@@ -23,16 +23,8 @@ g3=ggplot() +
 g1+(g2/g3)
 ```
 
+
 **The AARMS-EIDM Summer School will take place at [Bonne Bay Marine Station](https://grenfell.mun.ca/academics-and-research/Pages/Bonne-Bay-Marine-Station.aspx), located in Norris Point on the west coast of Newfoundland.** Two graduate-level mathematics courses will be offered from August 19 to 31, 2023.  [Photo credit](https://commons.wikimedia.org/wiki/File:Bonnebaymarinestation.jpg)
-
-## Applications {-}
-<div class="alert alert-info">
-<center>
-**To apply for the summer school you must complete this [form](https://forms.gle/DcWMnRJtnNFKXMar6) by April 7, 2023.**
-
-Space is limited. Interested participants are encouraged to apply early so that we can accommodate the maximum number of participants.
-</center>
-</div>
 
 ## Details {-}
 
@@ -60,6 +52,15 @@ From August 20 to 30, 7 hours of work are planned to occur at [Bonne Bay Marine 
 
 - [Dr. James Watmough](https://watmough.ext.unb.ca/), University of New Brunswick
 
+## Guest lecturers {-}
+
+- [Dr. Bouchra Nasri](https://www.bouchrarnasri.com/), Universite de Montreal
+
+- [Dr. Steve Walker](https://github.com/stevencarlislewalker), McMaster University
+
+- [Dr. Brenda Wilson](https://www.mun.ca/medicine/faculty-and-staff-resources/faculty-a-z/wilson-brenda.php), Memorial University
+
+- [Dr. Edward Thommes](https://sites.google.com/view/ewthommes/home), Sanofi Pasteur
 
 ## Funding {-}
 ```{r, include=F}

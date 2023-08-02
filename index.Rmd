@@ -60,7 +60,7 @@ From August 20 to 30, 7 hours of work are planned to occur at [Bonne Bay Marine 
 
 - [Dr. Brenda Wilson](https://www.mun.ca/medicine/faculty-and-staff-resources/faculty-a-z/wilson-brenda.php), Memorial University
 
-- [Dr. Edward Thommes](https://ca.linkedin.com/in/edward-thommes-6455a371), Sanofi Pasteur
+- [Dr. Edward Thommes](https://sites.google.com/view/ewthommes/home), Sanofi Pasteur
 
 ## Funding {-}
 ```{r, include=F}
