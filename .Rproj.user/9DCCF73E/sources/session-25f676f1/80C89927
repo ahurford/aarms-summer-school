@@ -1,7 +1,7 @@
 {
     "id": "80C89927",
-    "path": "~/Desktop/Work/Teaching/aarms-summer-school/03-schedule.Rmd",
-    "project_path": "03-schedule.Rmd",
+    "path": "~/Desktop/Work/Teaching/aarms-summer-school/04-schedule-1.Rmd",
+    "project_path": "04-schedule-1.Rmd",
     "type": "r_markdown",
     "hash": "1611185812",
     "contents": "",
@@ -20,7 +20,7 @@
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1690999277493,
+    "last_content_update": 1690999277,
     "read_only": false,
     "read_only_alternatives": []
 }

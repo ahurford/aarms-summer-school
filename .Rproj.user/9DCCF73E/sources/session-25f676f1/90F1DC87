@@ -1,9 +1,9 @@
 {
     "id": "90F1DC87",
-    "path": "~/Desktop/Work/Teaching/aarms-summer-school/04-schedule-2.Rmd",
-    "project_path": "04-schedule-2.Rmd",
+    "path": "~/Desktop/Work/Teaching/aarms-summer-school/05-schedule-2.Rmd",
+    "project_path": "05-schedule-2.Rmd",
     "type": "r_markdown",
-    "hash": "0",
+    "hash": "746070965",
     "contents": "",
     "dirty": false,
     "created": 1690999297013.0,
@@ -20,7 +20,7 @@
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1690999337108,
+    "last_content_update": 1690999337,
     "read_only": false,
     "read_only_alternatives": []
 }
