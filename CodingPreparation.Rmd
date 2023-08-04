@@ -1,4 +1,4 @@
-# Preparation for students with limited coding {.unlisted .unnumbered #prepcoding}
+# Preparation for students with limited coding experience {.unlisted .unnumbered #prepcoding}
 
 Coding involves some knowledge of specific languages (for the summer school this is R), however the most important coding skill is having a good idea for how to do what you want to do (i.e., writing pseudo-code), having experience solving similar problems (the summer school aims to give you this experience for your own future research), and being skilled at debugging.
 

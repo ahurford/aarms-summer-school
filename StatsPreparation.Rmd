@@ -1,0 +1,9 @@
+# Preparation for students with few stats courses {.unlisted .unnumbered #prepstats}
+
+The statistics covered in the Data, Models, and Decision support course focuses on bridging dynamical system models, such as those covered in Keeling and Rohani, with data. There is also an emphasis on mechanistically describing sources of uncertainty in model predictions.
+
+The topics covered in this course are statistical in nature, but the motivation and presentation is quite different from statistics courses.
+
+To prepare for the summer school, if you are inexperienced with statistics, I recommend revisiting some basic probability. For this you can read Primer 3 in _A Biologists Guide to Mathematical Modeling_ by Sarah P. Otto and Troy Day. In addition, while it will be covered at the summer school, it might help to read Chapter 4. Introduction to Bayes in the _Ecological forecasting_ book by Michael Dietze.
+
+Both these books are usually available for download as ebooks from university libraries.
