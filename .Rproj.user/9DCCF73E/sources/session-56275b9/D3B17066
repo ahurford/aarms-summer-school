@@ -1,12 +1,12 @@
 {
-    "id": "E77D16F6",
+    "id": "D3B17066",
     "path": "~/Desktop/Work/Teaching/aarms-summer-school/01-course-1.Rmd",
     "project_path": "01-course-1.Rmd",
     "type": "r_markdown",
-    "hash": "1243675927",
+    "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1691156986113.0,
+    "created": 1691158067391.0,
     "source_on_save": false,
     "relative_order": 4,
     "properties": {
@@ -20,7 +20,7 @@
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1691157705468,
+    "last_content_update": 1691157705,
     "read_only": false,
     "read_only_alternatives": []
 }
