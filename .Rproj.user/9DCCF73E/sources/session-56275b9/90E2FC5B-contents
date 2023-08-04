@@ -7,13 +7,16 @@ Mathematical models provide decision support through forecasting, describing unr
 
 AARMS Summer School format:
 
-- 15 lectures (15 hours)
-- 1 guest lecture (1 hour)
-- In-class exercises/group work (19 hours)
+- 15 lectures [schedule: [week 1](#week1); [week 2](#week2)]
+- 2 guest lectures [schedule: [week 1](#week1); [week 2](#week2)]
+- 8 problem sets [link](#mathepiprobs)
+- A final project [link](#projects)
+
+For participants with limited prior math courses, see [here](#prep) for suggested preparation.
 
 Software:
 
 - RStudio and R
 - To be able to install `rjags` you will need to first install [JAGS](http://mcmc-jags.sourceforge.net/)
 
-Students will work in groups of 2-3 to complete a project. Project descriptions will be provided by the instructors. Specific expertise of the instructors includes spatial epidemiology, importations, within-host models, zoonotic spillover, and COVID-19.
+

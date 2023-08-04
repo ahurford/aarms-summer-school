@@ -1,4 +1,4 @@
-# Tentative schedule - Week 1 {-}
+# Tentative schedule - Week 1 {.unnumbered #week1}
 
 ```{r, echo=F, warning=FALSE}
 library(toastui)
