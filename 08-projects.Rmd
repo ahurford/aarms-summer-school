@@ -21,4 +21,6 @@ Specific expertise of the instructors includes spatial epidemiology, importation
 
 1. [A guide for infectious disease models aimed to provide decision support](#SDM)
 
+2. [Forecasting sampled tick abundance](#ticks)
+
 
