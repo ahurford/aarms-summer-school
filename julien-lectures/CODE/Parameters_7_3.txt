@@ -1,0 +1,18 @@
+Grid_Size,_(Size_x_Size)
+			50
+Transmission_rates,_beta
+			1
+Recovery_rates,_gamma
+			0.1
+Birth_Rate,_nu
+			0.0001
+Coupling_parameter,_rho
+			0.1
+Initial_Susceptibles,_X0
+			0.1
+Number_Infected_Patches
+			4
+Number_of_Individuals_in_each_subpopulation,N_0
+			1.0
+Run_until_time
+			2000

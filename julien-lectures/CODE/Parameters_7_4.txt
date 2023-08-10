@@ -1,0 +1,14 @@
+Grid_Size,_(Size_x_Size)
+                        50
+Transmission_rates,_tau
+                        1
+Recovery_rates,_gamma
+                        0.1
+Birth_Rate,_nu
+                        0.01
+Import_Rate,_epsilon
+			0.001
+Time_step
+			0.1
+Run_until_time
+                        2000
