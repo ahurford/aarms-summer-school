@@ -2,5 +2,5 @@
 
 This directory will contain code for my lectures. 
 
-For convenience, I am including here all the code from the relevant chapters in [Modeling Infectious Diseases in Humans and Animals](http://www.modelinginfectiousdiseases.org/), by Keeling and Rohani. Refer to the book and that website for details (and the website for the latest version of the code).
+For convenience, I am including here all the code from the relevant chapters in [Modeling Infectious Diseases in Humans and Animals](http://www.modelinginfectiousdiseases.org/), by Keeling and Rohani. Refer to the book and that website for details (and the website for the latest version of the code). I will progressively remove these files as I convert them to `R`.
 
