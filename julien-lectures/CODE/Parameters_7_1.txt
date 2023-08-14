@@ -1,0 +1,22 @@
+Number_of_subpopulations,_n
+			5
+Transmission_rates,_beta_i
+			1 1 1 1 1
+Recovery_rates,_gamma_i
+			0.1 0.1 0.1 0.1 0.1
+Birth_rate,_nu_i
+			0.0001 0.0001 0.0001 0.0001 0.0001
+Death_rate,_mu_i
+			0.0001 0.0001 0.0001 0.0001 0.0001
+Movement_matrix,_m_ij
+			0    0.01 0.01 0.01 0.01
+			0.01 0    0.01 0.01 0.01
+			0.01 0.01 0    0.01 0.01
+			0.01 0.01 0.01 0    0.01
+			0.01 0.01 0.01 0.01 0
+Initial_Susceptibles
+			0.1 0.1 0.1 0.1 0.1
+Initial_Infecteds
+			0.0001 0 0 0 0
+Run_until_time
+			2190

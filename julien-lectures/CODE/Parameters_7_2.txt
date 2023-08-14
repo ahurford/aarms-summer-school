@@ -1,0 +1,26 @@
+Number_of_subpopulations,_N
+			5
+Transmission_rates,_beta_i
+			1 1 1 1 1
+Recovery_rates,_gamma_i
+			0.3 0.3 0.3 0.3 0.3
+Leaving_rate_matrix,_l_ij
+			0    0.1  0    0    0 
+			0. 1 0    0.1  0    0 
+			0    0.1  0    0.1  0 
+			0    0    0.1  0    0.1
+			0    0    0    0.1  0
+Return_rate_matrix,_r_ij
+			0 2 2 2 2
+			2 0 2 2 2
+			2 2 0 2 2
+			2 2 2 0 2
+			2 2 2 2 0
+Population_Sizes
+			1000 1000 1000 1000 1000
+Initial_Number_Susceptibles
+			800  800  800  800  800
+Initial_Number_Infecteds
+			1 0 0 0 0
+Run_until_time
+			60
