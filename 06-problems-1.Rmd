@@ -8,9 +8,6 @@
 \
 
 - **Problems 1.2 Host heterogeneity and Multipathogen/Multihost** (Chs 3 & 4 of Keeling and Rohani - Heffernan; TA - Li)
-    + [Heterogeneity Part II.pdf](August 21_2023/Heterogeneity Part 2/Greer_Heterogenity-Exercise_Part2.pdf)
-    + [Heterogeneity Part 2.Rmd](https://github.com/ahurford/ss-amy-greer/blob/main/August%2021_2023/Heterogeneity%20Part%202/Heterogenity%20Exercise_Part2.Rmd)
-    + [data.RData](https://github.com/ahurford/ss-amy-greer/blob/main/August%2021_2023/Heterogeneity%20Part%202/data.RData)
     
 \
 
