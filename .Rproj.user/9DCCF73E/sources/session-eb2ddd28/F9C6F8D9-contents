@@ -21,7 +21,7 @@ calendar(view = "week", defaultDate = "2023-08-19 15:00:00") %>%
     calendarId = 4,
     start = "2023-08-19 15:00:00",
     end = "2023-08-19 20:00:00")%>%
-  ####### Monday August 20
+  ####### Sunday August 20
   cal_schedules(
     calendarId=1,
     title = "Simple epidemiological models",
@@ -72,8 +72,8 @@ calendar(view = "week", defaultDate = "2023-08-19 15:00:00") %>%
     title = "Data portal",
     body = "Presentation by Bouchra Nasri",
     calendarId = 2,
-    start = "2023-08-20 16:30:00",
-    end = "2023-08-20 17:30:00")%>%
+    start = "2023-08-21 16:30:00",
+    end = "2023-08-21 17:30:00")%>%
 ##################### Tuesday Aug 21
   cal_schedules(
     calendarId=1,
@@ -125,8 +125,8 @@ calendar(view = "week", defaultDate = "2023-08-19 15:00:00") %>%
     title = "Data portal",
     body = "Presentation by Steve Walker",
     calendarId = 2,
-    start = "2023-08-21 16:30:00",
-    end = "2023-08-21 17:30:00")%>%
+    start = "2023-08-22 16:30:00",
+    end = "2023-08-22 17:30:00")%>%
 ############## Wed Aug 22
   cal_schedules(
     calendarId=3,
@@ -178,8 +178,8 @@ calendar(view = "week", defaultDate = "2023-08-19 15:00:00") %>%
     title = "Projects",
     body = "",
     calendarId = 5,
-    start = "2023-08-22 16:30:00",
-    end = "2023-08-22 17:30:00")%>%
+    start = "2023-08-20 16:30:00",
+    end = "2023-08-20 17:30:00")%>%
 ################# Thurs Aug 23
   cal_schedules(
     calendarId=3,
