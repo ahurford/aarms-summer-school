@@ -1,0 +1,24 @@
+# Conditions for forming and suspending the Atlantic bubble {.unlisted .unnumbered #bubble}
+
+In the Summer and Fall of 2020, the provinces of Atlantic Canada (New Brunswick, Nova Scotia, Prince Edward Island, and Newfoundland and Labrador) reported few COVID-19 cases ([Hurford et al. 2023](https://doi.org/10.1016/j.jtbi.2022.111378)). These provinces formed the [Atlantic bubble](https://www.cbc.ca/news/canada/nova-scotia/atlantic-bubble-burst-1.5812454), which eased COVID-19 self-isolation requirements for residents of Atlantic Canada travelling between provinces. It was announced that the Atlantic bubble would reform in the summer of 2021, but this reopening was [delayed](https://www.gov.nl.ca/releases/2021/exec/0413n09/), and shortly after most of Canada's provinces announced re-opening plans because many Canadians had now received at least one dose of vaccine. [Wikipedia](https://en.wikipedia.org/wiki/Atlantic_Bubble) has a good summary of the Atlantic bubble during the COVID-19 pandemic.
+
+In 2021, the Trans-Tasman bubble was formed between [Australia and New Zealand](https://www.reuters.com/world/asia-pacific/new-zealand-suspends-quarantine-free-travel-with-australia-2021-07-23/), with New Zealand proposing the [traffic light system](https://www.stuff.co.nz/travel/news/124762419/transtasman-bubble-how-the-covid19-traffic-light-system-works) to Continue, Pause, or Suspend participation in the bubble.
+
+For this project your are to **develop a mathematical model that gives the criteria for when a jurisdiction implementing a containment strategy should enter into a quarantine-free `bubble' during a pandemic.** 
+
+It may be helpful to first consider a two-patch model before considering a more realistic multi-patch model. You may also gain insight by trying to determine the epidemiolgical and public health response requirements for a containment strategy to be possible/beneficial.
+
+A relevant reference is [The differential importation risks of COVID-19 from inbound travellers and the feasibility of targeted travel controls: A case study in Hong Kong](https://www.thelancet.com/journals/lanwpc/article/PIIS2666-6065(21)00093-6/fulltext#seccesectitle0017) by Yang et al (2021).
+
+```{r, include=F}
+require(ggplot2)
+require(cowplot)
+require(magick)
+require(patchwork)
+g1=ggplot() + 
+  draw_image("images/airport.jpg") 
+```
+```{r, echo=F}
+g1
+```
+
