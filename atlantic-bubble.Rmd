@@ -8,6 +8,8 @@ A relevant reference is [The differential importation risks of COVID-19 from inb
 
 You should begin by performing a literature review to identify any relevant modelling.
 
+Another version of this project would be to consider an infectious disease that impacts agriculture, such as [foot-and-mouth](https://en.wikipedia.org/wiki/2001_United_Kingdom_foot-and-mouth_outbreak), and to review the use of spatially-structured measures, and zones with no measures. 
+
 ## Background {-}
 In the Summer and Fall of 2020, the provinces of Atlantic Canada (New Brunswick, Nova Scotia, Prince Edward Island, and Newfoundland and Labrador) reported few COVID-19 cases ([Hurford et al. 2023](https://doi.org/10.1016/j.jtbi.2022.111378)). These provinces formed the [Atlantic bubble](https://www.cbc.ca/news/canada/nova-scotia/atlantic-bubble-burst-1.5812454), which eased COVID-19 self-isolation requirements for residents of Atlantic Canada travelling between provinces. It was announced that the Atlantic bubble would reform in the summer of 2021, but this reopening was [delayed](https://www.gov.nl.ca/releases/2021/exec/0413n09/), and shortly after most of Canada's provinces announced re-opening plans because many Canadians had now received at least one dose of vaccine. [Wikipedia](https://en.wikipedia.org/wiki/Atlantic_Bubble) has a good summary of the Atlantic bubble during the COVID-19 pandemic.
 
