@@ -26,7 +26,7 @@ For participants with limited coding experience, see [here](#prepcoding) for sug
 
 - **Lecture 3. Host heterogeneity.** [.pdf](August 21_2023/Heterogeneity Part 2/Greer_Heterogenity-Exercise_Part2.pdf) [.Rmd](https://github.com/ahurford/ss-amy-greer/blob/main/August%2021_2023/Heterogeneity%20Part%202/Heterogenity%20Exercise_Part2.Rmd) [.RData](https://github.com/ahurford/ss-amy-greer/blob/main/August%2021_2023/Heterogeneity%20Part%202/data.RData)
 
-- **Lecture 13. Zoonotic spillover.** [slides](https://github.com/ahurford/ss-amy-greer/blob/main/August%2027_2023/Zoonotic%20spillover/Greer_Spillover_Part1_handout.pdf)
+- **Lecture 13. Zoonotic spillover.** [reading](https://royalsocietypublishing.org/doi/10.1098/rstb.2018.0435) [slides](https://github.com/ahurford/ss-amy-greer/blob/main/August%2027_2023/Zoonotic%20spillover/Greer_Spillover_Part1_handout.pdf)
 
 - **Lecture 14. Zoonotic spillover II.** [slides](https://github.com/ahurford/ss-amy-greer/blob/main/August%2027_2023/Zoonotic%20spillover/Greer_Spillover_Part2_handout.pdf)
 

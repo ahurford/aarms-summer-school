@@ -62,7 +62,7 @@ cal_schedules(
   cal_schedules(
     calendarId=1,
     title = "Zoonotic spillover",
-    body = "MATH 6115",
+    body = "MATH 6115. Please read https://royalsocietypublishing.org/doi/10.1098/rstb.2018.0435",
     start = "2023-08-27 08:30:00",
     end = "2023-08-27 09:30:00")%>%
       cal_schedules(
@@ -73,7 +73,7 @@ cal_schedules(
   cal_schedules(
     title = "Zoonotic spillover",
     calendarId=1,
-    body = "MATH 6115",
+    body = "MATH 6115. Please read https://royalsocietypublishing.org/doi/10.1098/rstb.2018.0435",
     start = "2023-08-27 10:00:00",
     end = "2023-08-27 11:00:00")%>%
   cal_schedules(
