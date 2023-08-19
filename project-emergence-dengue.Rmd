@@ -1,0 +1,14 @@
+# Investigating the conditions for locally transmitted dengue infections {.unlisted .unnumbered #local-emergence-dengue}
+
+One of the consequences of climate change is a modification of the range of many species. One preoccupying such change is the northward expansion of the range of *Aedes aegypti* and *Aedes albopictus*, two of the vectors of *dengue*. This has resulted in a shift, in regions where dengue was absent, from no epidemics to micro-epidemics, where one infected individual returning from a region where dengue is endemic infects several individuals in close proximity, to more sustained epidemics. The same is true with *Chikungunya* and might become true, in the not so distant future, with *malaria*.
+
+First, gather some information about this phenomenon and document a few instances where this occurred. Then, keeping this general framework in mind, write a mathematical model to describe the problem. The model will need to incorporate:
+- Temperature-dependent vector density, of a form you will need to determine so that vector abundances increase with one or two degree (C) of mean temperature increase.
+- A host population mostly naive to the pathogen.
+- Point introductions of the pathogen in the host population.
+
+The main question to investigate is the transition from no local epidemics to micro-epidemics to sustained local epidemics.
+
+Some ideas you may find useful:
+- While formulating and analysing the model in ODE is probably a good idea to get a sense of the general behaviour of the system, there is a lot to be gained by considering the continuous time Markov chain analogue.
+- One could even think of simulating the problem using ABMs or network models. Early outbreaks in the southern USA were often of nearby households, this could be fun to look at.

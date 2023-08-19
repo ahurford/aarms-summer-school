@@ -25,4 +25,4 @@ Specific expertise of the instructors includes spatial epidemiology, importation
 
 3. [Conditions for forming and suspending the Atlantic bubble](#bubble)
 
-
+4. [Investigating the conditions for locally transmitted dengue infections](#local-emergence-dengue)
