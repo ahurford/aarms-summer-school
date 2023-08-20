@@ -1,0 +1,8 @@
+# *Dicrocoelium dendriticum* and the Zombie Ants {.unlisted .unnumbered #zombie-ants}
+
+The Lancet Fluke (*Dicrocoelium dendriticum*) is an intestinal parasite of Sheep of some concern in Atlantic Canada <https://www.gov.nl.ca/ffa/files/agrifoods-animals-health-pdf-vs-02-001.pdf>
+
+Research the life cycle of the parasite and its impact on sheep farming.
+Develop a model forecasting the spread of the parasite through a flock or over a region with the aim of forecasting some aspect of its impact on farming.
+
+Your report should include a discussion of your assumptions about the sources uncertainty in your forecast.  One option is to focus on issues of data collection and process variability, another is to focus on the complex dynamics (e.g., a bifurcation analysis) and their role in forecast uncertainty.
