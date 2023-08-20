@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Problems 2.8. | AARMS-EIDM.knit</title>
+  <title>Investigating the conditions for locally transmitted dengue infections | AARMS-EIDM.knit</title>
   <meta name="description" content="" />
   <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Problems 2.8. | AARMS-EIDM.knit" />
+  <meta property="og:title" content="Investigating the conditions for locally transmitted dengue infections | AARMS-EIDM.knit" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Problems 2.8. | AARMS-EIDM.knit" />
+  <meta name="twitter:title" content="Investigating the conditions for locally transmitted dengue infections | AARMS-EIDM.knit" />
   
   
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="prep.html"/>
-<link rel="next" href="behaviour-change.html"/>
+<link rel="prev" href="behaviour-change.html"/>
+<link rel="next" href="global-spread-SARS.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -101,19 +101,17 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="probs-2-8" class="section level1 unlisted unnumbered hasAnchor">
-<h1>Problems 2.8.<a href="probs-2-8.html#probs-2-8" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<ol style="list-style-type: decimal">
-<li><p>In a group of 3 to 4, work together to make a consequence table related to the implementation of capacity limits and/or social distancing in retail, schools, and community recreation venues during a pandemic due to an airborne respiratory illness. Have each group member play the role of a different stakeholder. Do not do the modelling to determine the values in the consequence table, instead represent these as values, <span class="math inline">\(v_{i,j}\)</span>.</p>
-<ul>
-<li>Write a paragraph describing how you applied some of the principles described in Chapter 17 of Dietze.</li>
-<li>Provide any inequalities related to the values, <span class="math inline">\(v_{i,j}\)</span>, you expect in the consequence table. Describe the trade-offs the consequence table reveals.</li>
-<li>Provide a simple epidemiological model that might form the deterministic skeleton for a model that could be used to estimate the values in the consequence table.</li>
-</ul></li>
-<li><p>Write 1 paragraph, which is an example of something that in hindsight was a “failure in imagination” during the COVID-19 pandemic.</p></li>
-<li><p>Describe how a mathematical model (preferably with equations) could be extended to consider the “failure in imagination” that you described in 2.</p></li>
-<li><p>Visit <a href="https://www.ipcc.ch/report/ar6/wg2/">https://www.ipcc.ch/report/ar6/wg2/</a>. Find a figure of future carbon emission scenarios (Reconstruction Concentration Pathways (RCPs)), and their impacts. Write a paragraph that describes how the presentation of projections in the IPCC report are consistent with the principles discussed in Chapter 17 of Dietze (2017) for scenario construction.</p></li>
-</ol>
+<div id="local-emergence-dengue" class="section level1 unlisted unnumbered hasAnchor">
+<h1>Investigating the conditions for locally transmitted dengue infections<a href="local-emergence-dengue.html#local-emergence-dengue" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>One of the consequences of climate change is a modification of the range of many species. One preoccupying such change is the northward expansion of the range of <em>Aedes aegypti</em> and <em>Aedes albopictus</em>, two of the vectors of <em>dengue</em>. This has resulted in a shift, in regions where dengue was absent, from no epidemics to micro-epidemics, where one infected individual returning from a region where dengue is endemic infects several individuals in close proximity, to more sustained epidemics. The same is true with <em>Chikungunya</em> and might become true, in the not so distant future, with <em>malaria</em>.</p>
+<p>First, gather some information about this phenomenon and document a few instances where this occurred. Then, keeping this general framework in mind, write a mathematical model to describe the problem. The model will need to incorporate:
+- Temperature-dependent vector density, of a form you will need to determine so that vector abundances increase with one or two degree (C) of mean temperature increase.
+- A host population mostly naive to the pathogen.
+- Point introductions of the pathogen in the host population.</p>
+<p>The main question to investigate is the transition from no local epidemics to micro-epidemics to sustained local epidemics.</p>
+<p>Some ideas you may find useful:
+- While formulating and analysing the model in ODE is probably a good idea to get a sense of the general behaviour of the system, there is a lot to be gained by considering the continuous time Markov chain analogue.
+- One could even think of simulating the problem using ABMs or network models. Early outbreaks in the southern USA were often of nearby households, this could be fun to look at.</p>
 
 </div>
             </section>
@@ -121,8 +119,8 @@
           </div>
         </div>
       </div>
-<a href="prep.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="behaviour-change.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="behaviour-change.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="global-spread-SARS.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
