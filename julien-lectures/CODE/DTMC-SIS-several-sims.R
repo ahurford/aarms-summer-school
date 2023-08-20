@@ -1,13 +1,14 @@
-# Example simulation of a simple SIS model
+# Example simulation of a simple SIS model. Run several simulations.
 library(markovchain)
 
-# Source a file with a few helpful functions for plotting (nice axes labels, crop figure)
-source("useful_functions.R")
+# Source a file with a few helpful functions for plotting (nice axes labels, 
+# crop figure)
+source("functions_useful.R")
 
 # Total population
-Pop = 5
+Pop = 100
 # Initial number of infectious
-I_0 = 2
+I_0 = 1
 # Parameters
 gamma = 1/5
 R_0 = 1.5
@@ -33,23 +34,9 @@ if (max(rowSums(T))>1) {
 }
 diag(T) = 1-rowSums(T)
 
-
+# Create the Markov chain object
 mcSIS <- new("markovchain", 
              states = sprintf("I_%d", 0:Pop),
              transitionMatrix = T,
              name = "SIS")
 
-# Show some info about the chain
-summary(mcSIS)
-
-# The vector of steady states. Here, all mass should be in I_0 (the first state)
-steadyStates(mcSIS)
-
-# Here, we only have one absorbing state, so this is trivial
-meanRecurrenceTime(mcSIS)
-
-# Hitting probabilities
-hittingProbabilities(mcSIS)
-
-# Mean absorption time
-meanAbsorptionTime(mcSIS)
