@@ -1,0 +1,13 @@
+# Simulating the global spread of SARS-CoV-2 {.unlisted .unnumbered #global-spread-SARS}
+
+Write an ODE metapopulation-type model to describe the global spread of a pathogen like SARS-CoV-2 between countries. You should proceed to the basic mathematical analysis of the model, in order to understand well how model parameters are likely to affect model behaviour.
+
+You will need to decide on the type of model to use: SIR, SLIR (a.k.a. SEIR), SLIAR or something else. You will also need to decide on whether to use an epidemic or an endemic model. Justify your choices.
+
+Then simulate the model with, depending on your computational resources, either a continent or the entire world. Work at the country level. Learn how to pull data regarding country population (see, e.g., [this paper](https://doi.org/10.1016/j.idm.2019.12.008) and its associated [github repo](https://github.com/julien-arino/modelling-with-data)), in order to construct movement using gravity-type weights. (You will also need to find *country centroids* to incorporate distances between countries.)
+
+Compare the rate of *country invasions* you obtain (i.e., the number of countries reporting case counts larger than some detection threshold that you will choose) with that observed in real life (see, e.g., Figure 1 [here](https://julien-arino.github.io/assets/pdf/papers/2022_Arino-FIC85.pdf)).
+
+Then modify your model to incorporate travel restrictions, both global (acting on all movement rates at the same time) or local (acting on some movement rates).
+
+It could be interesting to consider also the continuous time Markov chain analogue of your model. You could also consider a network model.
