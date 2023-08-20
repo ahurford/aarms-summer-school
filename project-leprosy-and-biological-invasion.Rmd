@@ -1,4 +1,6 @@
 # Leprosy and Biological Invasion {.unlisted .unnumbered #leprosy}
 
-[USA Today](http://www.digtriad.com/news/article/282114/175/Armadillos-Invading-East-Tennessee)
+
 Armadillos can carry leprosy. With climate change, feasible habitats for armadillos can expand. Thus, areas where leprosy cases are rare can experience increases in leprosy incidence. Develop a mathematical model of armadillo movement with climate change and project the effects of armadillos on leprosy incidence in space.
+
+For more background, see [this article in USA Today](http://www.digtriad.com/news/article/282114/175/Armadillos-Invading-East-Tennessee).
