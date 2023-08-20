@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Problems 2.3. | AARMS-EIDM.knit</title>
+  <title>Problems 2.3. Characterizing uncertainty | AARMS-EIDM.knit</title>
   <meta name="description" content="" />
   <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Problems 2.3. | AARMS-EIDM.knit" />
+  <meta property="og:title" content="Problems 2.3. Characterizing uncertainty | AARMS-EIDM.knit" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Problems 2.3. | AARMS-EIDM.knit" />
+  <meta name="twitter:title" content="Problems 2.3. Characterizing uncertainty | AARMS-EIDM.knit" />
   
   
   
@@ -102,30 +102,44 @@
 
             <section class="normal" id="section-">
 <div id="probs-2-3" class="section level1 unlisted unnumbered hasAnchor">
-<h1>Problems 2.3.<a href="probs-2-3.html#probs-2-3" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<h1>Problems 2.3. Characterizing uncertainty<a href="probs-2-3.html#probs-2-3" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <ol style="list-style-type: decimal">
 <li>To characterize uncertainty in our ecological forecast model, we need more flexibility than the assumptions of general linear models (or ‘traditional statistical models’).
 <ol style="list-style-type: lower-alpha">
-<li>What are these assumptions?</li>
+<li>What are these assumptions? [4 marks]</li>
 </ol></li>
-<li>Equation 6.1 on p81 of <em>Ecological Forecasting</em> describes a logistic regression.
+</ol>
+<p><br />
+</p>
+<ol start="2" style="list-style-type: decimal">
+<li>See equation 6.1 on p81 of <em>Ecological Forecasting</em> describes a logistic regression.
 <ol style="list-style-type: lower-alpha">
-<li>What assumption of the general linear model is not met for a logistic regression?</li>
-<li>Describe in words what the link function is?</li>
+<li>What assumption of the general linear model is not met for a logistic regression? [1 mark]</li>
+<li>Describe in words what the link function is? [1 mark]</li>
 </ol></li>
+</ol>
+<p><br />
+</p>
+<ol start="3" style="list-style-type: decimal">
 <li>See section 6.3 starting on p83.
 <ol style="list-style-type: lower-alpha">
-<li>Define process error and observation error.</li>
-<li>How are ‘data model’ and ‘observation error’ different?</li>
-<li>What is residual error (consult the index), and what point is made about residual error in this section?</li>
+<li>Define process error and observation error. [2 marks]</li>
+<li>How are ‘data model’ and ‘observation error’ different? [1 mark]</li>
+<li>What is residual error (consult the index of <em>Ecological forecasting</em> if needed), and what point is made about residual error in section 6.3? [2 marks]</li>
 </ol></li>
+</ol>
+<p> </p>
+<ol start="4" style="list-style-type: decimal">
 <li>See section 6.5 starting on p90.
 <ol style="list-style-type: lower-alpha">
-<li>In chapter 11, we will consider the population size, recorded over time, at different sites. Site may be considered a random effect. Explain why site could be considered a random effect?</li>
+<li>In chapter 11, we will consider the population size, recorded over time, at different sites. Site may be considered a random effect. Explain why site could be considered a random effect? [2 marks]</li>
 </ol></li>
+</ol>
+<p> </p>
+<ol start="5" style="list-style-type: decimal">
 <li>Complete Task 1 of <a href="https://github.com/EcoForecast/EF_Activities/blob/master/Chapter_06_FittingUncertainties.Rmd">Chapter_06_FittingUncertainites.Rmd</a>
 <ol style="list-style-type: lower-alpha">
-<li>Provide a write-up of your work to complete Task 1.</li>
+<li>Provide a write-up of your work to complete Task 1. [20 marks]</li>
 </ol>
 <ul>
 <li>Some of the plots are large relative to a laptop figure window. While it is possible to print the figures to a folder, I found that slow because of how often you need to look at the results of the plots. I recommend completing this task as an <code>.Rmd</code> because it is much easier to read your plots.</li>
@@ -133,7 +147,7 @@
 <li>When plotting the fitted model compared to data, note that estimated parameters are for the model which is then transformed by the link function.</li>
 </ul>
 <ol start="2" style="list-style-type: lower-alpha">
-<li>With a uniform prior, the code to complete this problem is <code>summary(glm(y ~ TDR, family = "poisson"))</code>. How does the mean of the posterior distribution of the parameter estimates for the Bayesian analysis compare to the estimation using the frequentist method (i.e., a uniform prior)?</li>
+<li>With a uniform prior, the code to complete this problem is <code>summary(glm(y ~ TDR, family = "poisson"))</code>. How does the mean of the posterior distribution of the parameter estimates for the Bayesian analysis compare to the estimation using the frequentist method (i.e., a uniform prior)? [1 mark]</li>
 </ol></li>
 </ol>
 

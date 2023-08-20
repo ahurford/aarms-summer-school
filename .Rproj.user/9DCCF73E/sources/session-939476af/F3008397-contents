@@ -1,23 +1,31 @@
-# Problems 2.3. {.unlisted .unnumbered #probs-2-3}
+# Problems 2.3. Characterizing uncertainty {.unlisted .unnumbered #probs-2-3}
 
 1. To characterize uncertainty in our ecological forecast model, we need more flexibility than the assumptions of general linear models (or 'traditional statistical models').
-    a. What are these assumptions?
+    a. What are these assumptions? [4 marks]
 
-2. Equation 6.1 on p81 of _Ecological Forecasting_ describes a logistic regression.
-     a. What assumption of the general linear model is not met for a logistic regression?
-     b. Describe in words what the link function is?
+\
+
+2. See equation 6.1 on p81 of _Ecological Forecasting_ describes a logistic regression.
+     a. What assumption of the general linear model is not met for a logistic regression? [1 mark]
+     b. Describe in words what the link function is? [1 mark]
+     
+\
   
 3. See section 6.3 starting on p83.
-    a. Define process error and observation error.
-    b. How are 'data model' and 'observation error' different?
-    c. What is residual error (consult the index), and what point is made about residual error in this section?
+    a. Define process error and observation error. [2 marks]
+    b. How are 'data model' and 'observation error' different? [1 mark]
+    c. What is residual error (consult the index of _Ecological forecasting_ if needed), and what point is made about residual error in section 6.3? [2 marks]
+  
+\  
   
 4. See section 6.5 starting on p90.
-    a. In chapter 11, we will consider the population size, recorded over time, at different sites. Site may be considered a random effect. Explain why site could be considered a random effect?
+    a. In chapter 11, we will consider the population size, recorded over time, at different sites. Site may be considered a random effect. Explain why site could be considered a random effect? [2 marks]
+    
+\    
   
 5. Complete Task 1 of [Chapter_06_FittingUncertainites.Rmd](https://github.com/EcoForecast/EF_Activities/blob/master/Chapter_06_FittingUncertainties.Rmd)
-    a. Provide a write-up of your work to complete Task 1.
+    a. Provide a write-up of your work to complete Task 1. [20 marks]
     + Some of the plots are large relative to a laptop figure window. While it is possible to print the figures to a folder, I found that slow because of how often you need to look at the results of the plots. I recommend completing this task as an `.Rmd` because it is much easier to read your plots.
     + In your write-up, comment on whether your MCMC is meeting the standards outlined for convergence, *but* continue with the task even if your MCMC doesn't meet the standards. It is more important to move through the task at a good pace, than to spend a lot of time getting a more precise result. 
     + When plotting the fitted model compared to data, note that estimated parameters are for the model which is then transformed by the link function.
-    b. With a uniform prior, the code to complete this problem is `summary(glm(y ~ TDR, family = "poisson"))`. How does the mean of the posterior distribution of the parameter estimates for the Bayesian analysis compare to the estimation using the frequentist method (i.e., a uniform prior)?
+    b. With a uniform prior, the code to complete this problem is `summary(glm(y ~ TDR, family = "poisson"))`. How does the mean of the posterior distribution of the parameter estimates for the Bayesian analysis compare to the estimation using the frequentist method (i.e., a uniform prior)? [1 mark]
