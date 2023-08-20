@@ -5,13 +5,18 @@ library(markovchain)
 # crop figure)
 source("functions_useful.R")
 
+# Number of simulations to run
+nb_sims = 100
+# Final time
+t_f = 100
+
 # Total population
 Pop = 100
 # Initial number of infectious
 I_0 = 1
 # Parameters
 gamma = 1/5
-R_0 = 1.5
+R_0 = 2.5
 # R0 would be (beta/gamma)*S0, so beta=R0*gamma/S0
 beta = R_0*gamma/(Pop-I_0)
 # Time step
@@ -40,3 +45,44 @@ mcSIS <- new("markovchain",
              transitionMatrix = T,
              name = "SIS")
 
+# Store the results in a list called SIMS
+SIMS = list()
+# Run nb_sims samples of the Markov chain
+for (s in 1:nb_sims) {
+  SIMS[[s]] <- markovchainSequence(n = t_f, 
+                                   markovchain = mcSIS, 
+                                   t0 = "I_1")
+  # We need to do a bit of editing: states come out named, not numbered, so we
+  # change this
+  SIMS[[s]] <- as.numeric(gsub("I_", "", SIMS[[s]]))
+}
+
+# To compute temporal means, we need to convert the result into a table with
+# time as rows and sims as columns
+RESULTS = mat.or.vec(nr = t_f, nc = nb_sims)
+for (s in 1:nb_sims) {
+  RESULTS[,s] = SIMS[[s]]
+}
+
+# Find max of all sims for plotting
+max_I = max(RESULTS)
+# Find mean for each row
+mean_I = apply(RESULTS, 1, mean)
+
+# Now do the plot
+for (s in 1:nb_sims) {
+  if (s == 1) {
+    plot(x = 1:t_f,
+         y = RESULTS[,s],
+         type = "l", lwd = 0.5, 
+         ylim = c(0, max_I),
+         col = ifelse(RESULTS[t_f, s] == 0, "dodgerblue4", "firebrick4"),
+         xlab = "Time (days)", ylab = "Prevalence")
+  } else {
+    lines(x = 1:t_f,
+          y = SIMS[[s]],
+          type = "l", lwd = 0.5,
+          col = ifelse(RESULTS[t_f, s] == 0, "dodgerblue4", "firebrick4"))
+  }
+}
+lines(x = 1:t_f, y = mean_I, lwd = 2)

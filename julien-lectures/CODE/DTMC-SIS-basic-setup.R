@@ -54,3 +54,4 @@ hittingProbabilities(mcSIS)
 
 # Mean absorption time
 meanAbsorptionTime(mcSIS)
+
