@@ -1,10 +1,6 @@
 # Example simulation of a simple SIS model. Run several simulations.
 library(markovchain)
 
-# Source a file with a few helpful functions for plotting (nice axes labels, 
-# crop figure)
-source("functions_useful.R")
-
 # Number of simulations to run
 nb_sims = 100
 # Final time

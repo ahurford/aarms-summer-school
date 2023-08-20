@@ -10,6 +10,7 @@
 # Runs several realisations of a discrete time Markov chain SIS model.
 
 library(shiny)
+library(markovchain)
 
 # Fix port on which Shiny runs (for embedding into html presentation)
 options(shiny.port = 8100)
@@ -27,21 +28,26 @@ ui <- fluidPage(
                         "Average infectious period (days):",
                         min = 0,
                         max = 30,
-                        value = 7),
+                        value = 5),
             sliderInput("R0",
                         "Basic reproduction number R0:",
-                        min = 0,
+                        min = 0.1,
                         max = 3,
-                        value = 0.5,
+                        value = 1.5,
                         step = 0.1),
             sliderInput("nb_sims",
                         "Number of simulations:",
                         min = 1,
                         max = 200,
-                        value = 25,
-                        step = 1)
+                        value = 100,
+                        step = 1),
+            sliderInput("t_f",
+                        "Final time:",
+                        min = 100,
+                        max = 200,
+                        value = 100,
+                        step = 5)
         ),
-        
         # Show a plot of the generated distribution
         mainPanel(
             plotOutput("a_distPlot",width="750px")
@@ -52,39 +58,7 @@ ui <- fluidPage(
 # Define server logic required to draw a histogram
 server <- function(input, output) {
 
-    SIS <- function (t, x, parms) {
-        with(as.list(x), {
-            dS <- params$gamma*I-params$beta*S*I
-            dI <- params$beta*S*I-params$gamma*I
-            list(c(dS, dI))
-        })
-    }
-    # Encode potential transitions:
-    transitions_nodemog = cbind(c(-1,1), # New infection (-1S,+1I)
-                                c(1,-1)) # Recovery (+1S,-1I)
-
-    # Function to calculate transition rates, given variables and parameters
-    lvrates_nodemog <- function(x, params, t) {
-        return(c(params$beta*x["S"]*x["I"], # Rate of new infection
-                 params$gamma*x["I"]))
-    }
-    
-    one_sim_ssa_tau_leap <- function(sim) {
-        # Perform the stochastic simulation!
-        r = ssa.adaptivetau(IC, 
-                            transitions_nodemog, 
-                            lvrates_nodemog, 
-                            params, 
-                            tf = 100,
-                            tl.params = list(epsilon=0.01))
-        ii_interp <- approx(r[,"time"], r[,"I"], 
-                            params$times, ties = "ordered", rule = 2)
-        results <- data.frame(ii_interp$y)
-        colnames(results) <- c("I")
-        return(results)
-    }
-
-    # Expression that generates a histogram. The expression is
+    # Expression that generates a plot. The expression is
     # wrapped in a call to renderPlot to indicate that:
     #
     #  1) It is "reactive" and therefore should re-execute automatically
@@ -92,79 +66,86 @@ server <- function(input, output) {
     #  2) Its output type is a plot
     
     output$a_distPlot <- renderPlot({
-        params <- list()
-        
-        params$nb_sims = input$nb_sims
-
-        params$S0 = 999
-        params$I0 = 1
-        IC = c(S = params$S0,
-               I = params$I0)
-        
-        params$t0 = 0
-        params$tf = 100
-        params$times <- seq(from = params$t0, 
-                            to = params$tf, 
-                            by = 0.1)
-        params$length_times <- length(params$times)
-        
-        RESULTS <- mat.or.vec(params$nb_sims,
-                              params$length_times)
-
+        # Number of simulations to run
+        nb_sims = input$nb_sims
+        # Final time
+        t_f = input$t_f
+        # Total population
+        Pop = 100
+        # Initial number of infectious
+        I_0 = 1
+        # Value of R_0
+        R_0 = input$R0
+        # Process gamma
         if (input$inv_gamma>0)
-            params$gamma = 1/input$inv_gamma
+          gamma = 1/input$inv_gamma
         else
-            params$gamma = 0
-        #params$beta <- input$R0*params$gamma/(params$S0+params$I0)
-        params$beta <- input$R0*params$gamma/params$S0
-        
-        inputs = 1:params[["nb_sims"]]
-        
-        numCores <- detectCores()
-        cl <- makeCluster(numCores)  
-        clusterExport(cl,c("params","IC","ssa.adaptivetau"),
-                      envir=environment())
-        RESULTS_TMP = parLapply(cl, inputs, one_sim_ssa_tau_leap)  
-        stopCluster(cl)  
-        
-        RESULTS <- matrix(unlist(RESULTS_TMP), ncol = params[["length_times"]], byrow = TRUE)
-        
-        y_max = max(max(RESULTS))
-        nb_sims_non_extinct = 0
-        results_raw <- params[["times"]]*0
-        results_conditioned <- params[["times"]]*0
-        # Now plot the results
-        for (sim in 1:params[["nb_sims"]]) {
-            if (sim == 1) {
-                plot(params[["times"]],RESULTS[sim,],
-                     xlab="Time (days)",
-                     ylab="Number of infectious individuals",
-                     type="l",lwd=0.5,ylim = c(0,y_max))
-            } else {
-                lines(params[["times"]],RESULTS[sim,],lwd=0.5,type="l")
-            }
-            # Prepare sum of results for average
-            results_raw = results_raw+RESULTS[sim,]
-            # Prepare sum of results conditioned on non-extinction for average
-            if (RESULTS[sim,params[["length_times"]]]>0) {
-                results_conditioned <- results_conditioned+RESULTS[sim,]
-                nb_sims_non_extinct <- nb_sims_non_extinct+1
-            }
+          gamma = 0
+        # R0 would be (beta/gamma)*S0, so beta=R0*gamma/S0
+        beta = R_0*gamma/(Pop-I_0)
+        # Time step
+        Delta_t = 1
+        # Make the transition matrix
+        T = mat.or.vec(nr = (Pop+1), nc = (Pop+1))
+        for (row in 2:Pop) {
+          I = row-1
+          mv_right = gamma*I*Delta_t # Recoveries
+          mv_left = beta*I*(Pop-I)*Delta_t # Infections
+          T[row,(row-1)] = mv_right
+          T[row,(row+1)] = mv_left
         }
+        # Last row only has move left
+        T[(Pop+1),Pop] = gamma*(Pop)*Delta_t
+        # Check that we don't have too large values
+        if (max(rowSums(T))>1) {
+          T = T/max(rowSums(T))
+        }
+        diag(T) = 1-rowSums(T)
+        # Create the Markov chain object
+        mcSIS <- new("markovchain", 
+                     states = sprintf("I_%d", 0:Pop),
+                     transitionMatrix = T,
+                     name = "SIS")
         
-        # Plot non-conditioned average
-        results_raw = results_raw / params[["nb_sims"]]
-        lines(params[["times"]],results_raw,col="blue",type="l",lwd=4)
-        # Plot average conditioned on non-extinction
-        results_conditioned = results_conditioned / nb_sims_non_extinct
-        lines(params[["times"]],results_conditioned,col="red",type="l",lwd=4)
-        
-        legend("topleft", legend = c("Trajectories","Average (all realizations)","Average (non-extinction)"), 
-               col=c("black","blue","red"), 
-               lwd = c(1,2,2), lty = c(1,1,1))
-        
+        # Store the results in a list called SIMS
+        SIMS = list()
+        # Run nb_sims samples of the Markov chain
+        for (s in 1:nb_sims) {
+          SIMS[[s]] <- markovchainSequence(n = t_f, 
+                                           markovchain = mcSIS, 
+                                           t0 = "I_1")
+          # We need to do a bit of editing: states come out named, not numbered, 
+          # so we change this
+          SIMS[[s]] <- as.numeric(gsub("I_", "", SIMS[[s]]))
+        }
+        # To compute temporal means, we need to convert the result into a table 
+        # with time as rows and sims as columns
+        RESULTS = mat.or.vec(nr = t_f, nc = nb_sims)
+        for (s in 1:nb_sims) {
+          RESULTS[,s] = SIMS[[s]]
+        }
+        # Find max of all sims for plotting
+        max_I = max(RESULTS)
+        # Find mean for each row
+        mean_I = apply(RESULTS, 1, mean)
+        # Now do the plot
+        for (s in 1:nb_sims) {
+          if (s == 1) {
+            plot(x = 1:t_f,
+                 y = RESULTS[,s],
+                 type = "l", lwd = 0.5, 
+                 ylim = c(0, max_I),
+                 col = ifelse(RESULTS[t_f, s] == 0, "dodgerblue4", "firebrick4"),
+                 xlab = "Time (days)", ylab = "Prevalence")
+          } else {
+            lines(x = 1:t_f,
+                  y = SIMS[[s]],
+                  type = "l", lwd = 0.5,
+                  col = ifelse(RESULTS[t_f, s] == 0, "dodgerblue4", "firebrick4"))
+          }
+        }
+        lines(x = 1:t_f, y = mean_I, lwd = 2)
     })
-    
 }
 
 # Run the application 
