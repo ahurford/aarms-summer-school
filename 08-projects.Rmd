@@ -28,3 +28,7 @@ Specific expertise of the instructors includes spatial epidemiology, importation
 4. [Investigating the conditions for locally transmitted dengue infections](#local-emergence-dengue)
 
 5. [Simulating the global spread of SARS-CoV-2](#global-spread-SARS)
+
+6. [Leprosy and Biological Invasion](#leprosy)
+
+7. [Behaviour change in an epidemic](#behaviour-change)
