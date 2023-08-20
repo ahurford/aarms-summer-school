@@ -11,7 +11,10 @@
 
 library(shiny)
 
-# Define UI for application that draws a histogram
+# Fix port on which Shiny runs (for embedding into html presentation)
+options(shiny.port = 8100)
+
+# Define UI
 ui <- fluidPage(
 
     # Application title

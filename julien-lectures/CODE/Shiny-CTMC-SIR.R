@@ -13,8 +13,10 @@ library(deSolve)
 library(parallel)
 library(adaptivetau)
 
+# Fix port on which Shiny runs (for embedding into html presentation)
+options(shiny.port = 8100)
 
-# Define UI for application that draws a histogram
+# Define UI
 ui <- fluidPage(
 
     # Application title

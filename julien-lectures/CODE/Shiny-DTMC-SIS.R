@@ -6,12 +6,10 @@
 #
 #    http://shiny.rstudio.com/
 #
-# CTMC SIR with vaccination
+# DTMC SIS
+# Runs several realisations of a discrete time Markov chain SIS model.
 
 library(shiny)
-library(deSolve)
-library(parallel)
-library(adaptivetau)
 
 # Fix port on which Shiny runs (for embedding into html presentation)
 options(shiny.port = 8100)
@@ -20,7 +18,7 @@ options(shiny.port = 8100)
 ui <- fluidPage(
 
     # Application title
-    titlePanel("Continuous-time Markov chain SIR with vaccination"),
+    titlePanel("Discrete-time Markov chain SIS"),
     
     # Sidebar with a slider input for the number of bins
     sidebarLayout(
@@ -33,21 +31,9 @@ ui <- fluidPage(
             sliderInput("R0",
                         "Basic reproduction number R0:",
                         min = 0,
-                        max = 20,
-                        value = 2,
+                        max = 3,
+                        value = 0.5,
                         step = 0.1),
-            sliderInput("p",
-                        "Percentage vaccinated:",
-                        min = 0,
-                        max = 100,
-                        value = 0,
-                        step = 1),
-            sliderInput("tf",
-                        "Final time:",
-                        min = 1,
-                        max = 200,
-                        value = 100,
-                        step = 1),
             sliderInput("nb_sims",
                         "Number of simulations:",
                         min = 1,
@@ -74,13 +60,13 @@ server <- function(input, output) {
         })
     }
     # Encode potential transitions:
-    transitions_nodemog = cbind(c(-1,1,0), # New infection (-1S,+1I,0R)
-                                c(0,-1,1)) # Recovery (0S,-1I,+1R)
+    transitions_nodemog = cbind(c(-1,1), # New infection (-1S,+1I)
+                                c(1,-1)) # Recovery (+1S,-1I)
 
     # Function to calculate transition rates, given variables and parameters
     lvrates_nodemog <- function(x, params, t) {
         return(c(params$beta*x["S"]*x["I"], # Rate of new infection
-                 params$gamma*x["I"])) # Rate of recovery
+                 params$gamma*x["I"]))
     }
     
     one_sim_ssa_tau_leap <- function(sim) {
@@ -89,7 +75,7 @@ server <- function(input, output) {
                             transitions_nodemog, 
                             lvrates_nodemog, 
                             params, 
-                            tf = params$tf,
+                            tf = 100,
                             tl.params = list(epsilon=0.01))
         ii_interp <- approx(r[,"time"], r[,"I"], 
                             params$times, ties = "ordered", rule = 2)
@@ -110,14 +96,13 @@ server <- function(input, output) {
         
         params$nb_sims = input$nb_sims
 
-        params$S0 = round(999*(1-input$p/100))
+        params$S0 = 999
         params$I0 = 1
         IC = c(S = params$S0,
-               I = params$I0,
-               R = 0)
+               I = params$I0)
         
         params$t0 = 0
-        params$tf = input$tf
+        params$tf = 100
         params$times <- seq(from = params$t0, 
                             to = params$tf, 
                             by = 0.1)
