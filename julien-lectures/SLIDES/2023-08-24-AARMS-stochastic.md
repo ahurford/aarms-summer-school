@@ -32,7 +32,7 @@ size: 4K
 <!-- _backgroundImage: "linear-gradient(to top, #85110d, 1%, white)" -->
 # Stochastic epidemiological models
 
-8 August 2023 
+24 August 2023 
 
 Julien Arino [![width:32px](https://raw.githubusercontent.com/julien-arino/presentations/main/FIGS/icons/email-round.png)](mailto:Julien.Arino@umanitoba.ca) [![width:32px](https://raw.githubusercontent.com/julien-arino/presentations/main/FIGS/icons/world-wide-web.png)](https://julien-arino.github.io/) [![width:32px](https://raw.githubusercontent.com/julien-arino/presentations/main/FIGS/icons/github-icon.png)](https://github.com/julien-arino)
 
@@ -42,11 +42,14 @@ University of Manitoba*
 <div style = "font-size:18px; margin-top:-10px; padding-bottom:30px;"></div>
 
 Canadian Centre for Disease Modelling
-Canadian COVID-19 Mathematical Modelling Task Force
+PHAC-EMNID / REMMI-ASPC
 NSERC-PHAC EID Modelling Consortium (CANMOD, MfPH, OMNI/RÉUNIS)
 
-<div style = "text-align: justify; position: relative; bottom: -5%; font-size:18px;">
-* The University of Manitoba campuses are located on original lands of Anishinaabeg, Cree, Oji-Cree, Dakota and Dene peoples, and on the homeland of the Métis Nation.</div>
+<div style = "text-align: justify; position: relative; bottom: -3%; font-size:23px; margin-left:-50px; margin-right:-50px">
+
+![bg width:800px opacity:0.2](https://raw.githubusercontent.com/julien-arino/presentations/main/FIGS/various/inuit-metis-firstnation.png)
+
+[*](https://umanitoba.ca/indigenous/sites/indigenous/files/2020-09/traditional-territories-acknowledgement-2020.pdf)The University of Manitoba campuses are located on original lands of Anishinaabeg, Cree, Oji-Cree, Dakota and Dene peoples, and on the homeland of the Métis Nation. We respect the Treaties that were made on these territories, we acknowledge the harms and mistakes of the past, and we dedicate ourselves to move forward in partnership with Indigenous communities in a spirit of reconciliation and collaboration.</div>
 
 ---
 
@@ -59,16 +62,9 @@ NSERC-PHAC EID Modelling Consortium (CANMOD, MfPH, OMNI/RÉUNIS)
 
 ---
 
-# <!--fit--> Correspondence to Chapter 6 of Keeling and Rohani
-
-- I am using my own flow
-- I will not cover all of the material in K&R, but will complement it, so look at their content as well
-
----
-
 # Remarks / Resources
 
-This is a *user-oriented* course: I barely, if at all, touch on the algorithms; instead, I focus on how to use them
+This is a *user-oriented* course: I barely touch on the algorithms; instead, I focus on how to use them
 
 Code is available in [my subfolder in the course Github repo](https://github.com/ahurford/aarms-summer-school/tree/main/julien-lectures) in the CODE directory
 
@@ -113,7 +109,7 @@ Next slides: $P^\star = 100$K, $\gamma=1/5$, $\mathcal{R}_0=\{0.8,1.5,2.5\}$ (an
 
 ---
 
-# When $I_0=2$, extinctions happen quite frequently
+# <!--fit-->When $I_0=2$, extinctions happen quite frequently
 
 ![height:600px](https://raw.githubusercontent.com/julien-arino/presentations/main/FIGS/stochastic/extinctions_fct_R0.png)
 
@@ -139,7 +135,7 @@ But there are many others. Of note:
 
 $p(t)=(p_1(t),\ldots,p_n(t))^T$: probability vector, with $p_i(t)$ describing the probability that at time $t$, the system is in state $S_i$, $i=1,\ldots,n$
 
-$\sum_i p_i(t)=1$ for al# l $t$, of course
+$\sum_i p_i(t)=1$ for all $t$, of course
 
 State evolution governed by
 $$
@@ -172,15 +168,100 @@ So check the direction to understand whether you are using $A$ or $A^T$
 
 As a teacher of modelling: base theory of DTMC uses a lot of linear algebra and graph theory; usually really appreciated by students
 
-*Regular* DTMC (with *primitive* transition matrices) allow to consider equilibrium distribution of probability
+*Regular* DTMC (with *primitive* transition matrices) allow to consider equilibrium distribution of probability of being in various states
 
 *Absorbing* DTMC (with *reducible* transition matrices) allow the consideration of time to absorption, mean first passage time, etc.
+
+---
+
+# DTMC for example SIS system
+
+Since $S=P^\star-I$, consider only the infected. To simulate as DTMC, consider a random walk on $I$ ($\simeq$ Gambler's ruin problem)
+
+Denote $\lambda_I = \beta (P^\star-I)I\Delta t$, $\mu_I = \gamma I\Delta t$ and $\sigma_I=1-(\lambda_I+\mu_I)\Delta t$
+
+![width:1200px](https://raw.githubusercontent.com/julien-arino/3MC-course-epidemiological-modelling/main/FIGS/figure_SIS_random_walk.png)
+
+---
+
+#  Absorbing states, absorbing chains
+
+<div class="definition">
+
+A state $S_i$ in a Markov chain is **absorbing** if whenever it occurs on the $n^{th}$ generation of the experiment, it then occurs on every subsequent step. In other words, $S_i$ is absorbing if $p_{ii}=1$ and $p_{ij}=0$ for $i\neq j$
+</div>
+
+<div class="definition">
+
+A **Markov chain is absorbing** if it has at least one absorbing state, and if from every state it is possible to go to an absorbing state
+</div>
+
+<div class="definition">
+
+In an absorbing Markov chain, a state that is not absorbing is called **transient**
+</div>
+
+---
+
+#  Some questions on absorbing chains
+
+Suppose we have a chain like the following
+
+![width:500px center](https://raw.githubusercontent.com/julien-arino/3MC-course-epidemiological-modelling/main/FIGS/graphe_absorbant.png)
+
+1. Does the process eventually reach an absorbing state?
+2. Average # of times spent in a transient state, if starting in a transient state?
+3. Average # of steps before entering an absorbing state?
+4. Probability of being absorbed by a given absorbing state, when there are more than one, when starting in a given transient state?
+
+---
+
+#  Reaching an absorbing state
+
+Answer to question 1:
+<div class="theorem">
+
+Markov chain absorbing $\implies$ probability of reaching *an* absorbing state is **1**
+</div>
+
+---
+
+#  Standard form of the transition matrix
+
+For an absorbing chain with $k$ absorbing states and $r-k$ transient states, the transition matrix can be written as
+$$
+P=\begin{pmatrix}
+\mathbb{I}_k & \mathbf{0} \\
+R & Q
+\end{pmatrix}
+$$
+
+|     | Absorbing states | Transient states |
+|:---:|:---:|:---:|
+| **Absorbing states** | $\mathbb{I}_k$ | $\mathbf{0}$ |
+| **Transient states** | $R$ | $Q$ |
+
+$\mathbb{I}_k$ the $k\times k$ identity, $\mathbf{0}\in\mathbb{R}^{k\times(r-k)}$, $R\in\mathbb{R}^{(r-k)\times k}$, $Q\in\mathbb{R}^{(r-k)\times(r-k)}$
+
+---
+
+The matrix $\mathbb{I}_{r-k}-Q$ is invertible. Let
+
+- $N=(\mathbb{I}_{r-k}-Q)^{-1}$ be the **fundamental matrix** of the Markov chain
+- $T_i$ be the sum of the entries on row $i$ of $N$
+- $B=NR$
+
+Answers to our remaining questions:
+
+2. $N_{ij}$ is the average number of times the process is in the $j$th transient state if it starts in the $i$th transient state
+3. $T_i$ is the average number of steps before the process enters an absorbing state if it starts in the $i$th transient state
+4. $B_{ij}$ is the probability of eventually entering the $j$th absorbing state if the process starts in the $i$th transient state
 
 See for instance book of [Kemeny and Snell](https://www.amazon.com/Finite-Markov-Chains-Laurie-Kemeny/dp/B000KYES0O)
 
 ---
 
-# DTMC for example SIS system
+# Return to DTMC for example SIS system
 
 Since $S=P^\star-I$, consider only the infected. To simulate as DTMC, consider a random walk on $I$ ($\simeq$ Gambler's ruin problem)
 
@@ -208,7 +289,7 @@ $$
 
 ---
 
-```
+```R
 # Make the transition matrix
 T = mat.or.vec(nr = (Pop+1), nc = (Pop+1))
 for (row in 2:Pop) {
@@ -232,13 +313,13 @@ diag(T) = 1-rowSums(T)
 
 # Simulating a DTMC
 
-```
+```R
 library(DTMCPack)
 sol = MultDTMC(nchains = 20, tmat = T, io = IC, n = t_f)
 ```
 gives 20 realisations of a DTMC with transition matrix ``T``, initial conditions ``IC`` (a vector of initial probabilities of being in the different $I$ states) and final time ``t_f``
 
-See code on [Github](https://github.com/julien-arino/UK-APASI)
+See code on [Github](https://github.com/ahurford/aarms-summer-school/tree/main/julien-lectures/CODE)
 
 ---
 
@@ -250,7 +331,7 @@ See code on [Github](https://github.com/julien-arino/UK-APASI)
 
 `DTMCPack` is great for obtaining realisations of a DTMC, but to study it in more detail, `markovchain` is much more comprehensive
 
-```
+```R
 library(markovchain)
 mcSIS <- new("markovchain", 
              states = sprintf("I_%d", 0:Pop),
@@ -262,7 +343,7 @@ Note that interestingly, `markovchain` overrides the weird default "`*` is Hadam
 
 ---
 
-```
+```R
 > summary(mcSIS)
 SIS  Markov chain that is composed by: 
 Closed classes: 
@@ -320,9 +401,7 @@ CTMC are roughly equivalent to ODE
 
 ---
 
-# ODE to CTMC : focus on different components
-
-![width:600px](https://raw.githubusercontent.com/julien-arino/presentations/main/FIGS/flow-diagrams/figure_SIS_no_demography_ODE.png)  ![width:400px](https://raw.githubusercontent.com/julien-arino/presentations/main/FIGS/flow-diagrams/figure_SIS_no_demography_CTMC.png)
+![bg contain 95%](https://raw.githubusercontent.com/julien-arino/presentations/main/FIGS/stochastic/SIS_ODE_vs_CTMC.png)
 
 ---
 
@@ -362,7 +441,7 @@ while {$t\leq t_f$}
 
 # Simulating a CTMC
 
-```
+```R
 library(GillespieSSA2)
 IC <- c(S = (Pop-I_0), I = I_0)
 params <- c(gamma = gamma, beta = beta)
@@ -385,10 +464,6 @@ plot(sol$time, sol$state[,"I"], type = "l",
 ---
 
 ![bg contain](https://raw.githubusercontent.com/julien-arino/presentations/main/FIGS/stochastic/one_CTMC_sim.png)
-
----
-
-![bg contain](https://raw.githubusercontent.com/julien-arino/3MC-course-epidemiological-modelling/main/FIGS/many_CTMC_sims_with_means.png)
 
 ---
 
@@ -427,7 +502,7 @@ while {$t\leq t_f$}
 
 ---
 
-```
+```R
 b = 0.01   # Birth rate
 d = 0.01   # Death rate
 t_0 = 0    # Initial time
@@ -447,7 +522,7 @@ N_curr = N_0
 
 ---
 
-```
+```R
 while (t_curr<=t_f) {
   xi_t = (b+d)*N_curr
   # The exponential number generator does not like a rate of 0 (when the 
@@ -520,7 +595,7 @@ $$
 - At stop time
   - $|N| = 241,198$ (and $|t|$ as well, of course!)
   - time was moving slowly
-```
+```R
 > tail(diff(t))
 [1] 1.357242e-04 1.291839e-04 5.926044e-05 7.344020e-05 1.401148e-04 4.423529e-04
 ```
@@ -537,3 +612,44 @@ $$
 - *Approximation* method (compared to classic Gillespie, which is exact)
 - Roughly: consider "groups" of events instead of individual events
 - Good news: `GillespieSSA2` (which we saw earlier) and `adaptivetau`
+
+---
+
+# Parallelisation
+
+To see multiple realisations: good idea to parallelise, then interpolate results. Write a function, e.g.,  `run_one_sim` that .. runs one simulation, then..
+
+```R
+no_cores <- detectCores()-1
+cl <- makeCluster(no_cores)
+clusterEvalQ(cl,{
+  library(GillespieSSA2)
+})
+clusterExport(cl,
+              c("params",
+                "run_one_sim"),
+              envir = .GlobalEnv)
+SIMS = parLapply(cl = cl, 
+                 X = 1:params$number_sims, 
+                 fun =  function(x) run_one_sim(params))
+stopCluster(cl)
+```
+
+See `simulate_CTMC_parallel.R` on [Github](https://github.com/julien-arino/UK-APASI)
+
+---
+
+![bg contain](https://raw.githubusercontent.com/julien-arino/3MC-course-epidemiological-modelling/main/FIGS/many_CTMC_sims_with_means.png)
+
+---
+
+# Benefit of parallelisation
+
+Run the parallel code for 100 sims between `tictoc::tic()` and `tictoc::toc()`, giving `66.958 sec elapsed`, then the sequential version
+```R
+tictoc::tic()
+SIMS = lapply(X = 1:params$number_sims, 
+              FUN =  function(x) run_one_sim(params))
+tictoc::toc()
+```
+which gives `318.141 sec elapsed` on a 6C/12T Intel(R) Core(TM) i9-8950HK CPU @ 2.90GHz (4.75$\times$ faster) or `12.067 sec elapsed` versus `258.985 sec elapsed` on a 32C/64T AMD Ryzen Threadripper 3970X 32-Core Processor (21.46$\times$ faster !)
