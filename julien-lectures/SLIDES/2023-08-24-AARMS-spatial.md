@@ -74,7 +74,7 @@ Thucydides (c. 460 BCE - c. 395 BCE)
 - Basic mathematical analysis
 - $\mathcal{R}_0$ is not the panacea - An urban centre and satellite cities
 - Problems specific to metapopulations
-
+- Numerical investigations of large-scale systems
 ---
 
 <!-- _backgroundImage: "linear-gradient(to bottom, #f1c40f, 20%, white)" -->
@@ -1215,6 +1215,199 @@ i_{\ell p}' &= g_{\ell p}(S_p,I_p)+\textstyle{\sum_{q\in\mathcal{P}}} m_{\ell pq
 \end{aligned}
 $$
 required to observe a metapopulation-induced behaviour?
+
+---
+
+<!-- _backgroundImage: "linear-gradient(to bottom, #f1c40f, 20%, white)" -->
+# <!-- fit -->Numerical investigations of large-scale systems
+
+<div style = "position: relative; bottom: -40%; font-size:20px;">
+
+- JA. [Spatio-temporal spread of infectious pathogens of humans](https://doi.org/10.1016/j.idm.2017.05.001). *Infectious Disease Modelling* **2**(2):218-228 (2017)
+- JA. [Mathematical epidemiology in a data-rich world](https://doi.org/10.1016/j.idm.2019.12.008). *Infectious Disease Modelling* **5**:161-188 (2020)
+- github repo [modelling-with-data](https://github.com/julien-arino/modelling-with-data)
+</div>
+
+---
+
+# Not very difficult
+
+- As for the mathematical analysis: if you do things carefully and think about things a bit, numerics are not hard. Well: not harder than numerics in low-D
+- Exploit vector structure
+
+---
+
+# Set up parameters
+
+```R
+pop = c(34.017, 1348.932, 1224.614, 173.593, 93.261) * 1e+06
+countries = c("Canada", "China", "India", "Pakistan", "Philippines")
+T = matrix(data = 
+             c(0, 1268, 900, 489, 200, 
+               1274, 0, 678, 859, 150, 
+               985, 703, 0, 148, 58, 
+               515, 893, 144, 0, 9, 
+               209, 174, 90, 2, 0), 
+           nrow = 5, ncol = 5, byrow = TRUE)
+```
+
+---
+
+# Work out movement matrix
+
+```R
+p = list()
+# Use the approximation explained in Arino & Portet (JMB 2015)
+p$M = mat.or.vec(nr = dim(T)[1], nc = dim(T)[2])
+for (from in 1:5) {
+  for (to in 1:5) {
+    p$M[to, from] = -log(1 - T[from, to]/pop[from])
+  }
+  p$M[from, from] = 0
+}
+p$M = p$M - diag(colSums(p$M))
+```
+
+---
+
+```R
+p$P = dim(p$M)[1]
+p$eta = rep(0.3, p$P)
+p$epsilon = rep((1/1.5), p$P)
+p$pi = rep(0.7, p$P)
+p$gammaI = rep((1/5), p$P)
+p$gammaA = rep((1/3), p$P)
+# The desired values for R_0
+R_0 = rep(1.5, p$P)
+```
+
+---
+
+# <!--fit-->Write down indices of the different state variable types
+
+Save index of state variable types in state variables vector (we have to use a vector and thus, for instance, the name "S" needs to be defined)
+
+```R
+p$idx_S = 1:p$P
+p$idx_L = (p$P+1):(2*p$P)
+p$idx_I = (2*p$P+1):(3*p$P)
+p$idx_A = (3*p$P+1):(4*p$P)
+p$idx_R = (4*p$P+1):(5*p$P)
+```
+
+---
+
+# Set up IC and time
+
+```R
+# Set initial conditions. For example, we start with 2
+# infectious individuals in Canada.
+L0 = mat.or.vec(p$P, 1)
+I0 = mat.or.vec(p$P, 1)
+A0 = mat.or.vec(p$P, 1)
+R0 = mat.or.vec(p$P, 1)
+I0[1] = 2
+S0 = pop - (L0 + I0 + A0 + R0)
+# Vector of initial conditions to be passed to ODE solver.
+IC = c(S = S0, L = L0, I = I0, A = A0, R = R0)
+# Time span of the simulation (5 years here)
+tspan = seq(from = 0, to = 5 * 365.25, by = 0.1)
+```
+
+---
+
+# Set up $\beta$ to avoid blow up
+
+Let us take $\mathcal{R}_0=1.5$ for patches in isolation. Solve $\mathcal{R}_0$ for $\beta$ 
+$$
+\beta=\frac{\mathcal{R}_0}{S(0)}
+\left(
+\frac{1-\pi_p}{\gamma_{Ip}}
++\frac{\pi_p\eta_p}{\gamma_{Ap}}
+\right)^{-1}
+$$ 
+
+<p style="margin-bottom:2cm;"></p> 
+
+```R
+for (i in 1:p$P) {
+  p$beta[i] = 
+    R_0[i] / S0[i] * 1/((1 - p$pi[i])/p$gammaI[i] + p$pi[i] * p$eta[i]/p$gammaA[i])
+}
+```
+
+---
+
+# Define the vector field
+
+```R
+SLIAR_metapop_rhs <- function(t, x, p) {
+  with(as.list(p), {
+    S = x[idx_S]
+    L = x[idx_L]
+    I = x[idx_I]
+    A = x[idx_A]
+    R = x[idx_R]
+    N = S + L + I + A + R
+    Phi = beta * S * (I + eta * A) / N
+    dS = - Phi + MS %*% S
+    dL = Phi - epsilon * L + p$ML %*% L
+    dI = (1 - pi) * epsilon * L - gammaI * I + MI %*% I
+    dA = pi * epsilon * L - gammaA * A + MA %*% A
+    dR = gammaI * I + gammaA * A + MR %*% R
+    dx = list(c(dS, dL, dI, dA, dR))
+    return(dx)
+  })
+}
+```
+
+---
+
+# And now call the solver
+
+```R
+# Call the ODE solver
+sol <- ode(y = IC, 
+           times = tspan, 
+           func = SLIAR_metapop_rhs, 
+           parms = p,
+           method = "ode45")
+```
+
+---
+
+# One little trick (case with demography)
+
+Suppose demographic EP is $\mathbf{N}^\star=(\mathbf{d}-\mathcal{M})^{-1}\mathbf{b}$
+
+Want to maintain $\mathbf{N}(t)=\mathbf{N}^\star$ for all $t$ to ignore convergence to demographic EP. Think in terms of $\mathbf{b}$:
+
+$$
+\mathbf{N}'=0\iff \mathbf{b}-\mathbf{d}\mathbf{N}+\mathcal{M}\mathbf{N}=0 \iff \mathbf{b} = (\mathbf{d}-\mathcal{M})\mathbf{N}
+$$
+
+So take $\mathbf{b}=(\mathbf{d}-\mathcal{M})\mathbf{N}^\star$
+
+Then
+$$
+\mathbf{N}' = (\mathbf{d}-\mathcal{M})\mathbf{N}^\star
+-\mathbf{d}\mathbf{N}+\mathcal{M}\mathbf{N}
+$$
+and thus if $\mathbf{N}(0)=\mathbf{N}^\star$, then $\mathbf{N}'(0)=0$ and thus $\mathbf{N}'=0$ for all $t\geq 0$, i.e., $\mathbf{N}(t)=\mathbf{N}^\star$ for all $t\geq 0$
+
+---
+
+# Word of warning about that trick, though..
+
+$$
+\mathbf{b}=(\mathbf{d}-\mathcal{M})\mathbf{N}^\star
+$$
+
+$\mathbf{d}-\mathcal{M}$ has nonnegative (typically positive) diagonal entries and nonpositive off-diagonal entries
+
+Easy to think of situations where the diagonal will be dominated by the off-diagonal, so $\mathbf{b}$ could have negative entries
+
+$\implies$ use this for numerics, not for the mathematical analysis
 
 ---
 
