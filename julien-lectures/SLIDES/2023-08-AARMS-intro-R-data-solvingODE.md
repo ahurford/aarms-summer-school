@@ -1,7 +1,7 @@
 ---
 marp: true
-title: Practicum - Introduction to R. Collecting data. Solving ODEs in R
-description: Julien Arino - 3MC Course Epidemiological Modelling - Practicum 01 - Introduction to R. Collecting data. Solving ODEs in R
+title: Julien Arino - 2023 AARMS Summer School - Introduction to R. Collecting data. Solving ODEs in R
+description: Julien Arino - 2023 AARMS Summer School - Introduction to R. Collecting data. Solving ODEs in R
 theme: default
 paginate: false
 math: mathjax
@@ -31,9 +31,9 @@ size: 4K
 </style>
 
 <!-- _backgroundImage: "linear-gradient(to top, #85110d, 3%, white)" -->
-# Practicum 01 - Introduction to R. Collecting data. Solving ODEs in R
+# <!--fit-->Introduction to R. Collecting data. Solving ODEs in R
 
-4 April 2022
+20-30 August 2023
 
 Julien Arino [![width:32px](https://raw.githubusercontent.com/julien-arino/presentations/main/FIGS/icons/email-round.png)](mailto:Julien.Arino@umanitoba.ca) [![width:32px](https://raw.githubusercontent.com/julien-arino/presentations/main/FIGS/icons/world-wide-web.png)](https://julien-arino.github.io/) [![width:32px](https://raw.githubusercontent.com/julien-arino/presentations/main/FIGS/icons/github-icon.png)](https://github.com/julien-arino)
 
@@ -43,11 +43,15 @@ University of Manitoba*
 <div style = "font-size:18px; margin-top:-10px; padding-bottom:30px;"></div>
 
 Canadian Centre for Disease Modelling
-Canadian COVID-19 Mathematical Modelling Task Force
+PHAC-EMNID / REMMI-ASPC
 NSERC-PHAC EID Modelling Consortium (CANMOD, MfPH, OMNI/RÉUNIS)
 
-<div style = "text-align: justify; position: relative; bottom: -5%; font-size:18px;">
-* The University of Manitoba campuses are located on original lands of Anishinaabeg, Cree, Oji-Cree, Dakota and Dene peoples, and on the homeland of the Métis Nation.</div>
+<div style = "text-align: justify; position: relative; bottom: -3%; font-size:23px; margin-left:-50px; margin-right:-50px">
+
+![bg width:800px opacity:0.2](https://raw.githubusercontent.com/julien-arino/presentations/main/FIGS/various/inuit-metis-firstnation.png)
+
+[*](https://umanitoba.ca/indigenous/sites/indigenous/files/2020-09/traditional-territories-acknowledgement-2020.pdf)The University of Manitoba campuses are located on original lands of Anishinaabeg, Cree, Oji-Cree, Dakota and Dene peoples, and on the homeland of the Métis Nation. We respect the Treaties that were made on these territories, we acknowledge the harms and mistakes of the past, and we dedicate ourselves to move forward in partnership with Indigenous communities in a spirit of reconciliation and collaboration.</div>
+
 
 ---
 
@@ -70,7 +74,7 @@ NSERC-PHAC EID Modelling Consortium (CANMOD, MfPH, OMNI/RÉUNIS)
 
 - Open source version of S
 - Appeared in 1993
-- Now version 4.2
+- Now version 4.3
 - One major advantage in my view: uses a lot of C and Fortran code. E.g., `deSolve`:
 > The functions provide an interface to the FORTRAN functions 'lsoda', 'lsodar', 'lsode', 'lsodes' of the 'ODEPACK' collection, to the FORTRAN functions 'dvode', 'zvode' and 'daspk' and a C-implementation of solvers of the 'Runge-Kutta' family with fixed or variable time steps
 - Very active community on the web, easy to find solutions (same true of Python, I just prefer R)
@@ -123,13 +127,13 @@ NSERC-PHAC EID Modelling Consortium (CANMOD, MfPH, OMNI/RÉUNIS)
 
 Two ways:
 
-```
+```R
 X <- 10
 ```
 
 or
 
-```
+```R
 X = 10
 ```
 
@@ -141,14 +145,14 @@ First version is preferred by R purists.. I don't really care
 
 A very useful data structure, quite flexible and versatile. Empty list: `L <- list()`. Convenient for things like parameters. For instance
 
-```
+```R
 L <- list()
 L$a <- 10
 L$b <- 3
 L[["another_name"]] <- "Plouf plouf"
 ```
 
-```
+```R
 > L[1]
 $a
 [1] 10
@@ -166,7 +170,7 @@ $a
 
 # Vectors
 
-```
+```R
 x = 1:10
 y <- c(x, 12)
 > y
@@ -185,13 +189,13 @@ Note that in `z`, since the first two entries are characters, the added entry is
 # Matrices
 
 Matrix (or vector) of zeros
-```
+```R
 A <- mat.or.vec(nr = 2, nc = 3)
 ```
 
 Matrix with prescribed entries
 
-```
+```R
 B <- matrix(c(1,2,3,4), nr = 2, nc = 2)
 > B
      [,1] [,2]
@@ -220,7 +224,7 @@ Probably the biggest annoyance in R compared to other languages
 # Vector operations
 
 Vector addition is also frustrating. Say you write `x=1:10`, i.e., make the vector
-```
+```R
 > x
  [1]  1  2  3  4  5  6  7  8  9 10
 ```
@@ -244,7 +248,7 @@ Then `x+1` gives
 
 # Flow control
 
-```
+```R
 if (condition is true) {
   list of stuff to do
 }
@@ -252,7 +256,7 @@ if (condition is true) {
 
 Even if `list of stuff to do` is a single instruction, best to use curly braces
 
-```
+```R
 if (condition is true) {
   list of stuff to do
 } else if (another condition) {
@@ -268,7 +272,7 @@ if (condition is true) {
 
 `for` applies to lists or vectors
 
-```
+```R
 for (i in 1:10) {
   something using integer i
 }
@@ -285,15 +289,37 @@ for (m in list("truc", "muche", "chose", 1, 2)) {
 
 ---
 
-# lapply
+# apply
+
+Applies a function to one of the dimensions of a matrix
+
+```R
+M = matrix(data = runif(50), nr = 10)
+> apply(M, 1, max)
+ [1] 0.9943167 0.9219764 0.3220949 0.9752947 0.7750777 0.7490136 0.9628084 0.9850463
+ [9] 0.9098879 0.9764303
+> apply(M, 2, max)
+[1] 0.9943167 0.9764303 0.9850463 0.7528144 0.9628084
+```
+If you need a funkier function, just make it up on the fly or define it (if it is too complex)
+```R
+apply(M, 1, function(x) sum(x))
+ [1] 2.0285250 2.8906874 0.8427094 1.7375687 2.6387124 1.6453108 2.7476479 2.5075278
+ [9] 2.1175915 1.9980510
+> apply(M, 2, function(x) sum(x))
+[1] 3.396630 6.485475 3.990447 3.969723 3.312057
+```
+(There are functions `rowSums` and `colSums`, but you get the point)
+
+---
+
+# lapply/mapply/etc.
 
 Very useful function (a few others in the same spirit: `sapply`, `vapply`, `mapply`)
 
-Applies a function to each entry in a list/vector/matrix
+Applies a function to each entry in a list/vector/matrix. Because there is a parallel version (`parLapply`) that we will see later, worth learning
 
-Because there is a parallel version (`parLapply`) that we will see later, worth learning
-
-```
+```R
 l = list()
 for (i in 1:10) {
         l[[i]] = runif(i)
@@ -303,13 +329,13 @@ lapply(X = l, FUN = mean)
 
 or, to make a vector
 
-```
+```R
 unlist(lapply(X = l, FUN = mean))
 ```
 
 or
 
-```
+```R
 sapply(X = l, FUN = mean)
 ```
 
@@ -319,7 +345,7 @@ sapply(X = l, FUN = mean)
 
 Can "pick up" nontrivial list entries
 
-```
+```R
 l = list()
 for (i in 1:10) {
         l[[i]] = list()
@@ -331,7 +357,7 @@ sapply(X = l, FUN = function(x) length(x$b))
 
 gives
 
-```
+```R
 [1]  2  4  6  8 10 12 14 16 18 20
 ```
 
@@ -339,9 +365,9 @@ Just recall: the argument to the function you define is a list entry (`l[[1]]`, 
 
 ---
 
-# Avoid parameter variation loops with expand.grid
+# <!--fit-->Avoid parameter variation loops with expand.grid
 
-```
+```R
 # Suppose we want to vary 3 parameters
 variations = list(
     p1 = seq(1, 10, length.out = 10),
@@ -435,7 +461,7 @@ Recent movement (5-10 years): governments (local or higher) create portals where
 
 ---
 
-```
+```R
 library(wbstats)
 pop_data_CTRY <- wb_data(country = "ZAF", indicator = "SP.POP.TOTL",
                          mrv = 100, return_wide = FALSE)
@@ -484,13 +510,13 @@ crop_figure("pop_ZAF.png")
 
 # Getting the tree data
 
-```
+```R
 allTrees = read.csv("https://data.winnipeg.ca/api/views/hfwk-jp4h/ro
 ```
 
 After this,
 
-```
+```R
 dim(allTrees)
 ## [1] 300846
 15
@@ -500,7 +526,7 @@ dim(allTrees)
 
 # Let us clean things a little
 
-```
+```R
 elms_idx = grep("American Elm", allTrees$Common.Name, ignore.case = TRUE)
 elms = allTrees[elms_idx, ]
 ```
@@ -529,7 +555,7 @@ We are left with 54,036 American elms
 
 # Distances between all trees
 
-```
+```R
 elms_xy = cbind(elms$X, elms$Y)
 D = dist(elms_xy)
 idx_D = which(D<50)
@@ -539,7 +565,7 @@ idx_D = which(D<50)
 
 Keep a little more..
 
-```
+```R
 indices_LT_kept = as.data.frame(cbind(indices_LT[idx_D,],
                                 D[idx_D]))
 colnames(indices_LT_kept) = c("i","j","dist")
@@ -549,7 +575,7 @@ colnames(indices_LT_kept) = c("i","j","dist")
 
 # Create line segments between all pairs of trees
 
-```
+```R
 tree_locs_orig = cbind(elms_latlon$lon[indices_LT_kept$i],
                        elms_latlon$lat[indices_LT_kept$i])
 tree_locs_dest = cbind(elms_latlon$lon[indices_LT_kept$j],
@@ -575,7 +601,7 @@ tree_pairs = do.call(
 
 # A bit of mapping
 
-```
+```R
 library(tidyverse)
 # Get bounding polygon for Winnipeg
 bb_poly = osmdata::getbb(place_name = "winnipeg", 
@@ -602,7 +628,7 @@ rivers <- osmdata::opq(bbox = bb_poly) %>%
 - We have the roads and rivers of the city, which is a collection of line segments
 - If there is an intersection between a tree pair and a road/river, then we can forget this tree pair as their root systems cannot come into contact
 
-```
+```R
 st_crs(tree_pairs) = sf::st_crs(roads$osm_lines$geometry)
 iroads = sf::st_intersects(x = roads$osm_lines$geometry,
                            y = tree_pairs)
@@ -612,7 +638,7 @@ irivers = sf::st_intersects(x = rivers$osm_lines$geometry,
 
 ---
 
-```
+```R
 tree_pairs_roads_intersect = c()
 for (i in 1:length(iroads)) {
   if (length(iroads[[i]])>0) {
@@ -644,7 +670,7 @@ to_keep = setdiff(to_keep,tree_pairs_roads_intersect)
 
 ---
 
-```
+```R
 library(sqldf)
 library(dplyr)
 
@@ -665,7 +691,7 @@ SARS_selected = SARS %>%
 
 ---
 
-```
+```R
 # Create incidence for the selected country. diff does difference one by one,
 # so one less entry than the vector on which it is being used, thus we pad with a 0.
 SARS_selected$incidence = c(0, diff(SARS_selected$totalNumberCases))
@@ -691,13 +717,7 @@ EpiCurve(SARS_selected,
 <!-- _backgroundImage: "linear-gradient(to bottom, #f1c40f, 20%, white)" -->
 # <!--fit-->Solving ODE numerically
 
-- The deSolve library
-- Example - Fitting data
-
----
-
-<!-- _backgroundImage: "linear-gradient(to bottom, #156C26, 20%, white)" -->
-# The deSolve library
+### (The deSolve library)
 
 ---
 
@@ -718,7 +738,7 @@ EpiCurve(SARS_selected,
 
 As with more numerical solvers, you need to write a function returning the value of the right hand side of your equation (the vector field) at a given point in phase space, then call this function from the solver
 
-```
+```R
 library(deSolve)
 rhs_logistic <- function(t, x, p) {
   with(as.list(x), {
@@ -736,7 +756,7 @@ sol <- ode(IC, times, rhs_logistic, params)
 
 This also works: add `p` to arguments of `as.list` and thus use without `p$` prefix
 
-```
+```R
 library(deSolve)
 rhs_logistic <- function(t, x, p) {
   with(as.list(c(x, p)), {
@@ -760,62 +780,10 @@ In this case, beware of not having a variable and a parameter with the same name
 
 - You can also specify other methods: "lsode", "lsodes", "lsodar", "vode", "daspk", "euler", "rk4", "ode23", "ode45", "radau", "bdf", "bdf_d", "adams", "impAdams" or "impAdams_d" ,"iteration" (the latter for discrete-time systems)
 
-```
+```R
 ode(y, times, func, parms, 
     method = "ode45")
 ```
 
 - You can even implement your own integration method
 
----
-
-<!-- _backgroundImage: "linear-gradient(to bottom, #156C26, 20%, white)" -->
-# Example - Fitting data
-
----
-
-# Example - Fitting data
-
-- Note that this is a super simplified version of what to do
-- Much more elaborate procedures exist
-  - Roda. [Bayesian inference for dynamical systems](https://doi.org/10.1016/j.idm.2019.12.007)
-  - Portet. [A primer on model selection using the Akaike Information Criterion](https://doi.org/10.1016/j.idm.2019.12.010)
-- Let us grab some epi data online and fit an SIR model to it
-- Don't expect anything funky, as I said, this is the baby version
-- Also, keep in mind that any identification procedure is subject to risks due to *identifiability issues*; see, e.g., Roda et al, [Why is it difficult to accurately predict the COVID-19 epidemic?](https://doi.org/10.1016/j.idm.2020.03.001)
-
----
-
-# Principle
-
-- Data is a set $(t_i,y_i)$, $i=1,\ldots,N$, where $t_i\in\mathcal{I}$, some interval
-- Solution to SIR is $(t,x(t))$ for $t\in\mathcal{I}$
-- Suppose parameters of the model are $p$
-- We want to minimise the error function
-$$
-E(p) = \sum_{i=1}^N \|x(t_i)-y_i\|
-$$
-- Norm is typically Euclidean, but could be different depending on objectives
-- So given a point $p$ in (admissible) parameter space, we compute the solution to the ODE, compute $E(p)$
-- Using some minimisation algorithm, we seek a minimum of $E(p)$ by varying $p$
-
----
-
-# What are $y_i$ and $x(t_i)$ here?
-
-- In epi data for infectious diseases, we typically have incidence, i.e., number of new cases per unit time
-- In SIR model, this is $\beta SI$ or $\beta SI/N$, so, if using mass action incidence and Euclidean norm
-$$
-E(p)=\sum_{i=1}^N(\beta S(t_i)I(t_i)-y_i)^2
-$$
-or, if using standard incidence
-$$
-E(p)=\sum_{i=1}^N
-\left(\beta \frac{S(t_i)I(t_i)}{N}-y_i\right)^2
-$$
-
----
-
-# Implementing in practice
-
-See the code [practicum_01_fitting.R](https://raw.githubusercontent.com/julien-arino/3MC-course-epidemiological-modelling/main/CODE/practicum_01_fitting.R), which we will go over now
