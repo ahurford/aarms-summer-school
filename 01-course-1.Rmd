@@ -34,6 +34,9 @@ For participants with limited coding experience, see [here](#prepcoding) for sug
 
 - **Lecture ??. Stochastic models.** [.html](2023-08-24-AARMS-stochastic.html)
 
+- **Lecture ??+1. Spatial models.** [.html](2023-08-24-AARMS-spatial.html)
+
+- **Lecture ??-??. Some R stuff.** [.html](2023-08-AARMS-intro-R-data-solvingODE.html)
 
 - **Lecture 13. Zoonotic spillover.** [reading](https://royalsocietypublishing.org/doi/10.1098/rstb.2018.0435) [slides](https://github.com/ahurford/ss-amy-greer/blob/main/August%2027_2023/Zoonotic%20spillover/Greer_Spillover_Part1_handout.pdf)
 
