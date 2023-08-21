@@ -10,14 +10,18 @@
 \
 
 - **Problems 1.2 Host heterogeneity and Multipathogen/Multihost** (Chs 3 & 4 of Keeling and Rohani - Heffernan; TA - Li)
+    + [Problem Set 1.2](probset-multihost-multipath.pdf)
     
 \
 
 - **Problems 1.3 Within-host models** (Heffernan; TA - Su)
+    + [Problem Set 1.3](probset-inhost.pdf)
 
 \
 
 - **Problems 1.4 Pathogen evolution and temporally-forced models** (Ch 5 of Keeling and Rohani - Heffernan; TA - Baafi)
+    + [Problem Set 1.4-evolution](probset-evolution.pdf)
+    + [Problem Set 1.4-seasonality](probset-seasonality.pdf)
 
 \
 
