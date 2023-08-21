@@ -1,9 +1,0 @@
-# A guide for infectious disease models aimed to provide decision support {.unlisted .unnumbered #SDM}
-
-The aspects of decision support that we considered in the _Data, Models, and Decision support_ course were based on structured decision making as described in the textbook with the same name by R. Gregory and L. Failing. Gregory and Failing's book focuses on environmental management choices, however, best practices in decision support are also pervasive in the medical literature. Perform a systematic literature review to understand the differences and overlap between the principles of decision support that are discussed in the environmental versus epidemiological literatures.
-
-Perform a literature review to identify infectious disease modelling publications that you consider useful for decision support. Discuss how these publications conform to the principles of structured decision making discussed in Chapter 17 of _Ecological Forecasting_. Describe any new ideas these publications present for how to best do mathematical modelling to support decision making.
-
-Find an infectious disease model in the literature that has results that could be reformulated to better conform to the principles of structured decision making. Reproduce the infectious disease model and present the results as a consequence table, and/or calculate quantities (i.e., utility, exceedence probability, the Pareto front, etc) that are mentioned in Chapter 17 of _Ecological Forecasting_.
-
-You do not have to do all of these elements, however, please keep in mind that this is a math summer school, so you need to include an infectious disease model.
