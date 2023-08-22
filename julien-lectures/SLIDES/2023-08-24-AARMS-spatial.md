@@ -375,7 +375,6 @@ $$
 ---
 
 # Oh, what a tangled web we weave
-
 ### (Walter Scott, not Shakespeare)
 
 Consider, e.g., $\eqref{sys:spSLIRS_incidence}$ with $q_p=0$,
