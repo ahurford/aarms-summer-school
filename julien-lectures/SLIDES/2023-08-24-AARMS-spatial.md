@@ -1428,3 +1428,9 @@ $\implies$ use this for numerics, not for the mathematical analysis
 - We will see in [Practicum 02](https://julien-arino.github.io/3MC-course-epidemiological-modelling/2022_04_3MC_EpiModelling_P02_Analysis_LargeScaleModels.html) that simulation (deterministic and stochastic) can be costly in RAM and cycles but is easy
 
 - Metapopulation models are not the only solution!
+
+---
+
+<!-- _backgroundImage: "linear-gradient(to bottom, #F45627, 20%, #F45627)" -->
+
+# <!-- fit --> Merci / Miigwech / Thank you

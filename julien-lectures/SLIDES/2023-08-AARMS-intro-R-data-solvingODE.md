@@ -787,3 +787,8 @@ ode(y, times, func, parms,
 
 - You can even implement your own integration method
 
+---
+
+<!-- _backgroundImage: "linear-gradient(to bottom, #F45627, 20%, #F45627)" -->
+
+# <!-- fit --> Merci / Miigwech / Thank you

@@ -1198,3 +1198,9 @@ SIMS = lapply(X = 1:params$number_sims,
 tictoc::toc()
 ```
 which gives `318.141 sec elapsed` on a 6C/12T Intel(R) Core(TM) i9-8950HK CPU @ 2.90GHz (4.75$\times$ faster) or `12.067 sec elapsed` versus `258.985 sec elapsed` on a 32C/64T AMD Ryzen Threadripper 3970X 32-Core Processor (21.46$\times$ faster !)
+
+---
+
+<!-- _backgroundImage: "linear-gradient(to bottom, #F45627, 20%, #F45627)" -->
+
+# <!-- fit --> Merci / Miigwech / Thank you
