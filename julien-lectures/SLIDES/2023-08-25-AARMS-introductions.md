@@ -65,6 +65,7 @@ NSERC-PHAC EID Modelling Consortium (CANMOD, MfPH, OMNI/RÉUNIS)
 
 - Introductions
 - Introductions are part of the spatio-temporal spread process
+- Modelling introductions
 
 --- 
 
@@ -166,6 +167,29 @@ Efforts to prevent and manage pathogen introduction include surveillance, quaran
 <!--![bg 85%](cities_roads_FRA.png)-->
 ![bg contain](https://raw.githubusercontent.com/julien-arino/presentations/main/FIGS/transportation/cities_roads_CAN-MB_detail.png)
 
+--- 
+
+# Geographies greatly influence reasoning
+	
+- Country level: importations quickly become less relevant
+- Consider an isolated location of 500 people.. disease may become extinct then be reimported
+
+---
+
+![bg contain](https://raw.githubusercontent.com/julien-arino/presentations/main/FIGS/sars-cov-2/CT_extent_2020-07-30.png)
+
+---
+
+# <!-- fit -->Transmission within national jurisdictions was heterogeneous
+
+Moving from ISO-3166-3 (nation or territory) level to smaller sub-national jurisdictions, the picture is more contrasted
+
+Next slide: Example of activation of North American health regions/municipios/counties
+
+---
+
+![bg contain 90%](https://raw.githubusercontent.com/julien-arino/presentations/main/FIGS/sars-cov-2/pct_active_21days_with_pct_activations.png)
+
 ---
 
 <!-- _backgroundImage: "linear-gradient(to bottom, #f1c40f, 20%, white)" -->
@@ -177,6 +201,13 @@ Efforts to prevent and manage pathogen introduction include surveillance, quaran
 - S.P Otto, T. Day, <ins>JA</ins>, C. Colijn *et al*. [The origins and potential future of SARS-CoV-2 variants of concern in the evolving COVID-19 pandemic](https://doi.org/10.1016/j.cub.2021.06.049). *Current Biology* (2021)
 - Delory, <ins>JA</ins>, Haÿ, Klotz & Boëlle. SARS-CoV-2 in nursing homes: analysis of routine surveillance data in four European countries. *Aging and Infection* (2022)
 </div>
+
+---
+<div style = "position: relative; top: -55%; padding-bottom:60px; font-size:40px">
+The spread process in a jurisdiction-based world
+</div>
+
+![bg 95%](https://raw.githubusercontent.com/julien-arino/presentations/main/FIGS/importations/importation_process3.png)
 
 ---
 
@@ -278,18 +309,6 @@ Almost exclusively attacked from the perspective of would-be importer
 In practice:
 - Travel restrictions/interruptions
 - Quarantine
-
----
-
-# Plague control measures
-
-- Lazzarettos of Dubrovnik 1377 (30 days)
-- Quarantena of Venice 1448 (40 days)
-- Isolation of known or suspected cases as well as persons who had been in contact with them, at first for 14 days and gradually increased to 40 days
-- Improvement of sanitation: development of pure water supplies, garbage and sewage disposal, food inspection
-- .. Find and kill a snake, chop it into pieces and rub the various parts over swollen buboes. (Snake, synonymous with Satan, was thought to draw the disease out of the body as evil would be drawn to evil)
-
-![bg left:29%](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Nuremberg_chronicles_-_Dance_of_Death_%28CCLXIIIIv%29.jpg/1201px-Nuremberg_chronicles_-_Dance_of_Death_%28CCLXIIIIv%29.jpg)
 
 ---
 

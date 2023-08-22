@@ -635,6 +635,12 @@ Then $\sum_i X_i$ Erlang distributed with rate parameter $\theta$ and shape para
 
 ---
 
+# <!--fit-->So use multiple compartments
+
+![width:98%](https://raw.githubusercontent.com/julien-arino/petit-cours-epidemio-mathematique/main/FIGS/figure_residence_times_expo_Erlang_fr.png)
+
+---
+
 # Properties of the Erlang distribution
 
 An Erlang is a Gamma with shape parameter $k\in\mathbb{N}$. P.d.f. of the Erlang distribution

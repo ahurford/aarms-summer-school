@@ -161,7 +161,7 @@ And yet **mobility drives spatio-temporal spread**:
 
 ---
 
-![bg contain](https://raw.githubusercontent.com/julien-arino/presentations/main/FIGS/transportation/passengers_transported_worldwide.png)
+![bg contain](https://raw.githubusercontent.com/julien-arino/presentations/main/FIGS/transportation/nb-air-PAX-per-year.png)
 
 ---
 
@@ -371,6 +371,39 @@ $$
 - JA, Davis, Hartley, Jordan, Miller \& PvdD. [A multi-species epidemic model with spatial dynamics](https://server.math.umanitoba.ca/~jarino/papers/ArinoDavisHartleyJordanMillerVdD-2005-MMB22.pdf). *Mathematical Medicine and Biology* **22**(2):129-142 (2005) 
 - JA, Jordan \& PvdD. [Quarantine in a multi-species epidemic model with spatial dynamics](https://server.math.umanitoba.ca/~jarino/publications/ArinoJordanVdD-2007-MBS206.pdf). *Mathematical Biosciences* **206**(1):46-60 (2007)
 </div>
+
+---
+
+# Oh, what a tangled web we weave
+
+### (Walter Scott, not Shakespeare)
+
+Consider, e.g., $\eqref{sys:spSLIRS_incidence}$ with $q_p=0$,
+$$
+\Phi_{sp}=\sum_{k\in\mathcal{S}}\beta_{skp}S_{sp}I_{kp}
+$$
+- $\beta_{skp}$ describes *intra*- and *inter*-species *possibilities* of transmission in a *location*
+- If the encounter of a susceptible from species $s\in\mathcal{S}$ and an infectious from species $k\in\mathcal{S}$ in location $p\in\mathcal{P}$ can lead to infection of the susceptible then $\beta_{skp}>0,$ otherwise $\beta_{skp}=0$
+
+---
+
+# Malaria and many vector-borne diseases
+
+![width:1000px center](https://raw.githubusercontent.com/julien-arino/presentations/main/FIGS/multi-species/malaria_transmission_graph.png)
+
+---
+
+# Plague (bubonic, not pneumonic)
+
+![width:1200px center](https://raw.githubusercontent.com/julien-arino/presentations/main/FIGS/multi-species/plague_transmission_graph.png)
+
+---
+
+![width:1200px center](https://raw.githubusercontent.com/julien-arino/presentations/main/FIGS/multi-species/ArinoDavis_etal-2005-MMB22-title.png)
+
+---
+
+![bg contain](https://raw.githubusercontent.com/julien-arino/presentations/main/FIGS/multi-species/plague_transmission_graph_with_bidasse.png)
 
 ---
 
@@ -637,10 +670,8 @@ Assume they are (in other words, assume $\mathbf{d}$ nonsingular). Then $\mathca
 
 ---
 
-# Behaviour of the total population
-<p style="margin-bottom:-1.5cm;"></p> 
-
-# Equal movement case
+# <!--fit-->Behaviour of the total population with equal movement
+<!--<p style="margin-bottom:-1.5cm;"></p> -->
 
 $\mathbf{N}^\star=(\mathbf{d}-\mathcal{M})^{-1}\mathbf{b}$ attracts solutions of
 $$
@@ -1425,9 +1456,9 @@ $\implies$ use this for numerics, not for the mathematical analysis
 - Metapopulation models are easy to analyse locally, give interesting problems at the global level
 
 
-- We will see in [Practicum 02](https://julien-arino.github.io/3MC-course-epidemiological-modelling/2022_04_3MC_EpiModelling_P02_Analysis_LargeScaleModels.html) that simulation (deterministic and stochastic) can be costly in RAM and cycles but is easy
+- Simulation (deterministic and stochastic) can be costly in RAM and cycles but is easy
 
-- Metapopulation models are not the only solution!
+- Metapopulation models are not the only solution! (see network models, individual-based models, ..)
 
 ---
 
