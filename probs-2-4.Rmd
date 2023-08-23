@@ -38,6 +38,8 @@ What is the next change that you might make to this exercise to make progress on
 
 [10 marks]
 
+3. In Chapter 9, the _Ecological forecasting_ book describes a rigorous approach for fusing data from multiple sources, particularly as it might be relevant for informing priors for parameter estimation. It is also noted that this is rarely. Write a paragraph summarizing the approach that Dietz describes, and outline some of the challenges to realizing these standards for epidemiological modelling.
 
+[5 mark]
 
 
