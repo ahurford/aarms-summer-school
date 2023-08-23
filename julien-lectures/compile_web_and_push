@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Render the lectures and copy them where they need 
+# to be (/docs in the repo)
+# Do a web render (will not work in the absence of a
+# web connection)
+# Does pull and push, so beware..
+
+rm SLIDES/*.html
+npx @marp-team/marp-cli@latest  --bespoke.progress --html SLIDES/2023-*.md
+cp SLIDES/*.html ../docs/
+cd ASSIGNMENTS
+pdflatex exercises-*.tex
+cd ..
+cp ASSIGNMENTS/exercises-*.pdf ../docs/
+git pull
+git commit -a -m "Update the slides and assignments"
+git push
