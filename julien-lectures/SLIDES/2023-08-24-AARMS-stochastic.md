@@ -552,9 +552,9 @@ $$
 
 ---
 
-Survival function, $\mathcal{S}(t)=\mathbb{P}(T>t)$, for an exponential distribution with mean 80 years
+Survival function, $\mathcal{S}(t)=\mathbb{P}(T>t)$, for exponential distrib. with mean 80 years
 
-![width:800px center](https://raw.githubusercontent.com/julien-arino/3MC-course-epidemiological-modelling/main/FIGS/survival_exp_80years.png)
+![width:750px center](https://raw.githubusercontent.com/julien-arino/3MC-course-epidemiological-modelling/main/FIGS/survival_exp_80years.png)
 
 ---
 
@@ -632,26 +632,6 @@ Then $\sum_i X_i$ Erlang distributed with rate parameter $\theta$ and shape para
 # <!--fit-->So use multiple compartments
 
 ![width:98%](https://raw.githubusercontent.com/julien-arino/petit-cours-epidemio-mathematique/main/FIGS/figure_residence_times_expo_Erlang_fr.png)
-
----
-
-# Properties of the Erlang distribution
-
-An Erlang is a Gamma with shape parameter $k\in\mathbb{N}$. P.d.f. of the Erlang distribution
-$$
-f(t; k,\lambda)={\lambda^k t^{k-1} e^{-\lambda t} \over (k-1)!},\quad t,\lambda \geq 0
-$$
-$k$ **shape parameter**, $\lambda$ **rate parameter**
-
-Mean $k/\lambda$, variance $k/\lambda^2$, c.d.f.
-$$
-F(t; k,\lambda) = 1 - \sum_{n=0}^{k-1}\frac{1}{n!}e^{-\lambda t}(\lambda t)^n
-$$
-and thus survival function
-$$
-\mathcal{S}(t; k,\lambda) = 
-\sum_{n=0}^{k-1}\frac{1}{n!}e^{-\lambda t}(\lambda t)^n
-$$
 
 ---
 
@@ -805,7 +785,7 @@ See for instance book of [Kemeny and Snell](https://www.amazon.com/Finite-Markov
 # Return to DTMC for example SIS system
 
 Since $S=P^\star-I$, consider only the infected. To simulate as DTMC, consider a random walk on $I$ ($\simeq$ Gambler's ruin problem)
-
+<br>
 Denote $\lambda_I = \beta (P^\star-I)I\Delta t$, $\mu_I = \gamma I\Delta t$ and $\sigma_I=1-(\lambda_I+\mu_I)\Delta t$
 
 ![width:1200px](https://raw.githubusercontent.com/julien-arino/3MC-course-epidemiological-modelling/main/FIGS/figure_SIS_random_walk.png)
@@ -923,7 +903,14 @@ Function | Role
 
 </span>
 
---- 
+---
+
+<div style="width:100%; height:100%">
+  <iframe src="https://daytah-or-dahtah.ovh:3838/DTMC-SIS/" style="position:absolute; top:0px; left:0px; 
+  width:100%; height:100%; border: none; overflow: hidden;"></iframe>
+</div>
+
+---
 
 <!-- _backgroundImage: "linear-gradient(to bottom, #f1c40f, 20%, white)" -->
 # <!-- fit -->Continuous time Markov chains
