@@ -1,0 +1,6 @@
+"0","data <- list(y=log(y),n=length(y),      ## data"
+"0","             x_ic=log(1000),tau_ic=100, ## initial condition prior"
+"0","             a_obs=1,r_obs=1,           ## obs error prior"
+"0","             a_add=1,r_add=1,            ## process error prior"
+"0","             a_beta = 1,r_beta=1"
+"0","             )"

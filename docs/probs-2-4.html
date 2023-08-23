@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Problems 2.4. State-space models &amp; fusing data | AARMS-EIDM.knit</title>
+  <meta name="description" content="" />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Problems 2.4. State-space models &amp; fusing data | AARMS-EIDM.knit" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Problems 2.4. State-space models &amp; fusing data | AARMS-EIDM.knit" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="probs-2-3.html"/>
+<link rel="next" href="probs-2-8.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+<script src="libs/calendar-binding-0.3.0/calendar.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>2023 AARMS-EIDM Summer School</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#details"><i class="fa fa-check"></i>Details</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#instructors"><i class="fa fa-check"></i>Instructors</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#guest-lecturers"><i class="fa fa-check"></i>Guest lecturers</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#getting-there"><i class="fa fa-check"></i>Getting there</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#funding"><i class="fa fa-check"></i>Funding</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="course1.html"><a href="course1.html"><i class="fa fa-check"></i>Course 1. Mathematical Epidemiology</a></li>
+<li class="chapter" data-level="" data-path="course2.html"><a href="course2.html"><i class="fa fa-check"></i>Course 2. Data, models, and decision support</a></li>
+<li class="chapter" data-level="" data-path="week1.html"><a href="week1.html"><i class="fa fa-check"></i>Schedule - Week 1</a></li>
+<li class="chapter" data-level="" data-path="week2.html"><a href="week2.html"><i class="fa fa-check"></i>Schedule - Week 2</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="probs-2-4" class="section level1 unlisted unnumbered hasAnchor">
+<h1>Problems 2.4. State-space models &amp; fusing data<a href="probs-2-4.html#probs-2-4" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<ol style="list-style-type: decimal">
+<li><p>Save and run <a href="https://github.com/EcoForecast/EF_Activities/blob/master/Exercise_06_StateSpace.Rmd">Exercise_06_StateSpace.Rmd</a>. The code sample is pulling Google flu data for Massachuetts and fitting a random walk to the data. Complete the exercise where you convert the last 40 data points to <code>NA</code>, make a ‘forecast’, that is compared to the real data. Make the zoomed in plots as necessary. [10 marks] (this is mostly tests existing R skills/copy and paste).</p></li>
+<li><p>The process model,</p></li>
+</ol>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="probs-2-4.html#cb1-1" tabindex="-1"></a>  <span class="do">#### Process Model</span></span>
+<span id="cb1-2"><a href="probs-2-4.html#cb1-2" tabindex="-1"></a>  <span class="st">&quot;for(t in 2:n){</span></span>
+<span id="cb1-3"><a href="probs-2-4.html#cb1-3" tabindex="-1"></a><span class="st">    x[t]~dnorm(x[t-1],tau_add)</span></span>
+<span id="cb1-4"><a href="probs-2-4.html#cb1-4" tabindex="-1"></a><span class="st">  }&quot;</span></span></code></pre></div>
+<p>might be extended to include some epidemiological details. Rather than try to change to a very complicated model, as the first step, lets consider:</p>
+<p><span class="math inline">\(I_{t+1} = I_{t} + \left(\beta - 0.2\right)I_t\)</span>.</p>
+<p>This is a very simple epidemiological model, where it is assumed that the proportion of susceptible individuals is fixed and equal to 1. This assumption might hold for a short time after a novel pathogen emerges. For this model, <span class="math inline">\(\beta\)</span> is the transmission rate and the recovery rate is assumed to be estimated with complete certainty as 0.2 recoveries per day. Consider a new process model,</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="probs-2-4.html#cb2-1" tabindex="-1"></a>  <span class="do">#### Process Model</span></span>
+<span id="cb2-2"><a href="probs-2-4.html#cb2-2" tabindex="-1"></a>  <span class="st">&quot;for(t in 2:n){</span></span>
+<span id="cb2-3"><a href="probs-2-4.html#cb2-3" tabindex="-1"></a><span class="st">    x[t]~dnorm((1+beta_proc-0.2)*x[t-1],tau_add)</span></span>
+<span id="cb2-4"><a href="probs-2-4.html#cb2-4" tabindex="-1"></a><span class="st">  }&quot;</span></span></code></pre></div>
+<p>Let’s understand, that <code>x[t]</code> is <span class="math inline">\(I(t)\)</span>, and <code>beta_proc</code> is <span class="math inline">\(\beta\)</span>.</p>
+<p>Add to the code, a prior for <code>beta_proc</code>. Run your code. When I tried this, it failed with the error:</p>
+<p><code>Error in update.jags(object, n.iter, ...) : Error in node beta_proc Current value is inconsistent with data</code></p>
+<p>My interpretation of the error message is that if <span class="math inline">\(\beta\)</span> is not time-varying, then there is no way that my linear recursion equation can fit the flu data, which is fluctuating. This is because the linear recursion equation will produce only geometric growth, or decay, but not both, depending on whether <span class="math inline">\(\beta &gt; 0.2\)</span> or not.</p>
+<p>Try this too. Describe all the changes that you made to the code. Report the errors that you get (or a show a graph of a fit, if you get this to work).</p>
+<p>What is the next change that you might make to this exercise to make progress on increasing the epidemiological detail, while also having a model that runs. You are to describe what you would do, but you do not have to do it.</p>
+<p>[10 marks]</p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="probs-2-3.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="probs-2-8.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
