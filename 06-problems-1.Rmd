@@ -26,6 +26,7 @@
 \
 
 - **Problems 1.5 Stochastic dynamics and spatial models** (Ch 6 & 7 of Keeling and Rohani - Arino; TA - Li)
+    + [Problem Set 1.5-stochastics](exercises-stochastic.pdf)
 
 \
 
