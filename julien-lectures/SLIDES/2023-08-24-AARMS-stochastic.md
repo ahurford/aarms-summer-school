@@ -57,7 +57,7 @@ NSERC-PHAC EID Modelling Consortium (CANMOD, MfPH, OMNI/RÉUNIS)
 # Outline
 
 - Why stochasticity matters
-- Side note: sojourn times / residence times
+- Side note: sojourn / residence times
 - Discrete time Markov chains
 - Continuous time Markov chains
 
@@ -95,7 +95,7 @@ $$\mathcal{R}_0 = \dfrac{\beta}{\gamma}P^\star$$
 
 - If $\mathcal{R}_0=\beta P^\star/\gamma<1$, the disease dies out (*disease-free* equilibrium)
 - If $\mathcal{R}_0>1$, it becomes established at an *endemic* equilibrium $I^\star=P^\star-\gamma/\beta=(1-1/\mathcal{R}_0)P^\star$
-
+<br>
 Next slides: $P^\star = 100$K, $\gamma=1/5$, $\mathcal{R}_0=\{0.8,1.5,2.5\}$ (and $\beta=\gamma \mathcal{R}_0/P^\star$)
 
 ---
@@ -120,6 +120,7 @@ Next slides: $P^\star = 100$K, $\gamma=1/5$, $\mathcal{R}_0=\{0.8,1.5,2.5\}$ (an
 
 - Discrete-time Markov chains (DTMC)
 - Continuous-time Markov chains (CTMC)
+<br>
 
 But there are many others. Of note: 
 - Branching processes (BP)
@@ -128,7 +129,9 @@ But there are many others. Of note:
 --- 
 
 <!-- _backgroundImage: "linear-gradient(to bottom, #f1c40f, 20%, white)" -->
-# <!-- fit -->Side note: sojourn times / residence times
+# <!-- fit -->Side note: sojourn / residence times
+
+---
 
 # Some probability theory
 
@@ -173,22 +176,13 @@ We assume that $T$ is a **continuous** random variable, that is, $T$ takes conti
 - distance
 - time
 
+<br>
 
 Another type of random variables are **discrete** random variables, which take values in a denumerable set. Examples of discrete r.v.:
 
 - heads or tails on a coin toss
 - the number rolled on a dice
 - height of a person, if expressed rounded without subunits, age of a person in years (without subunits)
-
----
-
-# Probability
-
-A **probability** is a function $\mathcal{P}$, from a probability space to $[0,1]$
-
-Formally: $(\Omega,\mathcal{F},\mathcal{P})$ is a probability space, with $\Omega$ the **sample** space, $\mathcal{F}$ a $\sigma$-algebra of subsets of $\Omega$ whose elements are the **events**, and $\mathcal{P}$ a **measure** from $\mathcal{F}$ to $[0,1]$ such that $\mathcal{P}(E)\geq 0$, $\forall E\subset\Omega$, $\mathcal{P}(\Omega)=1$ and $\mathcal{P}(E_1\cup E_2\cup\cdots)=\sum_i\mathcal{P}(E_i)$
-
-Gives the likelihood of an event occurring, among all the events that are possible, in that particular setting. For example, $\mathbb{P}(\textrm{getting heads when tossing a coin})=1/2$ and $\mathbb{P}(\textrm{getting tails when tossing a coin})=1/2$
 
 ---
 
@@ -658,10 +652,6 @@ $$
 \mathcal{S}(t; k,\lambda) = 
 \sum_{n=0}^{k-1}\frac{1}{n!}e^{-\lambda t}(\lambda t)^n
 $$
-
----
-
-![width:1000px center](https://raw.githubusercontent.com/julien-arino/3MC-course-epidemiological-modelling/main/FIGS/expo_vs_erlang.png)
 
 ---
 
