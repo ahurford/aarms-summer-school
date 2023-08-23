@@ -25,8 +25,8 @@ For participants with limited statistics courses, see [here](#prepstats) for sug
 
 For participants with limited coding experience, see [here](#prepcoding) for suggested preparation.
 
-- **Lecture 5. Characterizing uncertainty**. Why ecological forecasting -  [slides](https://github.com/ahurford/aarms-summer-school/blob/main/amy-lectures/Ecological_forecasting.pdf) [Lecture slides](https://github.com/ahurford/aarms-summer-school/blob/main/amy-lectures/Characterizing_Uncertainty.pdf)
+- **Lectures 5 & 6. Characterizing uncertainty**. Why ecological forecasting -  [slides](https://github.com/ahurford/aarms-summer-school/blob/main/amy-lectures/Ecological_forecasting.pdf) | [Lecture slides](https://github.com/ahurford/aarms-summer-school/blob/main/amy-lectures/Characterizing_Uncertainty.pdf)
 
-- **Lecture 7. Latent variables and state-space models**
+- **Lectures 7 & 8. Latent variables and state-space models & Fusing data sources** [Lecture slides](https://github.com/ahurford/aarms-summer-school/blob/main/amy-lectures/State_Space_Models.pdf)
 
 - **Lecture 15. Models for decision support.** [slides](https://github.com/ahurford/aarms-summer-school/blob/main/amy-lectures/Decision_Support.pdf)
