@@ -82,29 +82,6 @@ Thucydides (c. 460 BCE - c. 395 BCE)
 
 ---
 
-# Animal movement vs human mobility ?
-
-- Distinction is important
-- Should actually further distinguish three types of animal movement:
-  1. Unconstrained "natural" animal movement
-  2. Constrained natural animal movement (constraints arising from human presence)
-  3. Human-driven animal movement (e.g., cattle)
-- Human mobility is the collection of acts that lead to the temporary or permanent displacement of people
-
----
-
-![bg contain](https://raw.githubusercontent.com/julien-arino/presentations/main/FIGS/spatial/rabies_1990-noBG.png)
-
----
-
-![bg contain](https://raw.githubusercontent.com/julien-arino/presentations/main/FIGS/spatial/rabies_2000-noBG.png)
-
----
-
-![bg contain](https://raw.githubusercontent.com/julien-arino/presentations/main/FIGS/spatial/rabies_2010-noBG.png)
-
----
-
 # <!-- fit -->Mobility is complicated and drives disease spatialisation
 
 **Mobility is complicated**:
@@ -194,6 +171,7 @@ And yet **mobility drives spatio-temporal spread**:
 - Travel between jurisdictions can be complicated or impossible
 - Data is integrated at the jurisdicional level
 - Policy is decided at the jurisdictional level
+- Long range mobility is a bottom $\to$ top $\to$ top $\to$ bottom process
 
 ![bg right:40%](https://compote.slate.com/images/af3c1e4a-9ca9-4caa-8cbb-7f4f34c9ac88.jpeg?width=1440&rect=1560x1040&offset=0x0)
 
@@ -398,7 +376,6 @@ $$
 
 # Oh, what a tangled web we weave
 ### (Walter Scott, not Shakespeare)
-<br>
 
 Consider, e.g., $\eqref{sys:spSLIRS_incidence}$ with $q_p=0$,
 $$
@@ -837,12 +814,6 @@ $$
 
 ---
 
-# Side note - Computing $\mathcal{R}_0$
-
-See [these slides](https://julien-arino.github.io/3MC-course-epidemiological-modelling/2022_04_3MC_EpiModelling_P02_Analysis_LargeScaleModels.html) (part of [this course](https://julien-arino.github.io/3MC-course-epidemiological-modelling/))
-
----
-
 # Computing the basic reproduction number $\mathcal{R}_0$
 
 Use next generation method with $\Xi=\{L_1,\ldots,L_{|\mathcal{P}|},I_1,\ldots,I_{|\mathcal{P}|}\}$, $\Xi'=\mathcal{F}-\mathcal{V}$
@@ -1169,152 +1140,6 @@ $$
 *YES*, coupling together backward bifurcating units can lead to a system-level backward bifurcation
 
 JA, Ducrot & Zongo. [A metapopulation model for malaria with transmission-blocking partial immunity in hosts](https://server.math.umanitoba.ca/~jarino/papers/ArinoDucrotZongo-2011-JMB.pdf). *Journal of Mathematical Biology* **64**(3):423-448 (2012) 
-
----
-
-# Example - Malaria
-
-![width:1200px center](https://raw.githubusercontent.com/julien-arino/presentations/main/FIGS/multi-species/ArinoDucrotZongo-2012-JMB-title.png)
-
----
-
-![bg contain](https://raw.githubusercontent.com/julien-arino/presentations/main/FIGS/multi-species/ArinoDucrotZongo-2012-JMB-flowdiagram.png)
-
----
-
-# The model
-
-$$
-\begin{align*}
-S_{H,i}' &=
-\Lambda_{H,i}+\beta_{H,i} R_{H,i}+\rho_{H,i} I_{H,i}
--(\mu_{H,i}+\Phi_{H,i}) S_{H,i}
-\color{red}{+\textstyle{\sum_{{j\in\mathcal{P}}}} m^{S}_{ij}S_{H,j}} \\
-I_{H,i}' &=\Phi_{H,i}S_{H,i}-\epsilon_{H,i}I_{H,i}
-\color{red}{+\textstyle{\sum_{j\in\mathcal{P}}}m^{I}_{ij}I_{H,j}} \\
-R_{H,i}' &= \alpha_{H,i}I_{H,i}-\delta_{H,i}R_{H,i}
-\color{red}{+\textstyle{\sum_{{j\in\mathcal{P}}}}m^{R}_{ij}R_{H,j}} \\
-S_{V,i}' &= \Lambda_{V,i}-\mu_{V,i}S_{V,i}-\Phi_{V,i}S_{V,i} \\
-I_{V,i}' &= \Phi_{V,i}S_{V,i}-\mu_{V,i}I_{V,i}
-\end{align*}
-$$
-
-**NOTE** Vectors do not move between patches!
-
----
-
-# General incidence functions
-
-$$
-\Phi_{H,i} = b_{H,i}(H_i,V_i)\sigma_{V_iH_i}\frac{I_{V,i}}{H_i}
-$$
-and
-$$
-\Phi_{V,i} = b_{V,i}(H_i,V_i)
-\left(
-  \sigma_{H_iV_i}
-  \frac{I_{H,i}}{H_i}
-  +\hat{\sigma}_{H_iV_i}\frac{R_{H,i}}{H_i}
-\right)
-$$
-where $b_{H,i}$ number of bites a human has per unit time and $b_{V,i}$ number of humans a mosquito bites per unit time
-
----
-
-# Next generation matrix
-
-Denote $K=FV^{-1}$ and $K_{ij}$ the $(i,j)$ block of size $3\times 3$ of $K$, i.e., for $1\leq i,j\leq n$
-$$K_{ij}=\left[
-           \begin{array}{ccc}
-             (I_{H,i}\hookleftarrow I_{H,j}) & (I_{H,i}\hookleftarrow R_{H,j}) & (I_{H,i}\hookleftarrow I_{V,j}) \\
-             (R_{H,i}\hookleftarrow I_{H,j}) & (R_{H,i}\hookleftarrow R_{H,j}) & (R_{H,i}\hookleftarrow I_{V,j}) \\
-             (I_{V,i}\hookleftarrow I_{H,j}) &( I_{V,i}\hookleftarrow R_{H,j}) & (I_{V,i}\hookleftarrow I_{V,j}) \\
-           \end{array}
-         \right],
-$$
-where $Y\hookleftarrow X$ indicates that individuals from compartment $X$ infect individuals from compartment $Y$
-
----
-
-Elements of the matrix $K$ take, for $i,j=1,\ldots,n$, the form
-$$
-\begin{align}
-  K_{ij}&=\left[
-           \begin{array}{ccc}
-             0 & 0 & 0 \\
-             0 & 0 & 0 \\
-            (I_{V,i}\hookleftarrow I_{H,j}) &( I_{V,i}\hookleftarrow R_{H,j}) & 0 \\
-           \end{array}
-         \right]\text{ if }i\neq j, \label{K_ij}\\
-         K_{ii}&=\left[
-           \begin{array}{ccc}
-             0 & 0 & (I_{H,i}\hookleftarrow I_{V,i}) \\
-             0 & 0 & 0 \\
-            (I_{V,i}\hookleftarrow I_{H,i}) &( I_{V,i}\hookleftarrow R_{H,i}) & 0 \\
-           \end{array}
-         \right]\label{K_ii}
-\end{align}
-$$
-
----
-
-Let  $\tilde{K}$ be the $n\times n$ block matrix  of $2\times 2$ matrices with elements extracted from the matrix $K$, given for $i,j=1,\ldots,n$ by
-$$
-\begin{align}
-  \tilde{K}_{ij}&=\left[
-           \begin{array}{cc}
-             0 & 0  \\
-             (I_{V,i}\hookleftarrow I_{H,j}) &  0 \\
-           \end{array}
-         \right]\text{ if }i\neq j,\label{souselements_eq1}\\
-         \tilde{K}_{ii}&=\left[
-           \begin{array}{cc}
-              0 & (I_{H,i}\hookleftarrow I_{V,i}) \\
-             (I_{V,i}\hookleftarrow I_{H,i}) &  0 \\
-           \end{array}
-         \right]\label{souselements_eq2}
-\end{align}
-$$
-Let $P_{K} (\lambda)$  and $P_{\tilde{K}}(\lambda)$ be the characteristic polynomials of the next generation matrices $K$ and $\tilde{K}$, respectively. Then we have
-$$
-\begin{equation}
-P_{K} (\lambda)=(-\lambda)^{n}P_{\tilde{K}} (\lambda)
-\end{equation}
-$$
-
----
-
-# Single patch case
-
-With two specific incidence functions, if the disease-induced death rate $\gamma_{H,i}=0$ for all $i=1,\ldots,n$, then the point $(S^{*},0)$ is globally  asymptotically stable when $\mathcal{R}_0<1$
-
-When disease may induce death in each patch $\gamma_{H,i}\neq0$ for all $i=1,\ldots,n$ and when it is sufficiently large, backward bifurcation at $\mathcal{R}_0=1$ may occur for this model for one patch using two relatively general special cases of the incidence functions
-
-Thus positive equilibria may exist when $\mathcal{R}_0<1$
-
----
-
-# $|\mathcal{P}|$ patch case
-
-Consider equilibrium equation written as $\Psi(M,x)=0$, where $x=(S,I)$
-
-Set $M=0$, assume that the equation $\Psi(0,x)=0$ admits a solution $x_{0}$ even when $\mathcal{R}_0(0)<1$ (assume at least one of the isolated patches is in a backward bifurcation situation)
-
-Then connect patches with migration matrix with small entries such that $\mathcal{R}_0(M)<1$
-
-When operator $\frac{\partial \Psi}{\partial x}(0,x_{0})$ is invertible, implicit functions theorem $\Rightarrow$ there exists a branch (parametrized by $M$) of endemic equilibria when the travel matrix $M$ has small enough entries
-
----
-
-# Type reproduction numbers - Problem formulation
-
-### Control targeted at subpopulations
-
-Let $J$ be a subset of the set $\{H_1,V_1,\ldots,H_n,V_n\}$ of host types; can malaria be eradicated by targeting this subset $J$ of host types with some control measure?
-
-### Reminiscent of the source-sink problem
-
-(E.g., Arino, Bajeux & Kirkland)
 
 ---
 
