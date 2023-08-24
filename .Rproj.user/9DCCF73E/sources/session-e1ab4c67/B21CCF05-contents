@@ -1,0 +1,8 @@
+theta = 1/10
+gamma = 1/5
+beta = 0.02
+mu = 1/50
+
+dbeta_num = theta*beta*(gamma + mu) - beta*theta + mu*(gamma +mu)
+dgamma_num = -mu*beta*(gamma + mu) - beta*(beta*theta - mu*(gamma + mu))
+denom = (beta*(gamma + mu))^2
