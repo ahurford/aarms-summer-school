@@ -74,9 +74,9 @@ NSERC-PHAC EID Modelling Consortium (CANMOD, MfPH, OMNI/RÉUNIS)
 
 ---
 
-# <!--fit--> Introductions (according to ChatGPT, emphasis mine)
+# <!--fit--> Introductions (according to ChatGPT, emphasis and "British-ation" mine)
 
-**Biological introduction**, also known as *biological invasion* or *biological colonization*, refers to the *intentional* or *unintentional* **introduction** of a **non-native species** into an ecosystem or habitat where they did not previously occur naturally. This introduction can be facilitated by human activities such as trade, travel, and agriculture. These introduced species are often referred to as "invasive species."
+**Biological introduction**, also known as *biological invasion* or *biological colonisation*, refers to the *intentional* or *unintentional* **introduction** of a **non-native species** into an ecosystem or habitat where they did not previously occur naturally. This introduction can be facilitated by human activities such as trade, travel, and agriculture. These introduced species are often referred to as "invasive species."
 
 ---
 
@@ -94,7 +94,7 @@ Preventing and managing biological introductions is crucial for maintaining the 
 
 - Introductions are often thought of negatively (see previous slide, even ChatGPT thinks so :smile:) because of their impact on human activities (and some are easy to spot for us, e.g. the emerald ash borer, the zebra mussel, the Asian carp, etc.)
 
-- However, on the evolutionary side, introductions are a major source of genetic variation. They can lead to the extinction of native species, but also to the emergence of new species.
+- However, from an evolutionary perspective, introductions are a major source of genetic variation. They can lead to the extinction of native species, but also to the emergence of new species.
 
 (We percieve our environment as being at some equilibrium. It is not! It is constantly changing, and introductions are part of this change.)
 
@@ -148,15 +148,34 @@ Efforts to prevent and manage pathogen introduction include surveillance, quaran
 # ODE metapopulations somewhat miss the point
 
 - Pathogen introductions are not automatic
-- They are stochastic events
+- Introductions are stochastic events
 - Like for infection of a person with a pathogen, there can be successful and unsuccessful introductions
 - A location where the pathogen is absent is subject to repeated challenges as individuals from infected locations arrive
 
 ---
 
+# <!--fit-->Heterogeneity in "lived epidemics" increases <br>at the micro-scale
+
+![center](https://raw.githubusercontent.com/julien-arino/presentations/main/FIGS/importations/introductions-in-care-homes.png)
+
+<div style = "position: relative; bottom: -13%; font-size:20px; text-align: justify; margin-left:-70px; margin-right:-50px;">
+
+- T. Delory, <ins>JA</ins>, P.-E. Haÿ, V. Klotz & P.-Y. Boëlle. [SARS-CoV-2 in Nursing Homes: Analysis of Routine Surveillance Data in Four European Countries](https://doi.org/10.14336/AD.2022.0820). *Aging and Disease* (2022)
+</div>
+
+---
+
 # Why consider introductions?
 
-- Canada is a very tolerant society *with* a massive blindspot
+### ("why did *I* consider introductions?")
+
+<br>
+
+- Canada is a very tolerant society *with* a massive blindspot, that is very obvious when, as I do, you live for instance in downtown Winnipeg
+<br>
+- City of Winnipeg population, 2021 census: 749,607. Indigenous identity: 90,995 (12.1%)
+<br>
+- Manitoba population, 2021 census: 1,307,190. Indigenous identity: 237,185 (18.1%)
 
 ---
 
@@ -167,7 +186,15 @@ Efforts to prevent and manage pathogen introduction include surveillance, quaran
 <!--![bg 85%](cities_roads_FRA.png)-->
 ![bg contain](https://raw.githubusercontent.com/julien-arino/presentations/main/FIGS/transportation/cities_roads_CAN-MB_detail.png)
 
---- 
+---
+
+# Isolated communities
+
+- Winnipeg: 749,607, median age 38.8, average household size 2.5
+
+- Red Sucker Lake: 1,000, median age 19, average household size 5.2
+
+---
 
 # Geographies greatly influence reasoning
 	
@@ -283,12 +310,44 @@ And the question becomes: how long does the chain "linger on" before it is absor
 
 ---
 
+![bg contain](https://raw.githubusercontent.com/julien-arino/presentations/main/FIGS/importations/SLDUR_metapop_introductions.png)
+
+---
+
+![bg contain](https://raw.githubusercontent.com/julien-arino/presentations/main/FIGS/importations/sim_2023_07_11-11_06_41_ID_9_run86.png)
+
+---
+
+![bg contain](https://raw.githubusercontent.com/julien-arino/presentations/main/FIGS/importations/sim_2023_07_11-11_06_41_ID_9_run2.png)
+
+---
+
+![bg contain](https://raw.githubusercontent.com/julien-arino/presentations/main/FIGS/importations/sim_2023_07_11-11_06_41_ID_9_run3.png)
+
+---
+
+![bg contain](https://raw.githubusercontent.com/julien-arino/presentations/main/FIGS/importations/sim_2023_07_11-11_06_41_ID_25_run5.png)
+
+---
+
+<div style = "position: relative; top: -55%; font-size:40px">
+Introduction vs community generated transmissions
+</div>
+
+![bg contain](https://raw.githubusercontent.com/julien-arino/presentations/main/FIGS/importations/exporter_importer_panel_zoom.png)
+
+<div style = "position: relative; bottom: -45%; font-size:20px">
+Left: low movement rate. Right: higher movement rate
+</div>
+
+---
+
 ![bg contain](https://raw.githubusercontent.com/julien-arino/presentations/main/FIGS/sars-cov-2/VOC_countries_reporting_since_first_case_2022_04_07.png)
 
 ---
 
 <div style="width:100%; height:100%">
-  <iframe src="https://ourworldindata.org/grapher/covid-variants-area?country=~USA" loading="lazy" style="width: 100%; height: 610px; border: 0px none;"></iframe>
+  <iframe src="https://ourworldindata.org/grapher/covid-variants-area?country=~CAN" loading="lazy" style="width: 100%; height: 610px; border: 0px none;"></iframe>
 </div>
 
 ---
