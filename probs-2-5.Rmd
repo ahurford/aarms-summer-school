@@ -1,0 +1,7 @@
+# Problems 2.5. Characterizing uncertainty {.unlisted .unnumbered #probs-2-5}
+
+The models presented in the [Hurford and Watmough (2021)](https://link.springer.com/chapter/10.1007/978-3-030-85053-1_11) book chapter do not contain any description of uncertainty.
+
+- Because I am not sure how to write an `if` statement in 
+
+[Data](https://github.com/ahurford/reescalation-chapter)
