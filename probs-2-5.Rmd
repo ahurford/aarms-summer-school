@@ -2,6 +2,7 @@
 
 The models presented in the [Hurford and Watmough (2021)](https://link.springer.com/chapter/10.1007/978-3-030-85053-1_11) book chapter do not contain any description of uncertainty.
 
-- Because I am not sure how to write an `if` statement in 
+- Because I am not sure how to write an `if` statement in _JAGS_, we will separate the data into _before_ the peak and _after_ the peak.
 
 [Data](https://github.com/ahurford/reescalation-chapter)
+[Chapter_11_UncertAnalysis.Rmd](https://github.com/EcoForecast/EF_Activities/blob/master/Chapter_11_UncertAnalysis.Rmd)
