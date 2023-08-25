@@ -1,4 +1,4 @@
-# Problems 2.5. Characterizing uncertainty {.unlisted .unnumbered #probs-2-5}
+# Problems 2.5. Propagating uncertainty {.unlisted .unnumbered #probs-2-5}
 
 The models presented in the [Hurford and Watmough (2021)](https://link.springer.com/chapter/10.1007/978-3-030-85053-1_11) book chapter do not contain any description of uncertainty. However, unlike [Problems 2.4](#probs-2-4) the model in Hurford and Watmough (2021) does have a similar shape to the data and the parameters have been estimated using maximum likelihood (which may be helpful to informing priors).
 
