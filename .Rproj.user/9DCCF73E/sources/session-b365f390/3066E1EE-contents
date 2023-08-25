@@ -41,6 +41,7 @@ For participants with limited coding experience, see [here](#prepcoding) for sug
 - **Julien Lecture 2. Spatial models.** [.html](2023-08-24-AARMS-spatial.html)
 
 - **Julien Lecture 3. Introductions.** [.html](2023-08-25-AARMS-introductions.html)
+    + A [reference](https://www.nature.com/articles/s41567-020-01121-y) from AH on 'why metapopulations don't get it done'. The reason Juul et al. gives is averaging ensembles (see Figure 1).
 
 - **Julien. Some R stuff.** [.html](2023-08-AARMS-intro-R-data-solvingODE.html)
 
