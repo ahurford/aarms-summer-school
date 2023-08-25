@@ -1,26 +1,26 @@
 {
-    "id": "6B24F15A",
-    "path": "~/Desktop/Work/Teaching/AARMS summer school docs/EF_Activities/Exercise_06_StateSpace.Rmd",
-    "project_path": null,
+    "id": "F585BFC7",
+    "path": "~/Desktop/Work/Teaching/aarms-summer-school/index.Rmd",
+    "project_path": "index.Rmd",
     "type": "r_markdown",
-    "hash": "4287398816",
+    "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1692800049111.0,
+    "created": 1692925955092.0,
     "source_on_save": false,
     "relative_order": 4,
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "63,24",
-        "scrollLine": "53"
+        "cursorPosition": "21,0",
+        "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1692802362,
+    "lastKnownWriteTime": 1692911697,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1692802362530,
+    "last_content_update": 1692911697,
     "read_only": false,
     "read_only_alternatives": []
 }
