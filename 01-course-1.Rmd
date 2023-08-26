@@ -42,6 +42,8 @@ For participants with limited coding experience, see [here](#prepcoding) for sug
 
 - **Julien Lecture 3. Introductions.** [.html](2023-08-25-AARMS-introductions.html)
 
+- **Julien Lecture 4. Simple Analysis** [.html](2023-08-25-AARMS-simple-analysis.html)
+
 - **Julien. Some R stuff.** [.html](2023-08-AARMS-intro-R-data-solvingODE.html)
 
 - **Lectures 13 & 14. Zoonotic spillover.** [reading](https://royalsocietypublishing.org/doi/10.1098/rstb.2018.0435) | [slides](https://github.com/ahurford/ss-amy-greer/blob/main/August%2027_2023/Zoonotic%20spillover/Greer_Spillover_handouts%20and%20problemset.pdf)
