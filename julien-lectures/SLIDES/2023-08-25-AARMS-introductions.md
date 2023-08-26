@@ -1,6 +1,6 @@
 ---
 marp: true
-title: Stochastic epidemiological models
+title: Introductions
 description: Julien Arino - 2023 AARMS Summer School - Introductions
 theme: default
 paginate: false
