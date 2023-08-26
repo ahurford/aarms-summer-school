@@ -3,7 +3,7 @@
     "path": "~/Desktop/Work/Teaching/aarms-summer-school/06-problems-1.Rmd",
     "project_path": "06-problems-1.Rmd",
     "type": "r_markdown",
-    "hash": "0",
+    "hash": "1704923875",
     "contents": "",
     "dirty": false,
     "created": 1693050918301.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "12,4",
-        "scrollLine": "0"
+        "cursorPosition": "39,192",
+        "scrollLine": "21"
     },
     "folds": "",
-    "lastKnownWriteTime": 1693050231,
+    "lastKnownWriteTime": 1693051145,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1693050231,
+    "last_content_update": 1693051145051,
     "read_only": false,
     "read_only_alternatives": []
 }
