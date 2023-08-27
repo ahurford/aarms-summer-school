@@ -27,6 +27,8 @@ g9=ggplot() +
   draw_image("photos/9.jpg") # Library 1
 g10=ggplot() +
   draw_image("photos/10.jpg") # Libray 2
+g11=ggplot() +
+  draw_image("photos/11.jpg") # Amy Greer
 ```
 ```{r, echo=F}
 g5
@@ -41,4 +43,5 @@ g1
 g8
 g9
 g10
+g11
 ```
