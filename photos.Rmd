@@ -1,0 +1,44 @@
+# Photos {#photos .unnumbered}
+
+```{r, include=F}
+require(ggplot2)
+require(cowplot)
+require(magick)
+require(patchwork)
+g0=ggplot() + 
+  draw_image("photos/0.jpg") 
+g1=ggplot() + 
+  draw_image("photos/1.jpg") # Jane lecture
+g2=ggplot() +
+  draw_image("photos/2.jpg") # Julien lecture
+g3=ggplot() +
+  draw_image("photos/3.jpg") # Julien 
+g4=ggplot() +
+  draw_image("photos/4.jpg") # Julien close-up
+g5=ggplot() +
+  draw_image("photos/5.jpg") 
+g6=ggplot() +
+  draw_image("photos/6.jpg") # Julien talk
+g7=ggplot() +
+  draw_image("photos/7.jpg") # Jane talk
+g8=ggplot() +
+  draw_image("photos/8.jpg") # Lab
+g9=ggplot() +
+  draw_image("photos/9.jpg") # Library 1
+g10=ggplot() +
+  draw_image("photos/10.jpg") # Libray 2
+```
+```{r, echo=F}
+g5
+g0
+g4
+g1
+#g2
+#g3
+#g4
+#g6
+#g7
+g8
+g9
+g10
+```

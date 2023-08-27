@@ -1,0 +1,37 @@
+# Course 2. Data, models, and decision support {#course2 .unnumbered}
+
+Mathematical models provide decision support through forecasting, describing unrealized past outcomes (counterfactuals), and in communication. This course will teach the technical skills to parameterize dynamical systems models in ecology and evolution, and quantify prediction uncertainty. The course will examine case studies to understand the use of models in decision support.
+
+This course is based on [Ecological Forecasting](https://press.princeton.edu/books/hardcover/9780691160573/ecological-forecasting) by Michael Dietze. This book is usually available for download as an ebook from university libraries.
+
+[Course outline (downloadable .pdf)](https://github.com/ahurford/aarms-summer-school/blob/main/syllabi/STAT%206751%20Data%2C%20models%2C%20and%20decision%20support%20v2.pdf)
+
+
+AARMS Summer School format:
+
+- 15 lectures [schedule: [week 1](#week1); [week 2](#week2)]
+- 2 guest lectures [schedule: [week 1](#week1); [week 2](#week2)]
+- 8 problem sets [link](#efprobs) | [EF Activities](https://github.com/EcoForecast/EF_Activities)
+- A final project [link](#projects)
+
+Software:
+
+- RStudio and R
+- To be able to install `rjags` you will need to first install [JAGS](http://mcmc-jags.sourceforge.net/)
+
+For participants with limited prior math courses, see [here](#prep) for suggested preparation.
+
+For participants with limited statistics courses, see [here](#prepstats) for suggested preparation.
+
+For participants with limited coding experience, see [here](#prepcoding) for suggested preparation.
+
+- **Lectures 5 & 6. Characterizing uncertainty**. Why ecological forecasting -  [slides](https://github.com/ahurford/aarms-summer-school/blob/main/amy-lectures/Ecological_forecasting.pdf) | [Lecture slides](https://github.com/ahurford/aarms-summer-school/blob/main/amy-lectures/Characterizing_Uncertainty.pdf)
+
+- **Lectures 7 & 8. Latent variables and state-space models & Fusing data sources** [Lecture slides](https://github.com/ahurford/aarms-summer-school/blob/main/amy-lectures/State_Space_Models.pdf)
+
+- **Lectures 9 & 10. Propagating Uncertainty** [Lecture slides](https://github.com/ahurford/aarms-summer-school/blob/main/amy-lectures/Propagating_Uncertainty.pdf)
+    + [Latin Hypercube Sampling R code and HIV example - Drake and Rohani](https://daphnia.ecology.uga.edu/drakelab/wp-content/uploads/2014/07/sensitivity.pdf)
+
+- **Lecture 15. Models for decision support.** [slides](https://github.com/ahurford/aarms-summer-school/blob/main/amy-lectures/Decision_Support.pdf)
+
+- **Julien Lecture 4. Data Assimilation** [.html](2023-08-26-AARMS-data-assimilation.html)

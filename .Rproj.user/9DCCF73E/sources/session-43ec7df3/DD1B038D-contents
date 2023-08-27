@@ -1,0 +1,44 @@
+# Projects {.unlisted .unnumbered #projects}
+
+## Project details {-}
+
+* Students will work in groups of 2-3 to complete a project. 
+
+* You have 2 weeks after the completion of the summer school to hand-in your final project (Due 9am NST Monday September 18).
+
+* As part of your final project, you must create something permanent. This may be:
+  + a presentation of your project that you upload to a website;
+  + software (i.e., hosted on github) or a dataset;
+  + a web app (i.e., R Shiny);
+  + a website aimed to communicate your results to the public;
+  + you may indicate that you plan to continue working on your project and publish it as a pre-print and submit it for peer-review;
+
+* You must also complete a written project so that we can evaluate the technical details of your work.
+
+Specific expertise of the instructors includes spatial epidemiology, importations, within-host models, zoonotic spillover, and COVID-19. Groups that have their own project idea, please discuss this will the instructors.
+
+## Possible projects {-}
+
+1. [A guide for infectious disease models aimed to provide decision support](#SDM)
+
+2. [Forecasting sampled tick abundance](#ticks)
+
+3. [Conditions for forming and suspending the Atlantic bubble](#bubble)
+
+4. [Investigating the conditions for locally transmitted dengue infections](#local-emergence-dengue)
+
+5. [Simulating the global spread of SARS-CoV-2](#global-spread-SARS)
+
+6. [Leprosy and Biological Invasion](#leprosy)
+
+7. [Behaviour change in an epidemic](#behaviour-change)
+
+The COVID-19 pandemic has led to an observed resurgence in many sexually transmitted infections (STIs) like syphilis, gonorrhoea, and chlamydia in [Canada](https://www.canada.ca/en/public-health/services/publications/diseases-conditions/chlamydia-gonorrhea-infectious-syphilis-canada-2020-infographic.html). Two of the most concerning patterns observed include:
+
+8a. [Congenital syphilis](#ag1) and 8b. [Antimicrobial-resistent gonorrhoea](#ag2)
+
+9. [Porcine epidemic diarrhea virus](#ag3)
+
+10. [*Dicrocoelium dendriticum* and the Zombie Ants](#zombie-ants)
+
+

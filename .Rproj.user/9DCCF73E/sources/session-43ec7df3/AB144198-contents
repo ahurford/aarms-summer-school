@@ -1,0 +1,24 @@
+# Problems - Data, Models, and Decision support {.unlisted .unnumbered #efprobs}
+
+- **Problems 2.1. Why make models & From models to forecasts** (see syllabus and Ch 2 of Dietze - Watmough; TA - Forero)
+  + [Problems 2.1](probs-2-1.html)
+
+- **Problems 2.2 Parameter estimation from the literature and Introduction to Bayes** (Ch 5 of Dietze - Watmough; TA - Falcao)
+
+  + [Intro to JAGS](https://github.com/EcoForecast/EF_Activities/blob/master/Exercise_05_JAGS.Rmd)
+
+- **Problems 2.3 Characterizing uncertainty** (Ch 6 of Dietze - Hurford; TA - Anokye)
+  + [Problems 2.3](#probs-2-3)
+
+- **Problems 2.4 Latent variables and fusing data sources** (Ch 8 & 9 of Dietze - Hurford; TA - Falcao)
+  + [Problems 2.4](#probs-2-4)
+ 
+- **Problems 2.5 Propagating uncertainty** (Ch 11 of Dietze - Hurford; TA - Anokye)
+    + [Problems 2.5](#probs-2-5)
+
+- **Problems 2.6 Data assimilation** (Ch 13 and 14 of Dietze - Arino; TA - Anokye)
+
+- **Problems 2.7 Assessing model performance and case studies** (Ch 7, 10, 12, 15 and 16 of Dietze - Watmough; TA - Falcao)
+
+- **Problems 2.8 Models for decision support** (Ch 17 of Dietze)
+  + [Problems 2.8](#probs-2-8)
