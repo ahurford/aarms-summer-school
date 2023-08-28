@@ -35,3 +35,5 @@ For participants with limited coding experience, see [here](#prepcoding) for sug
 - **Lecture 15. Models for decision support.** [slides](https://github.com/ahurford/aarms-summer-school/blob/main/amy-lectures/Decision_Support.pdf)
 
 - **Julien Lecture 4. Data Assimilation** [.html](2023-08-26-AARMS-data-assimilation.html)
+
+- **James Lecture 3. Assessing Model Performance** [slides](BBSchool09-assessing-model-performance.pdf)

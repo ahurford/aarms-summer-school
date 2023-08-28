@@ -19,6 +19,7 @@
 - **Problems 2.6 Data assimilation** (Ch 13 and 14 of Dietze - Arino; TA - Anokye)
 
 - **Problems 2.7 Assessing model performance and case studies** (Ch 7, 10, 12, 15 and 16 of Dietze - Watmough; TA - Falcao)
+  + [Problems 2.7](#probs-2-7)
 
 - **Problems 2.8 Models for decision support** (Ch 17 of Dietze)
   + [Problems 2.8](#probs-2-8)
