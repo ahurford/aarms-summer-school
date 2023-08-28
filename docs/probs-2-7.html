@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Problems 2.8 Modeling for decision support | AARMS-EIDM.knit</title>
+  <title>Problems 2.7 Assessing Model Performance | AARMS-EIDM.knit</title>
   <meta name="description" content="" />
   <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Problems 2.8 Modeling for decision support | AARMS-EIDM.knit" />
+  <meta property="og:title" content="Problems 2.7 Assessing Model Performance | AARMS-EIDM.knit" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Problems 2.8 Modeling for decision support | AARMS-EIDM.knit" />
+  <meta name="twitter:title" content="Problems 2.7 Assessing Model Performance | AARMS-EIDM.knit" />
   
   
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="probs-2-5.html"/>
-<link rel="next" href="ag1.html"/>
+<link rel="prev" href="bubble.html"/>
+<link rel="next" href="prepcoding.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -166,18 +166,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="probs-2-8" class="section level1 unlisted unnumbered hasAnchor">
-<h1>Problems 2.8 Modeling for decision support<a href="probs-2-8.html#probs-2-8" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="probs-2-7" class="section level1 unlisted unnumbered hasAnchor">
+<h1>Problems 2.7 Assessing Model Performance<a href="probs-2-7.html#probs-2-7" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <ol style="list-style-type: decimal">
-<li><p>In a group of 3 to 4, work together to make a consequence table related to the implementation of capacity limits and/or social distancing in retail, schools, and community recreation venues during a pandemic due to an airborne respiratory illness. Have each group member play the role of a different stakeholder. Do not do the modelling to determine the values in the consequence table, instead represent these as values, <span class="math inline">\(v_{i,j}\)</span>.</p>
-<ul>
-<li>Write a paragraph describing how you applied some of the principles described in Chapter 17 of Dietze.</li>
-<li>Provide any inequalities related to the values, <span class="math inline">\(v_{i,j}\)</span>, you expect in the consequence table. Describe the trade-offs the consequence table reveals.</li>
-<li>Provide a simple epidemiological model that might form the deterministic skeleton for a model that could be used to estimate the values in the consequence table.</li>
-</ul></li>
-<li><p>Write 1 paragraph, which is an example of something that in hindsight was a “failure in imagination” during the COVID-19 pandemic.</p></li>
-<li><p>Describe how a mathematical model (preferably with equations) could be extended to consider the “failure in imagination” that you described in 2.</p></li>
-<li><p>Visit <a href="https://www.ipcc.ch/report/ar6/wg2/">https://www.ipcc.ch/report/ar6/wg2/</a>. Find a figure of future carbon emission scenarios (Reconstruction Concentration Pathways (RCPs)), and their impacts. Write a paragraph that describes how the presentation of projections in the IPCC report are consistent with the principles discussed in Chapter 17 of Dietze (2017) for scenario construction.</p></li>
+<li>Rework <a href="probs-2-4">problem 2.4</a> exercise 2, but restrict the data to a single year. For example, just use data after August 1st, 2014.</li>
+</ol>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="probs-2-7.html#cb1-1" tabindex="-1"></a>gflu <span class="ot">=</span> <span class="fu">read.csv</span>(<span class="st">&quot;https://raw.githubusercontent.com/EcoForecast/EF_Activities/master/data/gflu_data.txt&quot;</span>,<span class="at">skip=</span><span class="dv">11</span>)</span>
+<span id="cb1-2"><a href="probs-2-7.html#cb1-2" tabindex="-1"></a>time <span class="ot">=</span> <span class="fu">as.Date</span>(gflu<span class="sc">$</span>Date)</span>
+<span id="cb1-3"><a href="probs-2-7.html#cb1-3" tabindex="-1"></a>y <span class="ot">=</span> gflu<span class="sc">$</span>Massachusetts</span>
+<span id="cb1-4"><a href="probs-2-7.html#cb1-4" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="probs-2-7.html#cb1-5" tabindex="-1"></a>yobs <span class="ot">=</span> y[time <span class="sc">&gt;</span> <span class="st">&quot;2014-08-01&quot;</span>]</span>
+<span id="cb1-6"><a href="probs-2-7.html#cb1-6" tabindex="-1"></a>tobs <span class="ot">=</span> time[time <span class="sc">&gt;</span> <span class="st">&quot;2014-08-01&quot;</span>]</span>
+<span id="cb1-7"><a href="probs-2-7.html#cb1-7" tabindex="-1"></a><span class="fu">plot</span>(tobs,yobs)</span></code></pre></div>
+<p><img src="AARMS-EIDM_files/figure-html/unnamed-chunk-9-1.png" width="672" />
+Create various visualizations to assess model performance as per the suggestions in Dietz, chapter 16. As a minimum, (1) plot the mean model output along with the observed cases vs time, (2) plot observed vs predicted (mean) and compute the correlation <span class="math inline">\(R^2\)</span>, and (3) plot the residuals (observed less predicted) vs both time and predicted. Comment on the results.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>(optional) Create visualizations and compute descriptive statistics to assess the model of <a href="probs-2-5">problem 2.5</a> or any model used in any other problem sets in the school (I.e., pick your favourite model and assess it).</li>
 </ol>
 
 </div>
@@ -186,8 +190,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="probs-2-5.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="ag1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="bubble.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="prepcoding.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

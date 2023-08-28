@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Problems 2.4. State-space models &amp; fusing data | AARMS-EIDM.knit</title>
   <meta name="description" content="" />
-  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Problems 2.4. State-space models &amp; fusing data | AARMS-EIDM.knit" />
   <meta property="og:type" content="book" />
@@ -172,17 +172,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Save and run <a href="https://github.com/EcoForecast/EF_Activities/blob/master/Exercise_06_StateSpace.Rmd">Exercise_06_StateSpace.Rmd</a>. The code sample is pulling Google flu data for Massachuetts and fitting a random walk to the data. Complete the exercise where you convert the last 40 data points to <code>NA</code>, make a ‘forecast’, that is compared to the real data. Make the zoomed in plots as necessary. [10 marks] (this is mostly tests existing R skills/copy and paste).</p></li>
 <li><p>The process model,</p></li>
 </ol>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="probs-2-4.html#cb1-1" tabindex="-1"></a>  <span class="do">#### Process Model</span></span>
-<span id="cb1-2"><a href="probs-2-4.html#cb1-2" tabindex="-1"></a>  <span class="st">&quot;for(t in 2:n){</span></span>
-<span id="cb1-3"><a href="probs-2-4.html#cb1-3" tabindex="-1"></a><span class="st">    x[t]~dnorm(x[t-1],tau_add)</span></span>
-<span id="cb1-4"><a href="probs-2-4.html#cb1-4" tabindex="-1"></a><span class="st">  }&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="probs-2-4.html#cb2-1" tabindex="-1"></a>  <span class="do">#### Process Model</span></span>
+<span id="cb2-2"><a href="probs-2-4.html#cb2-2" tabindex="-1"></a>  <span class="st">&quot;for(t in 2:n){</span></span>
+<span id="cb2-3"><a href="probs-2-4.html#cb2-3" tabindex="-1"></a><span class="st">    x[t]~dnorm(x[t-1],tau_add)</span></span>
+<span id="cb2-4"><a href="probs-2-4.html#cb2-4" tabindex="-1"></a><span class="st">  }&quot;</span></span></code></pre></div>
 <p>might be extended to include some epidemiological details. Rather than try to change to a very complicated model, as the first step, lets consider:</p>
 <p><span class="math inline">\(I_{t+1} = I_{t} + \left(\beta - 0.2\right)I_t\)</span>.</p>
 <p>This is a very simple epidemiological model, where it is assumed that the proportion of susceptible individuals is fixed and equal to 1. This assumption might hold for a short time after a novel pathogen emerges. For this model, <span class="math inline">\(\beta\)</span> is the transmission rate and the recovery rate is assumed to be estimated with complete certainty as 0.2 recoveries per day. Consider a new process model,</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="probs-2-4.html#cb2-1" tabindex="-1"></a>  <span class="do">#### Process Model</span></span>
-<span id="cb2-2"><a href="probs-2-4.html#cb2-2" tabindex="-1"></a>  <span class="st">&quot;for(t in 2:n){</span></span>
-<span id="cb2-3"><a href="probs-2-4.html#cb2-3" tabindex="-1"></a><span class="st">    x[t]~dnorm((1+beta_proc-0.2)*x[t-1],tau_add)</span></span>
-<span id="cb2-4"><a href="probs-2-4.html#cb2-4" tabindex="-1"></a><span class="st">  }&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="probs-2-4.html#cb3-1" tabindex="-1"></a>  <span class="do">#### Process Model</span></span>
+<span id="cb3-2"><a href="probs-2-4.html#cb3-2" tabindex="-1"></a>  <span class="st">&quot;for(t in 2:n){</span></span>
+<span id="cb3-3"><a href="probs-2-4.html#cb3-3" tabindex="-1"></a><span class="st">    x[t]~dnorm((1+beta_proc-0.2)*x[t-1],tau_add)</span></span>
+<span id="cb3-4"><a href="probs-2-4.html#cb3-4" tabindex="-1"></a><span class="st">  }&quot;</span></span></code></pre></div>
 <p>Let’s understand, that <code>x[t]</code> is <span class="math inline">\(I(t)\)</span>, and <code>beta_proc</code> is <span class="math inline">\(\beta\)</span>.</p>
 <p>Add to the code, a prior for <code>beta_proc</code>. Run your code. When I tried this, it failed with the error:</p>
 <p><code>Error in update.jags(object, n.iter, ...) : Error in node beta_proc Current value is inconsistent with data</code></p>
