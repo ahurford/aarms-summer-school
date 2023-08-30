@@ -1,7 +1,0 @@
-"0","nchain = 3"
-"0","init <- list()"
-"0","for(i in 1:nchain){"
-"0","  y.samp = sample(y,length(y),replace=TRUE)"
-"0","  init[[i]] <- list(tau_add=1/var(diff(log(y.samp))),  ## initial guess on process precision"
-"0","                    tau_obs=5/var(log(y.samp)))        ## initial guess on obs precision"
-"0","}"

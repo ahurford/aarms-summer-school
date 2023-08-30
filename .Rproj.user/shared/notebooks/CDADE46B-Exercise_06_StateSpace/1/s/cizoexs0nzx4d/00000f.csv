@@ -1,5 +1,0 @@
-"0","gflu = read.csv(""data/gflu_data.txt"",skip=11)"
-"0","time = as.Date(gflu$Date)"
-"0","#labels(gflu)"
-"0","y = gflu$Massachusetts"
-"0","plot(time,y,type='l',ylab=""Flu Index"",lwd=2,log='y')"

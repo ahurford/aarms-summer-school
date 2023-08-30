@@ -1,24 +1,0 @@
-"0","j.model   <- jags.model (file = textConnection(RandomWalk),"
-"0","                             data = data,"
-"0","                             inits = init,"
-"0","                             n.chains = 3)"
-"1","Compiling model graph
-   Resolving undeclared variables
-   Allocating nodes
-Graph information:
-   Observed stochastic nodes: 620
-   Unobserved stochastic nodes: 623
-   Total graph size: 1875
-
-"
-"1","Initializing model
-
-"
-"1","  |                                                        "
-"1","  |                                                  |   0%"
-"1","
-"
-"2","Error in update.jags(object, n.iter, ...) : Error in node beta_proc
-Current value is inconsistent with data
-
-"

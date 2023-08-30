@@ -1,0 +1,29 @@
+--- 
+site: bookdown::bookdown_site
+documentclass: book
+bookdown::gitbook:
+  css: style.css
+---
+
+# 2023 AARMS-EIDM Summer School - more photos {-}
+
+```{r, include=F}
+require(ggplot2)
+require(cowplot)
+require(magick)
+require(patchwork)
+g10=ggplot() +
+  draw_image("photos/10.jpg") 
+g11=ggplot() +
+  draw_image("photos/11.jpg") 
+g12=ggplot() +
+  draw_image("photos/12.jpg") # James
+g13=ggplot() +
+  draw_image("photos/13.jpg") # Amy
+```
+```{r, echo=F}
+g10
+g11
+g12
+g13
+```
