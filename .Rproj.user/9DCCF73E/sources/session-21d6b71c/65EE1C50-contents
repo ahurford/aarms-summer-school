@@ -6,7 +6,7 @@ require(cowplot)
 require(magick)
 require(patchwork)
 g0=ggplot() + 
-  draw_image("photos/0.jpg") 
+  draw_image("photos/0.jpg")
 g1=ggplot() + 
   draw_image("photos/1.jpg") # Jane lecture
 #g2=ggplot() +
@@ -14,9 +14,11 @@ g1=ggplot() +
 #g3=ggplot() +
   #draw_image("photos/3.jpg") # Julien 
 g4=ggplot() +
-  draw_image("photos/4.jpg") # Julien close-up
+  draw_image("photos/4.jpg") +
+  labs(caption = "photo contributed by Jessa Marley")
 g5=ggplot() +
-  draw_image("photos/5.jpg") 
+  draw_image("photos/5.jpg")+
+  labs(caption = "photo contributed by Jessa Marley")
 #g6=ggplot() +
   #draw_image("photos/6.jpg") # Julien talk
 #g7=ggplot() +
@@ -41,3 +43,5 @@ g9
 ```
 
 [More photos](https://ahurford.github.io/aarms-photos/)
+
+[Download photos](https://github.com/ahurford/aarms-summer-school/tree/main/photos)
