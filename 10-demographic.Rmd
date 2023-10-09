@@ -1,6 +1,6 @@
 # Participant demographic summary {-}
 
-## Affiliation {-}
+## Affiliation {- .unlisted}
 British Columbia CDC (1)
 
 University of Guelph (6)
@@ -35,7 +35,7 @@ Total participants: 39
 
 AARMS affiliation (11), Past affiliation with the African Institute of Mathematical Sciences (3), CANMOD (2), OMNI-REUNIS (6), Mathematics for Public Health (5).
 
-## Career stage {-}
+## Career stage {- .unlisted}
 Undergraduate or beginning graduate student (6)
 
 MSc student (7)
@@ -48,14 +48,14 @@ Early career researcher (1)
 
 Other (4)
 
-## Degree program/primary area {-}
+## Degree program/primary area {- .unlisted}
 Mathematics and statistics (32)
 
 Epidemiology, public health or biology (10)
 
 Other (1).
 
-## Gender, Indigenous Peoples, visible minitories, persons with disabilities {-}
+## Gender, Indigenous Peoples, visible minitories, persons with disabilities {- .unlisted}
 Male (15)
 
 Female (24)
