@@ -1,4 +1,4 @@
-# Participant demographic summary {-}
+# Participant demography {-}
 
 ## Affiliation {- .unlisted}
 British Columbia CDC (1)
