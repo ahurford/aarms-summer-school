@@ -62,6 +62,10 @@ Final projects that were completed as part of the AARMS-EIDM summer school were:
 
 1. **A Time-Delayed and Drug-Controlled Within-Host Model** by Rushi Chaudhary, Shiheng Fan, Tian Hou, Zhimin Li, and Yuanxi Yue
 
+1. **Investigating the spread and establishment of Chikungunya in Florida through stochastic and deterministic modelling** by Antonio Gondim, Leonardo Shultz, and Rebeca Falcao
+
+1. **Weather and _Chikungunya_ transmission dynamics** by Rebeca C Falcao, Antonio Mateus Gondim, and Leonardo Schultz
+
 ## Instructors {-}
 
 - [Dr. Amy Hurford](https://ahurford.github.io/website/#dr.-amy-hurford), Memorial University (Organizer, email: ahurford@mun.ca)
