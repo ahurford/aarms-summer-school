@@ -19,7 +19,7 @@ Final projects that were completed as part of the AARMS-EIDM summer school were:
 
 1. **Modelling Human Induced Allee Effects on Biological Invasion in a Two Patch Model** by Manuel Perez, Elise Woodward, and Zahresh Walji. [Github repository](https://github.com/ewoodwar/Final-project-2023-AARMS).
 
-1. **An SIARV model: dynamics and data fitting** by Jessa Marley, Shab Molan, Francisca Olajide, and Greg Forkutza.
+1. **An SIARV model: dynamics and data fitting** by Jessa Marley, Shab Molan, Francisca Olajide, and Greg Forkutza. _A substantial amount of work completed, including parameter estimation and modelling._
 
 1. **A Time-Delayed and Drug-Controlled Within-Host Model** by Rushi Chaudhary, Shiheng Fan, Tian Hou, Zhimin Li, and Yuanxi Yue. _Strong mathematical analysis._
 
